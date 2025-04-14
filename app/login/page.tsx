@@ -165,7 +165,7 @@ export default function LoginScreen() {
   }
 
   return (
-    <main className="min-h-screen bg-white md:bg-cover" style={{ backgroundImage: 'url(/Slice-15.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <main className="min-h-screen bg-white md:bg-cover" style={{ backgroundImage: 'url(/images/ncMILWfZIhGoAEK8QsFDsScGiRaQMsL0.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-10 bg-white border-b border-border px-4 py-3">
         <div className="flex items-center justify-between">
