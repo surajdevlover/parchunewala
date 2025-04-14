@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, Search, ShoppingCart, ChevronLeft, ChevronRight, Clock, Smile, User, LogIn, Store, ExternalLink } from "lucide-react"
+import { MapPin, Search, ShoppingCart, ChevronLeft, ChevronRight, Clock, Smile, User, LogIn, Store, ExternalLink, LogOut } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { ProductCard } from "@/components/product-card"
 import { StoreCard } from "@/components/store-card"
@@ -13,6 +13,7 @@ import { useCart } from "@/lib/cart-context"
 import { useAuth } from "@/lib/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import Footer from "../footer/footer"
+import { useRouter } from "next/navigation"
 
 export default function HomeScreen() {
   const [location, setLocation] = useState("")
@@ -20,9 +21,11 @@ export default function HomeScreen() {
   const [activeCategory, setActiveCategory] = useState("all")
   const [showTopButton, setShowTopButton] = useState(false)
   const { totalItems: cartItemCount } = useCart()
-  const { user, isAuthenticated } = useAuth()
+  const { user, isAuthenticated, logout } = useAuth()
   const [selectedStore, setSelectedStore] = useState<string | null>(null)
   const [showLocationPopup, setShowLocationPopup] = useState(false)
+  const [showUserMenu, setShowUserMenu] = useState(false)
+  const router = useRouter()
 
   // Categories with icons
   const categories = [
@@ -377,6 +380,15 @@ export default function HomeScreen() {
     ? featuredProducts.filter(product => product.storeId === selectedStore)
     : featuredProducts
 
+  const handleLogout = useCallback(() => {
+    // Call the logout function from auth context
+    logout();
+    // Hide the user menu
+    setShowUserMenu(false);
+    // Redirect to login page
+    router.push('/login');
+  }, [logout, router]);
+
   return (
     <main className="flex min-h-screen flex-col bg-gray-50">
       {/* Location Popup */}
@@ -436,26 +448,50 @@ export default function HomeScreen() {
 
             <div className="flex items-center gap-3">
               {isAuthenticated ? (
-                <Link href="/profile" className="flex items-center gap-2">
-                  <Avatar className="h-9 w-9 border border-gray-200">
-                    <AvatarFallback className="bg-pastel-orange/10 text-pastel-orange">
-                      {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
-                    </AvatarFallback>
-                  </Avatar>
-                  <span className="text-sm font-medium text-gray-700 hidden md:inline">
-                    {user?.name?.split(' ')[0] || 'User'}
-                </span>
-                </Link>
+                <div className="relative">
+                  <button 
+                    onClick={() => setShowUserMenu(!showUserMenu)}
+                    className="flex items-center gap-2"
+                  >
+                    <Avatar className="h-9 w-9 border border-gray-200">
+                      <AvatarFallback className="bg-pastel-orange/10 text-pastel-orange">
+                        {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
+                      </AvatarFallback>
+                    </Avatar>
+                    <span className="text-sm font-medium text-gray-700 hidden md:inline">
+                      {user?.name?.split(' ')[0] || 'User'}
+                    </span>
+                  </button>
+                  
+                  {showUserMenu && (
+                    <div className="absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg z-50 py-1">
+                      <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        My Profile
+                      </Link>
+                      <Link href="/orders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        My Orders
+                      </Link>
+                      <div className="border-t border-gray-100 my-1"></div>
+                      <button 
+                        onClick={handleLogout}
+                        className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-red-50"
+                      >
+                        <LogOut size={16} />
+                        Logout
+                      </button>
+                    </div>
+                  )}
+                </div>
               ) : (
                 <Link href="/login" className="block"> 
                   <Button className="bg-pastel-orange text-white flex items-center gap-1">
                     <LogIn size={16} />
                     <span className="hidden md:inline">Login</span>
-              </Button>
-            </Link>
+                  </Button>
+                </Link>
               )}
 
-            <Link href="/cart">
+              <Link href="/cart">
                 <div className="relative">
                   <Button variant="outline" className="gap-2 h-9 bg-pastel-orange/10 border-pastel-orange text-pastel-orange hover:bg-pastel-orange/20">
                     <ShoppingCart size={18} />

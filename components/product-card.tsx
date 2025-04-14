@@ -102,7 +102,7 @@ export function ProductCard({
         </Link>
         
         {/* Add to cart button */}
-        <div className="absolute bottom-2 right-2 z-10">
+        <div className="absolute bottom-2 right-2 z-1">
           <Button
             size="icon"
             className={`rounded-full h-7 w-7 sm:h-8 sm:w-8 transition-all ${

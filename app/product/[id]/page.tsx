@@ -4,12 +4,13 @@ import { useState, useEffect, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, Heart, Minus, Plus, ShoppingCart, Star, Clock, Shield, Truck, ChevronDown, ChevronUp, Sparkles, Menu, LogOut, User, X, Search } from "lucide-react"
+import { ArrowLeft, Heart, Minus, Plus, ShoppingCart, Star, Clock, Shield, Truck, ChevronDown, ChevronUp, Sparkles, Menu, LogOut, User, X, Search, ArrowUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ProductCard } from "@/components/product-card"
 import { useCart } from "@/lib/cart-context"
 import { useAuth } from "@/lib/auth-context"
 import { LoginRequiredModal } from "@/components/login-required-modal"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 // Fix the useMobileDetection hook outside the component
 const useMobileDetection = () => {
@@ -52,7 +53,7 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
 
   const router = useRouter()
   const { addToCart, totalItems } = useCart()
-  const { isAuthenticated, logout } = useAuth()
+  const { isAuthenticated, logout, user } = useAuth()
 
   // Sample product data - In a real app, this would come from an API call
   const product = {
@@ -266,7 +267,7 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Completely redesigned Blinkit mobile header */}
-      <header className="sticky top-0 z-30 bg-white">
+      <header className="sticky top-0 z-50 bg-white">
         {/* Delivery location bar */}
         <div className="bg-[#0c831f] text-white py-2 px-3 flex items-center">
           <div className="flex-1 flex items-center gap-1.5">
@@ -376,49 +377,30 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
               <>
                 <div className="p-4 border-b border-gray-100 bg-gray-50">
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 bg-[#0c831f]/10 rounded-full flex items-center justify-center">
-                      <User size={22} className="text-[#0c831f]" />
-                    </div>
+                    <Avatar className="h-12 w-12 bg-pastel-orange/10">
+                      <AvatarFallback className="text-pastel-orange">
+                        {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
+                      </AvatarFallback>
+                    </Avatar>
                     <div>
-                      <p className="text-sm font-medium text-gray-900">Hello, User</p>
-                      <p className="text-xs text-gray-500">user@example.com</p>
+                      <p className="text-sm font-medium text-gray-900">Hello, {user?.name?.split(' ')[0] || 'User'}</p>
+                      <p className="text-xs text-gray-500">{user?.email || 'user@example.com'}</p>
                     </div>
                   </div>
                 </div>
                 <div className="py-2">
-                  <button 
-                    className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 text-gray-700"
-                    onClick={() => {
-                      setShowUserMenu(false);
-                      router.push('/orders');
-                    }}
-                  >
+                  <Link href="/profile" className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 text-gray-700">
+                    <div className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center">
+                      <User size={16} className="text-gray-700" />
+                    </div>
+                    My Profile
+                  </Link>
+                  <Link href="/orders" className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 text-gray-700">
                     <div className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center">
                       <Clock size={16} className="text-gray-700" />
                     </div>
                     My Orders
-                  </button>
-                  <button 
-                    className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 text-gray-700"
-                    onClick={handleProfileEdit}
-                  >
-                    <div className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center">
-                      <User size={16} className="text-gray-700" />
-                    </div>
-                    Edit Profile
-                  </button>
-                  <button 
-                    className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 text-gray-700"
-                    onClick={() => {
-                      setShowUserMenu(false);
-                      router.push('/addresses');
-                    }}
-                  >
-                    <div className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center">
-                      <Truck size={16} className="text-gray-700" />
-                    </div>
-                    Manage Addresses
-                  </button>
+                  </Link>
                   <div className="border-t border-gray-100 mt-1">
                     <button 
                       className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 flex items-center gap-3 text-red-500"
@@ -461,7 +443,7 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
       
       {/* Mobile App Download Prompt - Blinkit style */}
       {showMobilePrompt && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white p-3 shadow-lg z-40 border-t border-gray-200">
+        <div className="fixed bottom-0 left-0 right-0 bg-white p-3 shadow-lg z-30 border-t border-gray-200">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="h-12 w-12 bg-[#0c831f] rounded-md flex items-center justify-center mr-3">
@@ -751,6 +733,14 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
         continueShopping={() => setShowLoginModal(false)}
         actionType="checkout"
       />
+
+      {/* Adjust positioning and z-index for floating button */}
+      <Button
+        className="fixed bottom-4 right-4 z-20 rounded-full h-12 w-12 bg-pastel-orange text-white shadow-lg flex items-center justify-center hover:bg-pastel-orange/90"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <ArrowUp size={20} />
+      </Button>
     </main>
   )
 }
