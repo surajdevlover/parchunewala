@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { ShopNavigation } from "@/components/shop-navigation";
 import { SharedHeader } from "@/components/shared-header";
-import { Footer } from "@/components/footer";
+import Footer from "@/app/footer/footer";
 
 export const metadata = {
   title: "Categories | Parchun",
@@ -15,7 +15,7 @@ export default function CategoriesLayout({
 }) {
   return (
     <>
-      <SharedHeader />
+      <SharedHeader title="Categories" />
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-1/4">
@@ -37,7 +37,7 @@ export default function CategoriesLayout({
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 } 
