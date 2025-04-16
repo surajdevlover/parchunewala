@@ -1,153 +1,127 @@
 "use client"
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react"
-import { 
-  emailPasswordSignIn, 
-  emailPasswordSignUp, 
-  mockGoogleSignIn, 
-  mockFacebookSignIn 
-} from "@/db/auth-service"
-import { User as DbUser } from "@/db/models/user"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
-// Use our model's User type
-type User = DbUser;
+interface User {
+  id: string
+  name: string
+  email: string
+  avatar?: string
+}
 
 interface AuthContextType {
   user: User | null
-  isLoading: boolean
-  login: (email: string, password: string) => Promise<void>
-  register: (name: string, email: string, phone: string, password: string) => Promise<void>
-  googleLogin: () => Promise<void>
-  facebookLogin: () => Promise<void>
-  logout: () => void
   isAuthenticated: boolean
+  login: (email: string, password: string) => Promise<boolean>
+  socialLogin: (provider: 'google' | 'facebook') => Promise<boolean>
+  logout: () => void
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
-export function AuthProvider({ children }: { children: ReactNode }) {
+export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  
-  // Check for existing user session on initial load
+  const router = useRouter()
+
   useEffect(() => {
-    const savedUser = localStorage.getItem('currentUser')
-    if (savedUser) {
-      setUser(JSON.parse(savedUser))
+    // Check if user is logged in from localStorage
+    const checkAuth = () => {
+      try {
+        const userData = localStorage.getItem('user_data')
+        if (userData) {
+          setUser(JSON.parse(userData))
+        }
+      } catch (error) {
+        console.error("Error checking authentication:", error)
+      } finally {
+        setIsLoading(false)
+      }
     }
-    setIsLoading(false)
+
+    checkAuth()
   }, [])
-  
-  const login = async (email: string, password: string) => {
+
+  const login = async (email: string, password: string): Promise<boolean> => {
+    // In a real app, this would be an API call to your backend
+    // For demo purposes, we're just simulating a login
+    
     try {
-      setIsLoading(true)
-      
-      if (!email || !password) {
-        throw new Error('Email and password are required')
+      // Simple validation for demo
+      if (email && password.length >= 6) {
+        // Create a mock user
+        const mockUser = {
+          id: '1',
+          name: email.split('@')[0],
+          email,
+          avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(email.split('@')[0])}&background=random`
+        }
+
+        // Store in localStorage
+        localStorage.setItem('user_data', JSON.stringify(mockUser))
+        localStorage.setItem('auth_state', 'authenticated')
+
+        // Update context
+        setUser(mockUser)
+        return true
       }
-      
-      const user = await emailPasswordSignIn(email, password)
-      
-      if (!user) {
-        throw new Error('Invalid email or password')
-      }
-      
-      setUser(user)
-      localStorage.setItem('currentUser', JSON.stringify(user))
+      return false
     } catch (error) {
-      console.error('Login failed:', error)
-      throw error
-    } finally {
-      setIsLoading(false)
+      console.error("Login error:", error)
+      return false
     }
   }
-  
-  const register = async (name: string, email: string, phone: string, password: string) => {
+
+  const socialLogin = async (provider: 'google' | 'facebook'): Promise<boolean> => {
+    // In a real app, this would trigger OAuth flow with the provider
+    // For demo purposes, we're just simulating a successful login
+    
     try {
-      setIsLoading(true)
-      
-      // Basic validation
-      if (!name || !email || !password) {
-        throw new Error('Name, email and password are required')
+      // Create a mock user based on the provider
+      const mockUser = {
+        id: provider === 'google' ? 'g-123456' : 'fb-123456',
+        name: provider === 'google' ? 'Google User' : 'Facebook User',
+        email: provider === 'google' ? 'google.user@example.com' : 'facebook.user@example.com',
+        avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(provider === 'google' ? 'Google User' : 'Facebook User')}&background=random`
       }
-      
-      const user = await emailPasswordSignUp(name, email, password, phone)
-      
-      if (!user) {
-        throw new Error('Registration failed. Email may already be in use.')
-      }
-      
-      setUser(user)
-      localStorage.setItem('currentUser', JSON.stringify(user))
+
+      // Store in localStorage
+      localStorage.setItem('user_data', JSON.stringify(mockUser))
+      localStorage.setItem('auth_state', 'authenticated')
+
+      // Update context
+      setUser(mockUser)
+      return true
     } catch (error) {
-      console.error('Registration failed:', error)
-      throw error
-    } finally {
-      setIsLoading(false)
+      console.error(`${provider} login error:`, error)
+      return false
     }
   }
-  
-  const googleLogin = async () => {
-    try {
-      setIsLoading(true)
-      
-      // In a real app, this would use the Google OAuth flow
-      const user = await mockGoogleSignIn()
-      
-      setUser(user)
-      localStorage.setItem('currentUser', JSON.stringify(user))
-    } catch (error) {
-      console.error('Google login failed:', error)
-      throw error
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  
-  const facebookLogin = async () => {
-    try {
-      setIsLoading(true)
-      
-      // In a real app, this would use the Facebook OAuth flow
-      const user = await mockFacebookSignIn()
-      
-      setUser(user)
-      localStorage.setItem('currentUser', JSON.stringify(user))
-    } catch (error) {
-      console.error('Facebook login failed:', error)
-      throw error
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  
+
   const logout = () => {
+    // Clear local storage
+    localStorage.removeItem('user_data')
+    localStorage.removeItem('auth_state')
+    
+    // Update context
     setUser(null)
-    localStorage.removeItem('currentUser')
+    router.push('/login')
   }
-  
+
   return (
-    <AuthContext.Provider 
-      value={{ 
-        user, 
-        isLoading, 
-        login, 
-        register,
-        googleLogin,
-        facebookLogin,
-        logout, 
-        isAuthenticated: !!user 
-      }}
-    >
-      {children}
+    <AuthContext.Provider value={{ user, isAuthenticated: !!user, login, socialLogin, logout }}>
+      {!isLoading && children}
     </AuthContext.Provider>
   )
 }
 
 export function useAuth() {
   const context = useContext(AuthContext)
+  
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider')
   }
+  
   return context
 } 

@@ -38,7 +38,6 @@ export function ProductCard({
 }: ProductCardProps) {
   const { addToCart } = useCart()
   const [addedToCart, setAddedToCart] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
   
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -76,11 +75,7 @@ export function ProductCard({
   const discountPercent = getDiscountPercent()
   
   return (
-    <div 
-      className="group rounded-xl overflow-hidden border border-gray-200 bg-white transition-all hover:shadow-md"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="group rounded-xl overflow-hidden border border-gray-200 bg-white transition-all hover:shadow-md">
       <div className="relative aspect-square w-full">
         <Link href={`/product/${id}`}>
           <div className="relative w-full h-full">
@@ -119,14 +114,6 @@ export function ProductCard({
       
       <div className="p-2 sm:p-3">
         <Link href={`/product/${id}`}>
-          {/* Store info */}
-          {isHovered && (
-            <div className="mb-1 flex items-center gap-1 animate-fade-in">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500"></div>
-              <p className="text-[10px] sm:text-xs text-gray-600">{storeName} • {storeDistance}</p>
-            </div>
-          )}
-          
           {/* Product name and quantity */}
           <div>
             <h3 className="font-medium text-xs sm:text-sm line-clamp-1 group-hover:text-pastel-orange transition-colors">{name}</h3>

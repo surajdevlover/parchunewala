@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { MapPin, Search, ShoppingCart, ChevronLeft, ChevronRight, Clock, Smile, User, LogIn, Store, ExternalLink, LogOut } from "lucide-react"
@@ -14,6 +14,7 @@ import { useAuth } from "@/lib/auth-context"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import Footer from "../footer/footer"
 import { useRouter } from "next/navigation"
+import { useMediaQuery } from "@/hooks/use-media-query"
 
 export default function HomeScreen() {
   const [location, setLocation] = useState("")
@@ -26,6 +27,7 @@ export default function HomeScreen() {
   const [showLocationPopup, setShowLocationPopup] = useState(false)
   const [showUserMenu, setShowUserMenu] = useState(false)
   const router = useRouter()
+  const isMobile = useMediaQuery("(max-width: 640px)")
 
   // Categories with icons
   const categories = [
@@ -222,6 +224,28 @@ export default function HomeScreen() {
           rating: 4.0,
           discount: "14% OFF",
           storeId: "3"
+        },
+        {
+          id: "s5",
+          name: "Bingo Mad Angles",
+          price: "₹30",
+          mrp: "₹35",
+          quantity: "130 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/bingo-mad-angles-achaari-masti.jpeg?height=100&width=100",
+          rating: 4.0,
+          discount: "14% OFF",
+          storeId: "3"
+        },
+        {
+          id: "s6",
+          name: "Bingo Mad Angles",
+          price: "₹30",
+          mrp: "₹35",
+          quantity: "130 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/bingo-mad-angles-achaari-masti.jpeg?height=100&width=100",
+          rating: 4.0,
+          discount: "14% OFF",
+          storeId: "3"
         }
       ]
     },
@@ -272,6 +296,28 @@ export default function HomeScreen() {
           rating: 4.6,
           discount: "10% OFF",
           storeId: "1"
+        },
+        {
+          id: "d5",
+          name: "Britannia Brown Bread",
+          price: "₹45",
+          mrp: "₹50",
+          quantity: "400 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/britannia-brown-bread.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "10% OFF",
+          storeId: "1"
+        },
+        {
+          id: "d6",
+          name: "Britannia Brown Bread",
+          price: "₹45",
+          mrp: "₹50",
+          quantity: "400 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/britannia-brown-bread.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "10% OFF",
+          storeId: "1"
         }
       ]
     },
@@ -314,6 +360,28 @@ export default function HomeScreen() {
         },
         {
           id: "b4",
+          name: "Pepsi Black",
+          price: "₹35",
+          mrp: "₹40",
+          quantity: "750 ml",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/pepsi-black.jpeg?height=100&width=100",
+          rating: 4.1,
+          discount: "12% OFF",
+          storeId: "3"
+        },
+        {
+          id: "b5",
+          name: "Pepsi Black",
+          price: "₹35",
+          mrp: "₹40",
+          quantity: "750 ml",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/pepsi-black.jpeg?height=100&width=100",
+          rating: 4.1,
+          discount: "12% OFF",
+          storeId: "3"
+        },
+        {
+          id: "b6",
           name: "Pepsi Black",
           price: "₹35",
           mrp: "₹40",
@@ -421,7 +489,9 @@ export default function HomeScreen() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
+              <div className={`${isMobile ? 'hidden' : 'block'}`}>
           <Logo size="md"/>
+              </div>
               
               <Link href="/location" className="flex items-center gap-1 text-gray-700 ml-4">
                 <MapPin size={16} className="text-pastel-orange" />
@@ -435,7 +505,7 @@ export default function HomeScreen() {
             </div>
 
             {/* Search Bar */}
-            <div className="flex-grow max-w-md mx-4">
+            <div className={`${isMobile ? 'hidden' : 'flex-grow max-w-md mx-4'}`}>
               <Link href="/search" className="relative w-full block">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
                   <Search size={18} className="text-gray-400" />
@@ -445,6 +515,15 @@ export default function HomeScreen() {
                 </div>
               </Link>
             </div>
+
+            {/* Mobile Search Button */}
+            {isMobile && (
+              <Link href="/search" className="mr-2">
+                <Button variant="ghost" size="icon" className="h-9 w-9">
+                  <Search size={20} className="text-gray-600" />
+                </Button>
+              </Link>
+            )}
 
             <div className="flex items-center gap-3">
               {isAuthenticated ? (
@@ -460,7 +539,7 @@ export default function HomeScreen() {
                     </Avatar>
                     <span className="text-sm font-medium text-gray-700 hidden md:inline">
                       {user?.name?.split(' ')[0] || 'User'}
-                    </span>
+                </span>
                   </button>
                   
                   {showUserMenu && (
@@ -487,11 +566,11 @@ export default function HomeScreen() {
                   <Button className="bg-pastel-orange text-white flex items-center gap-1">
                     <LogIn size={16} />
                     <span className="hidden md:inline">Login</span>
-                  </Button>
-                </Link>
+              </Button>
+            </Link>
               )}
 
-              <Link href="/cart">
+            <Link href="/cart">
                 <div className="relative">
                   <Button variant="outline" className="gap-2 h-9 bg-pastel-orange/10 border-pastel-orange text-pastel-orange hover:bg-pastel-orange/20">
                     <ShoppingCart size={18} />
@@ -732,7 +811,7 @@ export default function HomeScreen() {
               </Link>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
               {section.products.map(product => (
                 <ProductCard
                   key={product.id}

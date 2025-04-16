@@ -1,356 +1,305 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft, Eye, EyeOff, Loader2, LogOut, Info } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Logo } from "@/components/logo"
-import { useAuth } from "@/lib/auth-context"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useAuth } from '@/lib/auth-context'
+import Link from 'next/link'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Eye, EyeOff, ArrowLeft, Loader } from 'lucide-react'
+import { Logo } from '@/components/logo'
+import { Label } from '@/components/ui/label'
 
-// In a real app, these would be environment variables
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID"
-const FACEBOOK_APP_ID = "YOUR_FACEBOOK_APP_ID"
-
-export default function LoginScreen() {
-  const router = useRouter()
-  const { login, googleLogin, facebookLogin, logout, isLoading, isAuthenticated, user } = useAuth()
-  
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  })
-  
+export default function LoginPage() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState("")
-  const [socialLoading, setSocialLoading] = useState({
-    google: false,
-    facebook: false
-  })
-  const [justLoggedOut, setJustLoggedOut] = useState(false)
-  
+  const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const { login, socialLogin } = useAuth()
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const redirect = searchParams.get('redirect') || '/'
+
   useEffect(() => {
-    // Check if the user was redirected here after logout
-    const params = new URLSearchParams(window.location.search)
-    if (params.get('logout') === 'true') {
-      setJustLoggedOut(true)
-      // Auto clear the message after 3 seconds
-      const timer = setTimeout(() => setJustLoggedOut(false), 3000)
-      return () => clearTimeout(timer)
-    }
-    
-    // If already authenticated, show logout option
-    if (isAuthenticated) {
-      setJustLoggedOut(false)
-    }
-    
-    // Load Google API if needed (in a real app)
-    // const loadGoogleScript = () => {
-    //   const script = document.createElement('script')
-    //   script.src = 'https://accounts.google.com/gsi/client'
-    //   script.async = true
-    //   script.defer = true
-    //   document.body.appendChild(script)
-    //   return () => document.body.removeChild(script)
-    // }
-    
-    // Load Facebook API if needed (in a real app)
-    // const loadFacebookScript = () => {
-    //   const script = document.createElement('script')
-    //   script.src = 'https://connect.facebook.net/en_US/sdk.js'
-    //   script.async = true
-    //   script.defer = true
-    //   document.body.appendChild(script)
-    //   window.fbAsyncInit = () => {
-    //     window.FB.init({
-    //       appId: FACEBOOK_APP_ID,
-    //       cookie: true,
-    //       xfbml: true,
-    //       version: 'v18.0'
-    //     })
-    //   }
-    //   return () => document.body.removeChild(script)
-    // }
-    
-    // const googleCleanup = loadGoogleScript()
-    // const facebookCleanup = loadFacebookScript()
-    
-    // return () => {
-    //   googleCleanup()
-    //   facebookCleanup()
-    // }
-  }, [isAuthenticated])
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-    
-    // Clear error when user types
-    if (error) setError("")
-  }
-  
+    // Clear any existing errors when component mounts
+    setError('')
+  }, [])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError('')
+    setIsLoading(true)
+
+    try {
+      const success = await login(email, password)
+      if (success) {
+        router.push(redirect)
+      } else {
+        setError('Invalid email or password. Please try again.')
+      }
+    } catch (err) {
+      setError('An error occurred during login. Please try again.')
+      console.error(err)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleGoogleLogin = async () => {
+    setError('')
+    setIsLoading(true)
     
     try {
-      await login(formData.email, formData.password)
-      router.push("/home")
+      const success = await socialLogin('google')
+      if (success) {
+        router.push(redirect)
+      } else {
+        setError('Google login failed. Please try again.')
+      }
     } catch (err) {
-      setError("Invalid email or password")
-    }
-  }
-  
-  const handleGoogleLogin = async () => {
-    try {
-      setSocialLoading(prev => ({ ...prev, google: true }))
-      
-      // In a real app, you would use the Google API
-      // const googleUser = await new Promise((resolve) => {
-      //   window.google.accounts.id.initialize({
-      //     client_id: GOOGLE_CLIENT_ID,
-      //     callback: (response) => resolve(response)
-      //   })
-      //   window.google.accounts.id.prompt()
-      // })
-      
-      await googleLogin()
-      router.push("/home")
-    } catch (err) {
-      setError("Google login failed. Please try again.")
+      setError('An error occurred during Google login. Please try again.')
+      console.error(err)
     } finally {
-      setSocialLoading(prev => ({ ...prev, google: false }))
+      setIsLoading(false)
     }
   }
-  
+
   const handleFacebookLogin = async () => {
+    setError('')
+    setIsLoading(true)
+    
     try {
-      setSocialLoading(prev => ({ ...prev, facebook: true }))
-      
-      // In a real app, you would use the Facebook API
-      // const facebookUser = await new Promise((resolve, reject) => {
-      //   window.FB.login((response) => {
-      //     if (response.authResponse) {
-      //       resolve(response)
-      //     } else {
-      //       reject(new Error('Facebook login failed'))
-      //     }
-      //   }, { scope: 'email,public_profile' })
-      // })
-      
-      await facebookLogin()
-      router.push("/home")
+      const success = await socialLogin('facebook')
+      if (success) {
+        router.push(redirect)
+      } else {
+        setError('Facebook login failed. Please try again.')
+      }
     } catch (err) {
-      setError("Facebook login failed. Please try again.")
+      setError('An error occurred during Facebook login. Please try again.')
+      console.error(err)
     } finally {
-      setSocialLoading(prev => ({ ...prev, facebook: false }))
+      setIsLoading(false)
     }
   }
-  
-  const handleLogout = () => {
-    logout()
-    setJustLoggedOut(true)
-    // Add logout=true to the URL for state persistence
-    router.push('/login?logout=true')
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
   }
-  
-  const toggleShowPassword = () => {
-    setShowPassword(prev => !prev)
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  }
+
+  const handleBackClick = () => {
+    router.back()
   }
 
   return (
-    <main className="min-h-screen bg-white md:bg-cover" style={{ backgroundImage: 'url(/images/ncMILWfZIhGoAEK8QsFDsScGiRaQMsL0.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-10 bg-white border-b border-border px-4 py-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/home">
-              <Button variant="ghost" size="icon" className="h-9 w-9">
-                <ArrowLeft size={20} />
-              </Button>
-            </Link>
-          </div>
-          
-          {isAuthenticated && (
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button 
-                    variant="destructive" 
-                    size="sm" 
-                    onClick={handleLogout}
-                    className="bg-red-500 hover:bg-red-600"
-                  >
-                    <LogOut size={16} className="mr-2" />
-                    Logout
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>You are logged in as {user?.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          )}
-        </div>
-      </header>
+    <main className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 flex flex-col">
+      <div className="p-4 flex items-center">
+        <button 
+          onClick={handleBackClick} 
+          className="p-2 rounded-full hover:bg-white/60 transition-colors"
+        >
+          <ArrowLeft className="h-6 w-6 text-gray-700" />
+        </button>
+      </div>
 
-      <div className="container mx-auto px-4 pt-20 pb-10 flex flex-col min-h-screen">
-        <div className="flex-1 flex flex-col items-center justify-center max-w-md mx-auto w-full">
-          {justLoggedOut && (
-            <Alert className="mb-4 bg-green-50 border-green-200">
-              <AlertDescription className="flex items-center text-green-600">
-                <Info size={16} className="mr-2" />
-                You have been successfully logged out.
-              </AlertDescription>
-            </Alert>
-          )}
-          
-          <div className="bg-white/95 p-6 md:p-8 rounded-xl shadow-lg w-full backdrop-blur-sm">
-            <div className="mb-6 md:mb-8 text-center">
-              <Logo size="lg" className="mx-auto mb-4" />
-              <h1 className="text-xl md:text-2xl font-semibold mb-1">Welcome back</h1>
-              <p className="text-gray-500 text-sm md:text-base">Login to your account</p>
+      <motion.div 
+        className="flex flex-col items-center justify-center flex-1 px-4 py-12"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div 
+          className="w-full max-w-md"
+          variants={itemVariants}
+        >
+          <div className="mb-8 text-center">
+            <div className="mx-auto mb-4 image-reveal flex justify-center">
+              <Logo size="lg" />
             </div>
-            
-            {error && (
-              <div className="w-full p-3 mb-4 bg-red-50 text-red-600 text-sm rounded-md">
-                {error}
-              </div>
-            )}
-            
-            <form className="w-full space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email or Phone Number
-                </label>
+            <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome Back!</h1>
+            <p className="text-gray-600">Log in to your account to continue shopping</p>
+          </div>
+
+          {error && (
+            <motion.div 
+              className="bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded-lg mb-4"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {error}
+            </motion.div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <motion.div 
+              className="space-y-2"
+              variants={itemVariants}
+            >
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                Email Address
+              </label>
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email address"
+                required
+                className="w-full px-4 py-2 border rounded-lg focus:ring-pastel-orange focus:border-pastel-orange"
+              />
+            </motion.div>
+
+            <motion.div 
+              className="space-y-2"
+              variants={itemVariants}
+            >
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                Password
+              </label>
+              <div className="relative">
                 <Input
-                  type="text"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email or phone"
-                  value={formData.email}
-                  onChange={handleChange}
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
                   required
-                  className="w-full"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-pastel-orange focus:border-pastel-orange pr-10"
                 />
+                <button
+                  type="button"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? (
+                    <EyeOff className="h-5 w-5 text-gray-400" />
+                  ) : (
+                    <Eye className="h-5 w-5 text-gray-400" />
+                  )}
+                </button>
               </div>
-              
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                  Password
-                </label>
-                <div className="relative">
-                  <Input
-                    type={showPassword ? "text" : "password"}
-                    id="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    required
-                    className="w-full pr-10"
-                  />
-                  <button
-                    type="button"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
-                    onClick={toggleShowPassword}
-                  >
-                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </button>
-                </div>
-                <div className="flex justify-end mt-1">
-                  <Link href="/forgot-password" className="text-xs text-pastel-orange">
-                    Forgot Password?
-                  </Link>
-                </div>
+              <div className="flex justify-end">
+                <Link 
+                  href="/forgot-password" 
+                  className="text-sm text-pastel-orange hover:underline"
+                >
+                  Forgot Password?
+                </Link>
               </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-pastel-orange text-white h-11"
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <Button
+                type="submit"
+                className="w-full bg-pastel-orange hover:bg-pastel-orange/90 text-white font-medium py-2 px-4 rounded-lg transition-colors"
                 disabled={isLoading}
               >
                 {isLoading ? (
                   <>
-                    <Loader2 size={18} className="animate-spin mr-2" />
+                    <Loader className="mr-2 h-4 w-4 animate-spin" />
                     Logging in...
                   </>
-                ) : (
-                  'Login'
-                )}
+                ) : 'Log In'}
               </Button>
-            </form>
-            
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 text-sm">
-                Don&apos;t have an account?{" "}
-                <Link href="/register" className="text-pastel-orange font-medium">
-                  Sign up
-                </Link>
-              </p>
-            </div>
-            
-            <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 w-full">
-              <p className="text-center text-gray-500 text-sm mb-4">Or continue with</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Button 
-                  variant="outline" 
-                  className="h-11"
-                  onClick={handleGoogleLogin}
-                  disabled={socialLoading.google || isLoading}
-                >
-                  {socialLoading.google ? (
-                    <Loader2 size={18} className="animate-spin mr-2" />
-                  ) : (
-                    <Image 
-                      src="/images/google.svg" 
-                      alt="Google" 
-                      width={20} 
-                      height={20} 
-                      className="mr-2"
-                    />
-                  )}
-                  Sign in with Google
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="h-11"
-                  onClick={handleFacebookLogin}
-                  disabled={socialLoading.facebook || isLoading}
-                >
-                  {socialLoading.facebook ? (
-                    <Loader2 size={18} className="animate-spin mr-2" />
-                  ) : (
-                    <Image 
-                      src="/images/facebook.svg" 
-                      alt="Facebook" 
-                      width={20} 
-                      height={20} 
-                      className="mr-2"
-                    />
-                  )}
-                  Sign in with Facebook
-                </Button>
+            </motion.div>
+          </form>
+
+          <motion.div 
+            className="mt-6 text-center"
+            variants={itemVariants}
+          >
+            <p className="text-gray-600">
+              Don't have an account?{' '}
+              <Link href="/register" className="text-pastel-orange hover:underline">
+                Register Now
+              </Link>
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="mt-8"
+            variants={itemVariants}
+          >
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-gradient-to-br from-orange-50 to-amber-50 text-gray-500">
+                  Or continue with
+                </span>
               </div>
             </div>
-            
-            <div className="mt-6 text-center text-xs text-gray-500">
-              <p>By continuing, you agree to our</p>
-              <div className="flex justify-center gap-2 mt-1">
-                <Link href="/terms" className="text-pastel-orange">Terms of Service</Link>
-                <span>&</span>
-                <Link href="/privacy" className="text-pastel-orange">Privacy Policy</Link>
-              </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-3">
+              <Button 
+                variant="outline"
+                type="button"
+                className="w-full border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 rounded-lg"
+                onClick={handleGoogleLogin}
+                disabled={isLoading}
+              >
+                <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                  <path
+                    d="M23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96h-3.98v3.09c1.97 3.92 6.02 6.62 10.71 6.62z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.525 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29v-3.09h-3.98c-.8 1.61-1.26 3.43-1.26 5.38s.46 3.77 1.26 5.38l3.98-3.09z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42c-2.08-1.94-4.79-3.13-8.02-3.13-4.69 0-8.74 2.7-10.71 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                Google
+              </Button>
+              <Button 
+                variant="outline"
+                type="button"
+                className="w-full border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 rounded-lg"
+                onClick={handleFacebookLogin}
+                disabled={isLoading}
+              >
+                <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                  <path
+                    fill="#1877F2"
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+                Facebook
+              </Button>
             </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </main>
   )
 }

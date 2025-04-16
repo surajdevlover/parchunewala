@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Trash2, Plus, Minus, ChevronDown, ChevronUp } from "lucide-react"
@@ -15,6 +15,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { useRouter } from "next/navigation"
+import { useLogin } from "@/components/login-check"
+import { SharedHeader } from "@/components/shared-header"
 
 export default function CartScreen() {
   const { 
@@ -24,10 +26,29 @@ export default function CartScreen() {
     cartTotal,
     totalItems,
     viewProductStores,
-    updateProductStore
+    updateProductStore,
+    clearCart
   } = useCart()
   
+  const { isLoggedIn, requireLogin } = useLogin()
   const [expandedStores, setExpandedStores] = useState<Record<string, boolean>>({})
+  
+  // Clear all default cart items immediately on mount
+  useEffect(() => {
+    // First page load only - check if we need to clear default cart items
+    const userAddedItems = localStorage.getItem('user_added_cart_items');
+    
+    if (!userAddedItems && cartItems.length > 0) {
+      // This is the first load and there are items in cart that weren't explicitly added
+      clearCart();
+      console.log("Cleared default cart items");
+    }
+    
+    // Set flag so we don't clear again
+    if (!userAddedItems) {
+      localStorage.setItem('user_added_cart_items', 'true');
+    }
+  }, [clearCart, cartItems.length]);
   
   const toggleStoreExpand = (productId: string) => {
     setExpandedStores(prev => ({
@@ -58,22 +79,17 @@ export default function CartScreen() {
   }
 
   const router = useRouter()
+  
+  const handleProceedToCheckout = () => {
+    if (requireLogin('cart')) {
+      router.push('/checkout')
+    }
+  }
 
   return (
     <main className="flex min-h-screen flex-col bg-gray-50">
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-white border-b border-border px-4 py-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Link href="/home">
-              <Button variant="ghost" size="icon" className="h-9 w-9">
-                <ArrowLeft size={20} />
-              </Button>
-            </Link>
-            <h1 className="text-lg font-medium text-dark-grey">Your Cart ({totalItems()})</h1>
-          </div>
-        </div>
-      </header>
+      <SharedHeader title={`Your Cart (${totalItems()})`} showBackButton={true} />
 
       {cartItems.length === 0 ? (
         <div className="flex flex-col items-center justify-center flex-1 p-6">
@@ -327,7 +343,7 @@ export default function CartScreen() {
               
               <Button 
                 className="w-full bg-pastel-orange text-white mt-4 py-6 text-base font-medium hover:bg-pastel-orange/90"
-                onClick={() => router.push('/checkout')}
+                onClick={handleProceedToCheckout}
               >
                 Proceed to Checkout • {(() => {
                   const itemsTotal = parseFloat(cartTotal().replace('₹', ''))

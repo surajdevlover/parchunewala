@@ -31,7 +31,7 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-gray-900 mb-3">ParchuneWala</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-gray-600 hover:text-pastel-orange">About Us</Link></li>
+              <li><Link href="/about-us" className="text-gray-600 hover:text-pastel-orange">About Us</Link></li>
               <li><Link href="/careers" className="text-gray-600 hover:text-pastel-orange">Careers</Link></li>
               <li><Link href="/blog" className="text-gray-600 hover:text-pastel-orange">Blog</Link></li>
               <li><Link href="/press" className="text-gray-600 hover:text-pastel-orange">Press</Link></li>
@@ -42,9 +42,9 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-gray-900 mb-3">For Partners</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/partner" className="text-gray-600 hover:text-pastel-orange">Partner with us</Link></li>
-              <li><Link href="/seller" className="text-gray-600 hover:text-pastel-orange">Become a Seller</Link></li>
-              <li><Link href="/deliver" className="text-gray-600 hover:text-pastel-orange">Delivery Partner</Link></li>
+              <li><Link href="/partner-with-us" className="text-gray-600 hover:text-pastel-orange">Partner with us</Link></li>
+              <li><Link href="/become-seller" className="text-gray-600 hover:text-pastel-orange">Become a Seller</Link></li>
+              <li><Link href="/delivery-partner" className="text-gray-600 hover:text-pastel-orange">Delivery Partner</Link></li>
               <li><Link href="/franchise" className="text-gray-600 hover:text-pastel-orange">Franchise</Link></li>
             </ul>
           </div>
@@ -54,7 +54,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li><Link href="/privacy" className="text-gray-600 hover:text-pastel-orange">Privacy</Link></li>
               <li><Link href="/terms" className="text-gray-600 hover:text-pastel-orange">Terms</Link></li>
-              <li><Link href="/faq" className="text-gray-600 hover:text-pastel-orange">FAQs</Link></li>
+              <li><Link href="/faqs" className="text-gray-600 hover:text-pastel-orange">FAQs</Link></li>
               <li><Link href="/security" className="text-gray-600 hover:text-pastel-orange">Security</Link></li>
             </ul>
           </div>
@@ -79,9 +79,9 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} ParchuneWala. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0 text-sm text-gray-500">
-            <a href="#" className="hover:text-pastel-orange">Privacy Policy</a>
-            <a href="#" className="hover:text-pastel-orange">Terms of Service</a>
-            <a href="#" className="hover:text-pastel-orange">Cookie Policy</a>
+            <Link href="/privacy-policy" className="hover:text-pastel-orange">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-pastel-orange">Terms of Service</Link>
+            <Link href="/cookie-policy" className="hover:text-pastel-orange">Cookie Policy</Link>
           </div>
         </div>
       </div>

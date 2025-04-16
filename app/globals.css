@@ -180,11 +180,31 @@
 }
 
 @keyframes float {
-  0%, 100% { 
-    transform: translateY(0) rotate(0deg); 
+  0%, 100% {
+    transform: translateY(0);
   }
-  50% { 
-    transform: translateY(-20px) rotate(5deg); 
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Shimmer Loading Animation */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  transform: translateX(-100%);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
@@ -220,12 +240,5 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/* Responsive UI Classes */
 

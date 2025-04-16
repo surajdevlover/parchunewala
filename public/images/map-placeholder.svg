@@ -1,0 +1,7 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#E0E0E0" />
+  <rect x="50" y="50" width="700" height="400" fill="#C5E1A5" stroke="#81C784" stroke-width="2" />
+  <circle cx="300" cy="250" r="10" fill="#F44336" stroke="#D32F2F" stroke-width="2" />
+  <path d="M150,150 L250,100 L400,200 L350,350 L200,300 Z" fill="#90CAF9" stroke="#1976D2" stroke-width="2" />
+  <text x="50%" y="50%" font-family="Arial" font-size="36" text-anchor="middle" fill="#424242">Map Placeholder</text>
+</svg> 

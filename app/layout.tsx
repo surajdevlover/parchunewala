@@ -2,9 +2,12 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import "./animations.css"
 import { CompareProvider } from "@/lib/compare-context"
 import { CartProvider } from "@/lib/cart-context"
 import { AuthProvider } from "@/lib/auth-context"
+import { WishlistProvider } from "@/lib/wishlist-context"
+import { LoginProvider } from "@/components/login-check"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -30,7 +33,11 @@ export default function RootLayout({
         <AuthProvider>
           <CartProvider>
             <CompareProvider>
-              {children}
+              <WishlistProvider>
+                <LoginProvider>
+                  {children}
+                </LoginProvider>
+              </WishlistProvider>
             </CompareProvider>
           </CartProvider>
         </AuthProvider>

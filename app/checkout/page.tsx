@@ -10,11 +10,14 @@ import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { SharedHeader } from "@/components/shared-header"
 
 export default function CheckoutPage() {
   const router = useRouter()
   const { cartItems, cartTotal, clearCart } = useCart()
-  const [step, setStep] = useState<'address' | 'payment' | 'summary'>('address')
+  const [step, setStep] = useState(1)
   const [deliveryOption, setDeliveryOption] = useState<'standard' | 'express'>('standard')
   const [paymentMethod, setPaymentMethod] = useState<'online' | 'cod'>('online')
   const [loading, setLoading] = useState(false)
@@ -98,391 +101,572 @@ export default function CheckoutPage() {
     }, 1500)
   }
   
-  const renderAddressSelection = () => (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Delivery Address</h2>
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 }
+    }
+  }
+  
+  // Sample cart items data
+  const sampleCartItems = [
+    {
+      id: "p1",
+      name: "Basmati Rice Premium",
+      image: "/images/products/basmati-rice.jpg",
+      price: 149,
+      quantity: 2,
+      weight: "1 kg"
+    },
+    {
+      id: "p23",
+      name: "Dark Chocolate Bar",
+      image: "/images/products/chocolate.jpg",
+      price: 120,
+      quantity: 1,
+      weight: "100 g"
+    }
+  ];
+  
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <SharedHeader title="Checkout" showBackButton={true} />
       
-      <div className="space-y-3">
-        {addresses.map((address) => (
-          <div 
-            key={address.id}
-            className={`border rounded-lg p-3 ${
-              selectedAddress.id === address.id ? 'border-pastel-orange bg-pastel-orange/5' : 'border-gray-200'
-            }`}
-            onClick={() => setSelectedAddress(address)}
-          >
-            <div className="flex items-start justify-between">
-              <div className="flex gap-2">
-                <div className={`p-1.5 rounded-full ${
-                  address.type === 'home' ? 'bg-blue-100' : 'bg-purple-100'
-                }`}>
-                  {address.type === 'home' ? 
-                    <Home size={16} className="text-blue-600" /> : 
-                    <Briefcase size={16} className="text-purple-600" />
-                  }
+      <div className="container mx-auto px-4 py-6">
+        {/* Step indicator */}
+        {step < 4 && (
+          <div className="mb-6">
+            <div className="flex items-center justify-between max-w-xl mx-auto">
+              <div className={`flex flex-col items-center ${step >= 1 ? 'text-primary' : 'text-gray-400'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mb-1 ${step >= 1 ? 'bg-primary text-white' : 'bg-gray-200'}`}>
+                  1
                 </div>
+                <span className="text-xs">Address</span>
+              </div>
+              
+              <div className={`flex-1 h-1 mx-2 ${step >= 2 ? 'bg-primary' : 'bg-gray-200'}`} />
+              
+              <div className={`flex flex-col items-center ${step >= 2 ? 'text-primary' : 'text-gray-400'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mb-1 ${step >= 2 ? 'bg-primary text-white' : 'bg-gray-200'}`}>
+                  2
+                </div>
+                <span className="text-xs">Payment</span>
+              </div>
+              
+              <div className={`flex-1 h-1 mx-2 ${step >= 3 ? 'bg-primary' : 'bg-gray-200'}`} />
+              
+              <div className={`flex flex-col items-center ${step >= 3 ? 'text-primary' : 'text-gray-400'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mb-1 ${step >= 3 ? 'bg-primary text-white' : 'bg-gray-200'}`}>
+                  3
+                </div>
+                <span className="text-xs">Review</span>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Content based on step */}
+        {step === 1 && (
+          <motion.div
+            className="grid md:grid-cols-3 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="md:col-span-2">
+              <motion.div 
+                className="bg-white rounded-lg shadow-sm p-4 mb-6"
+                variants={itemVariants}
+              >
+                <h2 className="text-lg font-medium mb-4">Delivery Address</h2>
                 
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-sm">{address.name}</h3>
-                    {address.isDefault && (
-                      <Badge variant="outline" className="text-[10px] px-1 py-0">Default</Badge>
-                    )}
+                <RadioGroup 
+                  value={selectedAddress.id} 
+                  onValueChange={(value) => setSelectedAddress(addresses.find(a => a.id === value) || addresses[0])}
+                  className="space-y-4"
+                >
+                  {addresses.map(address => (
+                    <div 
+                      key={address.id} 
+                      className={`border rounded-lg p-4 transition-colors ${selectedAddress.id === address.id ? 'border-primary' : 'border-gray-200'}`}
+                    >
+                      <div className="flex gap-2">
+                        <RadioGroupItem id={address.id} value={address.id} />
+                        <div className="flex-1">
+                          <div className="flex justify-between">
+                            <Label htmlFor={address.id} className="font-medium">
+                              {address.name}
+                            </Label>
+                            <span className="text-xs bg-gray-100 px-2 py-0.5 rounded">
+                              {address.type}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 mt-1">
+                            {address.address}, {address.city}, {address.pincode}
+                          </p>
+                          <p className="text-sm text-gray-600 mt-1">
+                            {address.isDefault && (
+                              <Badge variant="outline" className="text-[10px] px-1 py-0">Default</Badge>
+                            )}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </RadioGroup>
+                
+                <Button 
+                  variant="outline" 
+                  className="w-full mt-4 border-dashed"
+                  onClick={() => { /* Would open address form */ }}
+                >
+                  <Plus size={16} className="mr-2" />
+                  Add New Address
+                </Button>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-white rounded-lg shadow-sm p-4 mb-6"
+                variants={itemVariants}
+              >
+                <h2 className="text-lg font-medium mb-4">Delivery Time</h2>
+                
+                <RadioGroup 
+                  defaultValue="standard"
+                  value={deliveryOption}
+                  onValueChange={(value) => setDeliveryOption(value as 'standard' | 'express')}
+                  className="space-y-3"
+                >
+                  <div className="border rounded-lg p-3">
+                    <div className="flex gap-2">
+                      <RadioGroupItem id="standard" value="standard" />
+                      <div className="flex-1">
+                        <Label htmlFor="standard" className="font-medium flex items-center">
+                          <Clock className="h-4 w-4 mr-2 text-primary" />
+                          Standard Delivery (30-45 min)
+                        </Label>
+                        <p className="text-sm text-gray-600 mt-1">
+                          Your order will be delivered within 30-45 minutes
+                        </p>
+                      </div>
+                      <div className="text-green-600 font-medium">
+                        Free
+                      </div>
+                    </div>
                   </div>
                   
-                  <p className="text-sm text-gray-600">{address.address}</p>
-                  <p className="text-sm text-gray-600">{address.city}, {address.pincode}</p>
+                  <div className="border border-gray-200 rounded-lg p-3 bg-gray-50">
+                    <div className="flex gap-2">
+                      <RadioGroupItem id="express" value="express" />
+                      <div className="flex-1">
+                        <Label htmlFor="express" className="font-medium flex items-center text-gray-400">
+                          <Clock className="h-4 w-4 mr-2" />
+                          Express Delivery (15-20 min)
+                        </Label>
+                        <p className="text-sm text-gray-400 mt-1">
+                          Additional ₹30
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </RadioGroup>
+              </motion.div>
+            </div>
+            
+            <div className="md:col-span-1">
+              <OrderSummary 
+                items={cartItems}
+                subtotal={calculateSubtotal()}
+                deliveryFee={calculateDeliveryFee()}
+                total={calculateTotal()}
+              />
+              
+              <motion.div variants={itemVariants}>
+                <Button 
+                  className="w-full mt-4"
+                  onClick={() => setStep(2)}
+                >
+                  Continue to Payment
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+        
+        {step === 2 && (
+          <motion.div
+            className="grid md:grid-cols-3 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="md:col-span-2">
+              <motion.div 
+                className="bg-white rounded-lg shadow-sm p-4 mb-6"
+                variants={itemVariants}
+              >
+                <h2 className="text-lg font-medium mb-4">Payment Method</h2>
+                
+                <Tabs defaultValue="online" className="w-full">
+                  <TabsList className="grid w-full grid-cols-2 mb-4">
+                    <TabsTrigger value="online">Online Payment</TabsTrigger>
+                    <TabsTrigger value="cod">Cash on Delivery</TabsTrigger>
+                  </TabsList>
+                  
+                  <TabsContent value="online" className="space-y-4">
+                    <RadioGroup 
+                      defaultValue="upi"
+                      className="space-y-3"
+                    >
+                      <div className="border rounded-lg p-3">
+                        <div className="flex gap-2">
+                          <RadioGroupItem id="upi" value="upi" />
+                          <div className="flex-1">
+                            <Label htmlFor="upi" className="font-medium">
+                              UPI
+                            </Label>
+                            <p className="text-sm text-gray-600 mt-1">
+                              Pay using UPI apps like Google Pay, PhonePe, etc.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="border rounded-lg p-3">
+                        <div className="flex gap-2">
+                          <RadioGroupItem id="card" value="card" />
+                          <div className="flex-1">
+                            <Label htmlFor="card" className="font-medium">
+                              Credit/Debit Card
+                            </Label>
+                            <p className="text-sm text-gray-600 mt-1">
+                              Pay using Visa, Mastercard, RuPay or any other card
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="border rounded-lg p-3">
+                        <div className="flex gap-2">
+                          <RadioGroupItem id="netbanking" value="netbanking" />
+                          <div className="flex-1">
+                            <Label htmlFor="netbanking" className="font-medium">
+                              Net Banking
+                            </Label>
+                            <p className="text-sm text-gray-600 mt-1">
+                              Pay through your bank account
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </RadioGroup>
+                  </TabsContent>
+                  
+                  <TabsContent value="cod">
+                    <div className="border rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-primary/10 p-2 rounded-full">
+                          <Wallet className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-medium">Cash on Delivery</h3>
+                          <p className="text-sm text-gray-600 mt-1">
+                            Pay with cash when your order is delivered.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </motion.div>
+            </div>
+            
+            <div className="md:col-span-1">
+              <OrderSummary 
+                items={cartItems}
+                subtotal={calculateSubtotal()}
+                deliveryFee={calculateDeliveryFee()}
+                total={calculateTotal()}
+              />
+              
+              <motion.div 
+                className="flex flex-col gap-3 mt-4"
+                variants={itemVariants}
+              >
+                <Button 
+                  className="w-full"
+                  onClick={() => setStep(3)}
+                >
+                  Review Order
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => setStep(1)}
+                >
+                  Back to Address
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+        
+        {step === 3 && (
+          <motion.div
+            className="grid md:grid-cols-3 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="md:col-span-2">
+              <motion.div 
+                className="bg-white rounded-lg shadow-sm p-4 mb-6"
+                variants={itemVariants}
+              >
+                <h2 className="text-lg font-medium mb-4">Order Details</h2>
+                
+                <div className="space-y-4">
+                  {cartItems.map(item => (
+                    <div key={item.product.id} className="flex gap-3 border-b pb-4">
+                      <div className="relative h-16 w-16 rounded-md overflow-hidden bg-gray-100 flex-shrink-0">
+                        <Image 
+                          src={item.product.image || ""} 
+                          alt={item.product.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-medium text-sm">{item.product.name}</h3>
+                        <p className="text-xs text-gray-500 mb-1">{item.product.weight}</p>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm">₹{item.product.price} × {item.quantity}</span>
+                          <span className="font-medium">₹{item.product.price * item.quantity}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                className="grid md:grid-cols-2 gap-4 mb-6"
+                variants={itemVariants}
+              >
+                <div className="bg-white rounded-lg shadow-sm p-4">
+                  <h3 className="text-sm font-medium mb-2 flex items-center">
+                    <MapPin className="h-4 w-4 mr-2 text-primary" />
+                    Delivery Address
+                  </h3>
+                  
+                  <div className="text-sm text-gray-600">
+                    <p className="font-medium">
+                      {selectedAddress.name}
+                    </p>
+                    <p>
+                      {selectedAddress.address}, {selectedAddress.city}, {selectedAddress.pincode}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg shadow-sm p-4">
+                  <h3 className="text-sm font-medium mb-2 flex items-center">
+                    <Clock className="h-4 w-4 mr-2 text-primary" />
+                    Delivery Time
+                  </h3>
+                  
+                  <div className="text-sm text-gray-600">
+                    <p>
+                      {getCurrentTime()} - {getDeliveryTime()}
+                    </p>
+                    <p className="mt-1">
+                      {deliveryOption === 'express' ? 'Express delivery (15-20 min)' : 'Standard delivery (30-45 min)'}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+            
+            <div className="md:col-span-1">
+              <OrderSummary 
+                items={cartItems}
+                subtotal={calculateSubtotal()}
+                deliveryFee={calculateDeliveryFee()}
+                total={calculateTotal()}
+                showItems={false}
+              />
+              
+              <motion.div 
+                className="flex flex-col gap-3 mt-4"
+                variants={itemVariants}
+              >
+                <Button 
+                  className="w-full"
+                  onClick={handlePlaceOrder}
+                  disabled={loading}
+                >
+                  {loading ? "Processing..." : "Place Order"}
+                </Button>
+                
+                <Button 
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => setStep(2)}
+                  disabled={loading}
+                >
+                  Back to Payment
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+        
+        {step === 4 && (
+          <motion.div
+            className="max-w-md mx-auto"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="bg-white rounded-lg shadow-sm p-6 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Check size={24} className="text-green-600" />
+              </div>
+              
+              <h2 className="text-xl font-semibold mb-2">Order Placed Successfully!</h2>
+              <p className="text-gray-600 mb-6">
+                Your order has been placed successfully and will be delivered within 15-30 minutes.
+              </p>
+              
+              <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                <div className="flex justify-between mb-2">
+                  <span className="text-gray-600">Order ID</span>
+                  <span className="font-medium">#ORD12345678</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Estimated Delivery</span>
+                  <span className="font-medium">15-30 minutes</span>
                 </div>
               </div>
               
-              {selectedAddress.id === address.id && (
-                <div className="h-5 w-5 bg-pastel-orange rounded-full flex items-center justify-center">
-                  <Check size={12} className="text-white" />
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-        
-        <Button 
-          variant="outline" 
-          className="w-full border-dashed border-gray-300 py-6"
-          onClick={() => { /* Would open address form */ }}
-        >
-          <Plus size={16} className="mr-2" />
-          Add New Address
-        </Button>
-      </div>
-      
-      <div>
-        <h3 className="text-sm font-medium mb-2">Delivery Options</h3>
-        <RadioGroup 
-          defaultValue="standard" 
-          value={deliveryOption}
-          onValueChange={(value) => setDeliveryOption(value as 'standard' | 'express')}
-          className="space-y-2"
-        >
-          <div className="flex items-center space-x-2 border rounded-lg p-3">
-            <RadioGroupItem value="standard" id="standard" />
-            <Label htmlFor="standard" className="flex-1">
-              <div className="flex justify-between w-full">
-                <span>Standard Delivery</span>
-                <span className="font-medium">₹15</span>
-              </div>
-              <p className="text-xs text-gray-500">Delivered in 30-45 minutes</p>
-            </Label>
-          </div>
-          
-          <div className="flex items-center space-x-2 border rounded-lg p-3">
-            <RadioGroupItem value="express" id="express" />
-            <Label htmlFor="express" className="flex-1">
-              <div className="flex justify-between w-full">
-                <span className="text-pastel-orange font-medium">Express Delivery</span>
-                <span className="font-medium">₹30</span>
-              </div>
-              <p className="text-xs text-gray-500">Delivered in 15-20 minutes</p>
-            </Label>
-          </div>
-        </RadioGroup>
-      </div>
-      
-      <Button 
-        className="w-full bg-pastel-orange text-white mt-6"
-        onClick={() => setStep('payment')}
-      >
-        Proceed to Payment
-      </Button>
-    </div>
-  )
-  
-  const renderPaymentMethods = () => (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Payment Method</h2>
-      
-      <RadioGroup 
-        defaultValue="online" 
-        value={paymentMethod}
-        onValueChange={(value) => setPaymentMethod(value as 'online' | 'cod')}
-        className="space-y-3"
-      >
-        <div className="flex items-center space-x-2 border rounded-lg p-3">
-          <RadioGroupItem value="online" id="online" />
-          <Label htmlFor="online" className="flex items-center gap-2 flex-1">
-            <div className="bg-blue-100 p-1.5 rounded-full">
-              <CreditCard size={16} className="text-blue-600" />
-            </div>
-            <div>
-              <span>Online Payment</span>
-              <p className="text-xs text-gray-500">UPI, Credit/Debit cards, Wallets</p>
-            </div>
-          </Label>
-        </div>
-        
-        <div className="flex items-center space-x-2 border rounded-lg p-3">
-          <RadioGroupItem value="cod" id="cod" />
-          <Label htmlFor="cod" className="flex items-center gap-2 flex-1">
-            <div className="bg-green-100 p-1.5 rounded-full">
-              <Wallet size={16} className="text-green-600" />
-            </div>
-            <span>Cash on Delivery</span>
-          </Label>
-        </div>
-      </RadioGroup>
-      
-      <div className="pt-4 border-t mt-6">
-        <h3 className="text-sm font-medium mb-3">Order Summary</h3>
-        
-        <div className="space-y-2 text-sm">
-          <div className="flex justify-between">
-            <span className="text-gray-600">Subtotal</span>
-            <span>₹{calculateSubtotal()}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600">Delivery Fee</span>
-            <span>₹{calculateDeliveryFee()}</span>
-          </div>
-          <div className="flex justify-between font-medium pt-2 border-t">
-            <span>Total</span>
-            <span>₹{calculateTotal()}</span>
-          </div>
-        </div>
-      </div>
-      
-      <div className="flex gap-3 mt-6">
-        <Button 
-          variant="outline" 
-          className="flex-1"
-          onClick={() => setStep('address')}
-        >
-          Back
-        </Button>
-        <Button 
-          className="flex-1 bg-pastel-orange text-white"
-          onClick={() => setStep('summary')}
-        >
-          Review Order
-        </Button>
-      </div>
-    </div>
-  )
-  
-  const renderOrderSummary = () => (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Order Summary</h2>
-      
-      <div className="bg-gray-50 rounded-lg p-3">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <MapPin size={16} className="text-gray-500" />
-            <span className="font-medium text-sm">Delivery Address</span>
-          </div>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="h-7 text-pastel-orange"
-            onClick={() => setStep('address')}
-          >
-            Change
-          </Button>
-        </div>
-        <p className="text-sm text-gray-600">{selectedAddress.address}</p>
-        <p className="text-sm text-gray-600">{selectedAddress.city}, {selectedAddress.pincode}</p>
-      </div>
-      
-      <div className="bg-gray-50 rounded-lg p-3">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <Clock size={16} className="text-gray-500" />
-            <span className="font-medium text-sm">Delivery Time</span>
-          </div>
-        </div>
-        <p className="text-sm text-gray-600">
-          {getCurrentTime()} - {getDeliveryTime()}
-        </p>
-        <p className="text-xs text-gray-500 mt-1">
-          {deliveryOption === 'express' ? 'Express delivery (15-20 min)' : 'Standard delivery (30-45 min)'}
-        </p>
-      </div>
-      
-      <div className="bg-gray-50 rounded-lg p-3">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <CreditCard size={16} className="text-gray-500" />
-            <span className="font-medium text-sm">Payment Method</span>
-          </div>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="h-7 text-pastel-orange"
-            onClick={() => setStep('payment')}
-          >
-            Change
-          </Button>
-        </div>
-        <p className="text-sm text-gray-600">
-          {paymentMethod === 'online' ? 'Online Payment' : 'Cash on Delivery'}
-        </p>
-      </div>
-      
-      <div className="border rounded-lg divide-y">
-        <div className="p-3">
-          <h3 className="font-medium text-sm mb-3">Items ({cartItems.length})</h3>
-          
-          <div className="space-y-3">
-            {Object.entries(storeGroups).map(([storeId, items]) => (
-              <div key={storeId}>
-                <p className="text-xs text-gray-500 mb-2">{items[0].storeName}</p>
+              <div className="flex flex-col gap-3">
+                <Button 
+                  onClick={() => router.push('/orders')}
+                >
+                  Track Order
+                </Button>
                 
-                {items.map(item => (
-                  <div key={item.product.id} className="flex gap-2 py-1">
-                    <div className="relative w-10 h-10 rounded overflow-hidden flex-shrink-0">
-                      <Image 
-                        src={item.product.image || ""} 
-                        alt={item.product.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <div className="flex justify-between">
-                        <p className="text-sm line-clamp-1">{item.product.name}</p>
-                        <p className="text-sm font-medium">{item.product.price}</p>
-                      </div>
-                      <div className="flex justify-between text-xs text-gray-500">
-                        <span>{item.product.quantity} × {item.quantity}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                <Button 
+                  variant="outline"
+                  onClick={() => router.push('/')}
+                >
+                  Continue Shopping
+                </Button>
               </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="p-3">
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Subtotal</span>
-              <span>₹{calculateSubtotal()}</span>
             </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Delivery Fee</span>
-              <span>₹{calculateDeliveryFee()}</span>
-            </div>
-            <div className="flex justify-between font-medium pt-2 border-t">
-              <span>Total</span>
-              <span>₹{calculateTotal()}</span>
-            </div>
-          </div>
-        </div>
+          </motion.div>
+        )}
       </div>
       
-      <div className="flex gap-3 mt-6">
-        <Button 
-          variant="outline" 
-          className="flex-1"
-          onClick={() => setStep('payment')}
-        >
-          Back
-        </Button>
-        <Button 
-          className="flex-1 bg-pastel-orange text-white"
-          onClick={handlePlaceOrder}
-          disabled={loading}
-        >
-          {loading ? 'Processing...' : 'Place Order'}
-        </Button>
+      {/* Trust indicators */}
+      <div className="bg-white border-t mt-8 py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex items-center gap-2">
+              <Check size={16} className="text-primary" />
+              <span className="text-sm">Secure Payment</span>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <Home size={16} className="text-primary" />
+              <span className="text-sm">Fast Delivery</span>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-primary" />
+              <span className="text-sm">Quick 15-30 min Delivery</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
-  
-  return (
-    <main className="flex min-h-screen flex-col bg-gray-50">
-      {/* Header */}
-      <header className="sticky top-0 z-10 bg-white border-b border-border px-4 py-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="h-9 w-9"
-              onClick={() => {
-                if (step === 'address') {
-                  router.push('/cart')
-                } else if (step === 'payment') {
-                  setStep('address')
-                } else {
-                  setStep('payment')
-                }
-              }}
-            >
-              <ArrowLeft size={20} />
-            </Button>
-            <h1 className="text-lg font-medium text-dark-grey">
-              {step === 'address' ? 'Delivery Details' : 
-               step === 'payment' ? 'Payment' : 'Order Summary'}
-            </h1>
-          </div>
-        </div>
-      </header>
+}
 
-      <div className="container max-w-md mx-auto px-4 py-6">
-        <div className="flex justify-between mb-6 text-sm">
-          <div className="flex flex-col items-center">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              step === 'address' || step === 'payment' || step === 'summary' 
-                ? 'bg-pastel-orange text-white' 
-                : 'bg-gray-200 text-gray-500'
-            }`}>
-              1
+// Order summary component
+function OrderSummary({ 
+  items, 
+  subtotal, 
+  deliveryFee, 
+  total,
+  showItems = true 
+}: { 
+  items: any[]; 
+  subtotal: number; 
+  deliveryFee: number; 
+  total: number;
+  showItems?: boolean;
+}) {
+  return (
+    <div className="bg-white rounded-lg shadow-sm p-4 sticky top-20">
+      <h2 className="text-lg font-medium mb-4">Order Summary</h2>
+      
+      {showItems && (
+        <div className="space-y-3 mb-4 max-h-56 overflow-y-auto">
+          {items.map(item => (
+            <div key={item.product.id} className="flex gap-2">
+              <div className="relative h-12 w-12 rounded-md overflow-hidden bg-gray-100 flex-shrink-0">
+                <Image 
+                  src={item.product.image || ""} 
+                  alt={item.product.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              
+              <div className="flex-1">
+                <h3 className="text-sm font-medium line-clamp-1">{item.product.name}</h3>
+                <div className="flex justify-between items-center mt-0.5">
+                  <span className="text-xs text-gray-500">{item.quantity} × ₹{item.product.price}</span>
+                  <span className="text-sm font-medium">₹{item.product.price * item.quantity}</span>
+                </div>
+              </div>
             </div>
-            <span className={`mt-1 ${step === 'address' ? 'text-pastel-orange font-medium' : 'text-gray-500'}`}>
-              Address
-            </span>
-          </div>
-          
-          <div className="w-full max-w-[60px] flex items-center justify-center">
-            <div className={`h-0.5 w-full ${
-              step === 'payment' || step === 'summary' ? 'bg-pastel-orange' : 'bg-gray-200'
-            }`} />
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              step === 'payment' || step === 'summary' 
-                ? 'bg-pastel-orange text-white' 
-                : 'bg-gray-200 text-gray-500'
-            }`}>
-              2
-            </div>
-            <span className={`mt-1 ${step === 'payment' ? 'text-pastel-orange font-medium' : 'text-gray-500'}`}>
-              Payment
-            </span>
-          </div>
-          
-          <div className="w-full max-w-[60px] flex items-center justify-center">
-            <div className={`h-0.5 w-full ${step === 'summary' ? 'bg-pastel-orange' : 'bg-gray-200'}`} />
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              step === 'summary' 
-                ? 'bg-pastel-orange text-white' 
-                : 'bg-gray-200 text-gray-500'
-            }`}>
-              3
-            </div>
-            <span className={`mt-1 ${step === 'summary' ? 'text-pastel-orange font-medium' : 'text-gray-500'}`}>
-              Summary
-            </span>
-          </div>
+          ))}
+        </div>
+      )}
+      
+      <div className="space-y-2 pt-3 border-t">
+        <div className="flex justify-between">
+          <span className="text-gray-600">Subtotal</span>
+          <span>₹{subtotal}</span>
         </div>
         
-        {step === 'address' && renderAddressSelection()}
-        {step === 'payment' && renderPaymentMethods()}
-        {step === 'summary' && renderOrderSummary()}
+        <div className="flex justify-between">
+          <span className="text-gray-600">Delivery Fee</span>
+          <span className="text-green-600">₹{deliveryFee}</span>
+        </div>
+        
+        <div className="flex justify-between font-medium text-lg pt-2 border-t mt-2">
+          <span>Total</span>
+          <span>₹{total}</span>
+        </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 } 

@@ -1,94 +1,166 @@
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { X } from 'lucide-react';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ShoppingBag, User, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface LoginRequiredModalProps {
   isOpen: boolean;
   onClose: () => void;
-  continueShopping?: () => void;
-  actionType?: 'checkout' | 'wishlist' | 'generic';
+  onLogin: () => void;
+  title?: string;
+  message?: string;
+  actionType?: "wishlist" | "cart" | "checkout" | "general";
 }
 
 export function LoginRequiredModal({
   isOpen,
   onClose,
-  continueShopping,
-  actionType = 'generic',
+  onLogin,
+  title = "Login Required",
+  message = "Please login to continue shopping and access all features",
+  actionType = "general"
 }: LoginRequiredModalProps) {
-  const router = useRouter();
-  const [isClosing, setIsClosing] = useState(false);
-
-  const handleLogin = () => {
-    router.push('/login');
-    onClose();
-  };
-
-  const getTitle = () => {
+  // Define action-specific messages and icons
+  const getContent = () => {
     switch (actionType) {
-      case 'checkout':
-        return 'Login Required for Checkout';
-      case 'wishlist':
-        return 'Login to Save Items';
+      case "wishlist":
+        return {
+          title: "Login to Save Items",
+          message: "Please login to add items to your wishlist and save them for later",
+          icon: <Heart className="h-8 w-8 text-primary" />
+        };
+      case "cart":
+        return {
+          title: "Login to Add to Cart",
+          message: "Please login to add items to your cart and proceed with checkout",
+          icon: <ShoppingBag className="h-8 w-8 text-primary" />
+        };
+      case "checkout":
+        return {
+          title: "Login to Checkout",
+          message: "Please login to complete your purchase and proceed to checkout",
+          icon: <ShoppingBag className="h-8 w-8 text-primary" />
+        };
       default:
-        return 'Login Required';
+        return {
+          title,
+          message,
+          icon: <User className="h-8 w-8 text-primary" />
+        };
     }
   };
 
-  const getMessage = () => {
-    switch (actionType) {
-      case 'checkout':
-        return 'Please login to your account to complete your purchase.';
-      case 'wishlist':
-        return 'Please login to add items to your wishlist.';
-      default:
-        return 'Please login to continue.';
+  const content = getContent();
+
+  // Close modal when ESC key is pressed
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+    
+    window.addEventListener('keydown', handleEsc);
+    
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, [onClose]);
+
+  // Animation variants
+  const backdropVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
+
+  const modalVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.9,
+      y: 20
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      y: 0,
+      transition: { 
+        type: "spring",
+        damping: 25,
+        stiffness: 300
+      }
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.9,
+      transition: { duration: 0.2 }
     }
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>{getTitle()}</DialogTitle>
-          <DialogDescription>{getMessage()}</DialogDescription>
-        </DialogHeader>
-        
-        <div className="flex flex-col items-center mt-2">
-          <div className="relative w-40 h-40 mb-4">
-            <Image 
-              src="/Slice-13.png" 
-              alt="Login required" 
-              fill 
-              className="object-contain"
-            />
-          </div>
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Backdrop */}
+          <motion.div 
+            className="absolute inset-0 bg-black/25"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={backdropVariants}
+            onClick={onClose}
+          />
           
-          <div className="flex flex-col w-full gap-3">
-            <Button
-              onClick={handleLogin}
-              className="bg-pastel-orange text-white hover:bg-pastel-orange/90"
-            >
-              Login Now
-            </Button>
+          {/* Modal */}
+          <motion.div 
+            className="bg-white rounded-lg shadow-xl w-[90%] max-w-md z-10 overflow-hidden"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={modalVariants}
+          >
+            {/* Header */}
+            <div className="flex justify-between items-center p-4 border-b">
+              <h2 className="text-lg font-medium">{content.title}</h2>
+              <Button 
+                variant="ghost" 
+                size="icon"
+                className="h-8 w-8"
+                onClick={onClose}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
             
-            <Button
-              variant="outline"
-              onClick={continueShopping || onClose}
-            >
-              Continue Shopping
-            </Button>
-          </div>
+            {/* Content */}
+            <div className="p-6">
+              <div className="flex flex-col items-center text-center mb-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  {content.icon}
+                </div>
+                <p className="text-gray-700">{content.message}</p>
+              </div>
+              
+              <div className="flex flex-col gap-3">
+                <Button 
+                  onClick={onLogin}
+                  className="w-full"
+                >
+                  Login
+                </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={onClose}
+                  className="w-full"
+                >
+                  Continue Browsing
+                </Button>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </DialogContent>
-    </Dialog>
+      )}
+    </AnimatePresence>
   );
 } 

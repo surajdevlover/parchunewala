@@ -88,18 +88,55 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Load cart items from localStorage on initial render
   useEffect(() => {
-    const savedCart = localStorage.getItem('cartItems')
-    if (savedCart) {
-      setCartItems(JSON.parse(savedCart))
+    // Only load cart items if localStorage exists (client-side)
+    if (typeof window !== 'undefined') {
+      // Start with an empty cart
+      setCartItems([]);
+      
+      const savedCart = localStorage.getItem('cartItems')
+      if (savedCart) {
+        try {
+          const parsedCart = JSON.parse(savedCart);
+          if (Array.isArray(parsedCart)) {
+            // Check if this is the first load and if we should use saved cart
+            const userAddedItems = localStorage.getItem('user_added_cart_items');
+            if (userAddedItems === 'true') {
+              // Only set cart items if the user has explicitly added items before
+              setCartItems(parsedCart);
+            } else {
+              // Clear any existing cart data if this is first load
+              localStorage.removeItem('cartItems');
+            }
+          } else {
+            // If not valid array, initialize empty cart
+            localStorage.removeItem('cartItems');
+          }
+        } catch (error) {
+          console.error("Error parsing cart:", error);
+          localStorage.removeItem('cartItems');
+        }
+      }
     }
   }, [])
 
   // Save cart items to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems))
+      
+      // If user adds items to cart, mark that they've explicitly added items
+      if (cartItems.length > 0) {
+        localStorage.setItem('user_added_cart_items', 'true');
+      }
+    }
   }, [cartItems])
 
   const addToCart = (product: Product, quantity: number, storeId?: string) => {
+    if (!product || !product.id) {
+      console.error("Invalid product:", product);
+      return;
+    }
+    
     const selectedStoreId = storeId || product.storeId || stores[0].id
     const selectedStore = stores.find(store => store.id === selectedStoreId)
     

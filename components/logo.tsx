@@ -16,7 +16,7 @@ export function Logo({ className, size = "md" }: LogoProps) {
   }
 
   return (
-    <Link href="/" className="{className}">
+    <Link href="/" className={className}>
       <Image
         src={logo}
         alt="ParchuneWala Logo"
