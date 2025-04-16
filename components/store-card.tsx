@@ -27,7 +27,7 @@ export function StoreCard({
   distance,
   products = Math.floor(Math.random() * 500 + 500),
   discount = "Up to 20% OFF",
-  deliveryFee = "Free delivery on orders above ₹99"
+  deliveryFee = "Free delivery on orders above ₹199"
 }: StoreCardProps) {
   return (
     <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden transition-all hover:shadow-md">

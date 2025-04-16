@@ -15,6 +15,7 @@ import { useMobileDetection } from "@/lib/use-mobile-detection"
 import { MobileAppPrompt } from "@/components/mobile-app-prompt"
 import { useWishlist } from "@/lib/wishlist-context"
 import { stores } from "@/lib/data"
+import { StoreComparison } from "@/components/store-comparison"
 
 // Define the ProductCardProps interface directly here instead of importing it
 interface ProductCardProps {
@@ -93,6 +94,36 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
       "/363209a.jpg",
       "/395091a.jpg",
       "/480934a.jpg"
+    ],
+    // Add store options for comparison
+    storeOptions: [
+      {
+        storeId: "1",
+        storeName: "Satish General Store",
+        price: "₹327",
+        available: true,
+        distance: "0.5 km",
+        rating: 4.2,
+        deliveryTime: "10-15 min"
+      },
+      {
+        storeId: "2",
+        storeName: "Pandit General Store",
+        price: "₹335",
+        available: true,
+        distance: "3.1 km",
+        rating: 4.5,
+        deliveryTime: "25-30 min"
+      },
+      {
+        storeId: "3",
+        storeName: "Anuj Kirana Store",
+        price: "₹320",
+        available: true,
+        distance: "3.5 km",
+        rating: 4.0,
+        deliveryTime: "30-35 min"
+      }
     ]
   }
 
@@ -268,14 +299,14 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
   }
 
   return (
-    <main className="pb-20 lg:pb-12 min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Mobile app prompt */}
       {showMobilePrompt && (
         <MobileAppPrompt onClose={toggleMobilePrompt} />
       )}
       
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <header className="sticky top-0 z-10 bg-white shadow-sm">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -373,7 +404,8 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
         actionType="wishlist"
       />
 
-      <div className="container mx-auto px-4 py-6">
+      {/* Main product content */}
+      <main className="container mx-auto px-4 py-6">
         {/* Product images */}
         <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
           <div className="flex flex-col md:flex-row md:gap-8">
@@ -558,6 +590,11 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
           </div>
         </div>
         
+        {/* Store comparison section */}
+        <section className="mt-6">
+          <StoreComparison product={product} />
+        </section>
+        
         {/* Similar products */}
         <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
           <div className="flex items-center justify-between mb-4">
@@ -576,7 +613,7 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
             ))}
           </div>
         </div>
-      </div>
+      </main>
       
       {/* Scroll to top button */}
       <Button
@@ -585,6 +622,6 @@ export default function ProductScreen({ params }: { params: { id: string } }) {
       >
         <ArrowUp size={20} />
       </Button>
-    </main>
+    </div>
   )
 }

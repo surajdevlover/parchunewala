@@ -22,6 +22,39 @@ export function LoginRequiredModal({
   message = "Please login to continue shopping and access all features",
   actionType = "general"
 }: LoginRequiredModalProps) {
+  interface AuthDebugState {
+    userData: any | null;
+    authState: string | null;
+    isAuthenticated: boolean;
+  }
+  
+  const [authDebug, setAuthDebug] = useState<AuthDebugState>({
+    userData: null,
+    authState: null,
+    isAuthenticated: false
+  });
+
+  // Update debug info
+  useEffect(() => {
+    const updateDebug = () => {
+      const userData = localStorage.getItem('user_data')
+      const authState = localStorage.getItem('auth_state')
+      const isAuthenticated = !!userData && authState === 'authenticated'
+      
+      setAuthDebug({
+        userData: userData ? JSON.parse(userData) : null,
+        authState,
+        isAuthenticated
+      })
+    }
+    
+    if (isOpen) {
+      updateDebug()
+      const interval = setInterval(updateDebug, 1000)
+      return () => clearInterval(interval)
+    }
+  }, [isOpen])
+
   // Define action-specific messages and icons
   const getContent = () => {
     switch (actionType) {
@@ -157,6 +190,18 @@ export function LoginRequiredModal({
                   Continue Browsing
                 </Button>
               </div>
+              
+              {/* Debug Info (hidden in production) */}
+              {process.env.NODE_ENV !== 'production' && (
+                <div className="mt-4 pt-4 border-t text-xs text-gray-500">
+                  <div className="font-semibold">Auth Debug:</div>
+                  <div>Auth State: {authDebug.authState || 'not set'}</div>
+                  <div>Is Authenticated: {authDebug.isAuthenticated ? 'Yes' : 'No'}</div>
+                  {authDebug.userData && (
+                    <div>User: {authDebug.userData.email}</div>
+                  )}
+                </div>
+              )}
             </div>
           </motion.div>
         </div>

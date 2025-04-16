@@ -311,7 +311,12 @@ export default function OrderConfirmationPage() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">Delivery Fee</span>
-                    <span>{order.deliveryFee}</span>
+                    <span className={order.deliveryFee === "₹0" || order.deliveryFee === "Free" ? "text-green-600 font-medium" : ""}>
+                      {order.deliveryFee === "₹0" || order.deliveryFee === "Free" ? "FREE" : order.deliveryFee}
+                    </span>
+                  </div>
+                  <div className="flex justify-between text-xs text-green-600 mb-1">
+                    <span>Free delivery on orders above ₹199!</span>
                   </div>
                   <div className="flex justify-between font-medium border-t border-gray-100 pt-2 mt-2">
                     <span>Total</span>

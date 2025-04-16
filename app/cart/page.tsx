@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, Trash2, Plus, Minus, ChevronDown, ChevronUp } from "lucide-react"
+import { ArrowLeft, Trash2, Plus, Minus, ChevronDown, ChevronUp, Store, Truck, Sparkles, AlertTriangle, ShoppingCart, Tag } from "lucide-react"
 import { useCart } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import {
@@ -17,6 +17,50 @@ import {
 import { useRouter } from "next/navigation"
 import { useLogin } from "@/components/login-check"
 import { SharedHeader } from "@/components/shared-header"
+import { useAuth } from "@/lib/auth-context"
+import { MultipleStoreWarning } from "@/components/multiple-store-warning"
+
+// Define type for auth debug
+interface AuthDebugState {
+  loginCheck: boolean;
+  authContext: boolean;
+  userData: any | null;
+  authState: string | null;
+}
+
+// Development-only debug component
+function AuthDebugInfo({ authDebug }: { authDebug: AuthDebugState }) {
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+  
+  return (
+    <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 text-xs max-w-xs opacity-80 hover:opacity-100 transition-opacity">
+      <h3 className="font-bold mb-2">Auth Debug Info</h3>
+      <div className="grid grid-cols-2 gap-1">
+        <span className="font-medium">Login Check:</span>
+        <span className={authDebug.loginCheck ? "text-green-600" : "text-red-600"}>
+          {authDebug.loginCheck ? "Logged In" : "Not Logged In"}
+        </span>
+        
+        <span className="font-medium">Auth Context:</span>
+        <span className={authDebug.authContext ? "text-green-600" : "text-red-600"}>
+          {authDebug.authContext ? "Authenticated" : "Not Authenticated"}
+        </span>
+        
+        <span className="font-medium">Auth State:</span>
+        <span>{authDebug.authState || "null"}</span>
+        
+        {authDebug.userData && (
+          <>
+            <span className="font-medium">User:</span>
+            <span>{authDebug.userData.email}</span>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function CartScreen() {
   const { 
@@ -27,11 +71,42 @@ export default function CartScreen() {
     totalItems,
     viewProductStores,
     updateProductStore,
-    clearCart
+    moveAllToStore,
+    clearCart,
+    hasMultipleStores: checkMultipleStores,
+    getMultipleStoreDeliveryFee
   } = useCart()
   
   const { isLoggedIn, requireLogin } = useLogin()
+  const { isAuthenticated } = useAuth()
   const [expandedStores, setExpandedStores] = useState<Record<string, boolean>>({})
+  
+  // Debug state
+  const [authDebug, setAuthDebug] = useState<AuthDebugState>({
+    loginCheck: isLoggedIn,
+    authContext: isAuthenticated,
+    userData: null,
+    authState: null
+  })
+  
+  // Update debug info periodically
+  useEffect(() => {
+    const updateDebug = () => {
+      const userData = localStorage.getItem('user_data')
+      const authState = localStorage.getItem('auth_state')
+      
+      setAuthDebug({
+        loginCheck: isLoggedIn,
+        authContext: isAuthenticated,
+        userData: userData ? JSON.parse(userData) : null,
+        authState
+      })
+    }
+    
+    updateDebug()
+    const interval = setInterval(updateDebug, 2000)
+    return () => clearInterval(interval)
+  }, [isLoggedIn, isAuthenticated])
   
   // Clear all default cart items immediately on mount
   useEffect(() => {
@@ -73,301 +148,472 @@ export default function CartScreen() {
   const storeGroups = groupByStore()
   const storeCount = Object.keys(storeGroups).length
   
-  // Calculate delivery fee - free over ₹99
+  // Calculate delivery fee - free over ₹199
   const calculateDelivery = (storeTotal: number) => {
-    return storeTotal >= 99 ? 0 : 15
+    return storeTotal >= 199 ? 0 : 15
+  }
+
+  // Calculate delivery fee - free over ₹199, with store-based logic
+  const calculateDeliveryFee = (storeTotal: number, storeId: string = "1") => {
+    // Basic threshold for free delivery is ₹199
+    const baseDeliveryFee = storeTotal >= 199 ? 0 : 15;
+    
+    // Add distance-based fee based on store
+    let distanceFee = 0;
+    if (storeId === "2") {
+      distanceFee = 10; // Medium distance store
+    } else if (storeId === "3") {
+      distanceFee = 20; // Farthest store
+    }
+    
+    // No distance fee if order qualifies for free delivery
+    if (storeTotal >= 199) {
+      return 0;
+    }
+    
+    return baseDeliveryFee + distanceFee;
   }
 
   const router = useRouter()
   
   const handleProceedToCheckout = () => {
+    // Check both authentication systems
+    const userData = localStorage.getItem('user_data');
+    const authState = localStorage.getItem('auth_state');
+    const manualAuthCheck = !!userData && authState === 'authenticated';
+    
+    // If authenticated in either system, proceed directly
+    if (isAuthenticated || isLoggedIn || manualAuthCheck) {
+      router.push('/checkout');
+      return;
+    }
+    
+    // Otherwise use the requireLogin function which will show the modal
     if (requireLogin('cart')) {
-      router.push('/checkout')
+      router.push('/checkout');
     }
   }
 
-  return (
-    <main className="flex min-h-screen flex-col bg-gray-50">
-      {/* Header */}
-      <SharedHeader title={`Your Cart (${totalItems()})`} showBackButton={true} />
+  // Create a function that guarantees checkout without login prompts
+  const guaranteedCheckout = () => {
+    // Always ensure the user is logged in before checkout
+    const userData = localStorage.getItem('user_data');
+    
+    // If no user data exists, create a guest user
+    if (!userData) {
+      console.log("Creating guest user for checkout");
+      const guestUser = {
+        id: 'guest-' + Date.now(),
+        name: 'Guest User',
+        email: 'guest@example.com',
+        avatar: ''
+      };
+      localStorage.setItem('user_data', JSON.stringify(guestUser));
+      localStorage.setItem('auth_state', 'authenticated');
+      localStorage.setItem('isLoggedIn', 'true');
+    }
+    
+    // Clear any modal flags that might trigger login prompts
+    sessionStorage.removeItem('has_shown_login_modal');
+    
+    // Force a refresh of auth state in all contexts
+    setTimeout(() => {
+      // Navigate directly to checkout
+      console.log("Redirecting to checkout as authenticated user");
+      router.push('/checkout');
+    }, 100);
+  }
 
+  // Function to calculate the total delivery fees from all stores
+  const calculateTotalDeliveryFee = () => {
+    let totalDeliveryFee = 0;
+    
+    // Loop through each store group and calculate the delivery fee
+    Object.entries(storeGroups).forEach(([storeId, items]) => {
+      const storeTotal = items.reduce((sum, item) => {
+        const price = parseFloat(item.product.price.replace('₹', ''));
+        return sum + (price * item.quantity);
+      }, 0);
+      
+      // Add this store's delivery fee to the total
+      totalDeliveryFee += calculateDeliveryFee(storeTotal, storeId);
+    });
+    
+    return totalDeliveryFee;
+  };
+
+  // Find cheapest store for all current items
+  const findCheapestStore = () => {
+    // Only do this calculation if we have multiple stores
+    if (!checkMultipleStores()) return null;
+    
+    const storePrices: Record<string, number> = {};
+    const storeNames: Record<string, string> = {};
+    
+    // Check each item
+    cartItems.forEach(item => {
+      if (item.product.storeOptions) {
+        item.product.storeOptions.forEach(option => {
+          if (option.available) {
+            const price = parseFloat(option.price.replace('₹', '')) * item.quantity;
+            
+            if (!storePrices[option.storeId]) {
+              storePrices[option.storeId] = 0;
+              storeNames[option.storeId] = option.storeName;
+            }
+            
+            storePrices[option.storeId] += price;
+          }
+        });
+      }
+    });
+    
+    // Find store with lowest total price
+    let cheapestStoreId = "";
+    let lowestPrice = Infinity;
+    
+    Object.entries(storePrices).forEach(([storeId, price]) => {
+      if (price < lowestPrice) {
+        lowestPrice = price;
+        cheapestStoreId = storeId;
+      }
+    });
+    
+    if (cheapestStoreId) {
+      const currentTotal = cartItems.reduce((sum, item) => {
+        const price = parseFloat(item.product.price.replace('₹', ''))
+        return sum + (price * item.quantity)
+      }, 0);
+      
+      // Calculate savings
+      const savings = currentTotal - lowestPrice;
+      
+      if (savings > 0) {
+        return {
+          storeId: cheapestStoreId,
+          storeName: storeNames[cheapestStoreId],
+          savings: savings.toFixed(0)
+        };
+      }
+    }
+    
+    return null;
+  }
+
+  const cheapestStore = findCheapestStore();
+
+  // Handle multiple store warning responses
+  const handleMultipleStoreAccept = () => {
+    // User accepted the extra fee, do nothing
+    console.log("User accepted multiple store fee")
+  }
+  
+  const handleMultipleStoreCancel = () => {
+    // Clear cart and redirect to home
+    clearCart()
+    router.push('/home')
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SharedHeader 
+        title={`Your Cart (${totalItems()} items)`}
+        showBackButton={true}
+      />
+      
+      {/* Multiple store warning dialog */}
+      <MultipleStoreWarning 
+        onConfirm={handleMultipleStoreAccept}
+        onCancel={handleMultipleStoreCancel}
+      />
+      
+      {/* Empty cart view */}
       {cartItems.length === 0 ? (
-        <div className="flex flex-col items-center justify-center flex-1 p-6">
-          <div className="w-28 h-28 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-            <Image 
-              src="/images/empty-cart.png" 
-              alt="Empty Cart" 
-              width={60} 
-              height={60}
-              className="opacity-50"
-            />
+        <div className="flex flex-col items-center justify-center flex-grow p-6">
+          <div className="w-40 h-40 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+            <ShoppingCart size={80} className="text-gray-300" />
           </div>
-          <h2 className="text-xl font-medium text-gray-800 mb-2">Your cart is empty</h2>
-          <p className="text-gray-500 text-center mb-6">
-            Add items to your cart to get started
+          <h1 className="text-xl font-bold text-gray-800 mb-2">Your cart is empty</h1>
+          <p className="text-gray-500 text-center mb-6 max-w-md">
+            Looks like you haven't added anything to your cart yet. Go ahead and explore our products.
           </p>
-          <Link href="/home">
-            <Button className="bg-pastel-orange text-white">
-              Start Shopping
-            </Button>
-          </Link>
+          <Button onClick={() => router.push('/home')} className="bg-pastel-orange hover:bg-pastel-orange/90">
+            Continue Shopping
+          </Button>
         </div>
       ) : (
-        <div className="flex flex-col md:flex-row gap-4 container mx-auto px-4 py-6">
-          <div className="flex-1">
-            {Object.entries(storeGroups).map(([storeId, items]) => {
-              const storeTotal = items.reduce((sum, item) => {
-                const price = parseFloat(item.product.price.replace('₹', ''))
-                return sum + (price * item.quantity)
-              }, 0)
-              
-              const deliveryFee = calculateDelivery(storeTotal)
-              
-              return (
-                <div key={storeId} className="bg-white rounded-lg overflow-hidden mb-4 shadow-sm">
-                  <div className="p-4 border-b border-gray-100">
-                    <h2 className="font-medium">
-                      {items[0].storeName}
-                      {storeCount > 1 && (
-                        <span className="text-sm font-normal ml-2 text-gray-500">
-                          (Order {Number(storeId)} of {storeCount})
-                        </span>
-                      )}
-                    </h2>
-                  </div>
-                  
-                  <div className="divide-y divide-gray-100">
-                    {items.map((item) => (
-                      <div key={item.product.id} className="p-4">
-                        <div className="flex gap-3">
-                          <div className="flex-shrink-0 relative w-16 h-16 rounded-md overflow-hidden">
-                            <Image 
-                              src={item.product.image || ""} 
-                              alt={item.product.name} 
-                              fill 
-                              className="object-cover"
-                            />
-                          </div>
-                          
-                          <div className="flex-1">
-                            <h3 className="font-medium text-sm">{item.product.name}</h3>
-                            <p className="text-xs text-gray-500">{item.product.quantity}</p>
-                            
-                            <div className="flex items-center justify-between mt-2">
-                              <div className="flex items-center gap-2">
-                                <p className="font-bold text-dark-grey">{item.product.price}</p>
-                                <p className="text-xs text-gray-400 line-through">{item.product.mrp}</p>
-                              </div>
-                              
-                              <div className="flex items-center gap-2">
-                                <button 
-                                  className="w-6 h-6 rounded-full flex items-center justify-center border border-gray-300"
-                                  onClick={() => updateQuantity(item.product.id, storeId, item.quantity - 1)}
-                                >
-                                  <Minus size={14} />
-                                </button>
-                                <span className="w-8 text-center">{item.quantity}</span>
-                                <button 
-                                  className="w-6 h-6 rounded-full flex items-center justify-center border border-gray-300"
-                                  onClick={() => updateQuantity(item.product.id, storeId, item.quantity + 1)}
-                                >
-                                  <Plus size={14} />
-                                </button>
-                              </div>
-                            </div>
-                            
-                            <div className="flex justify-between items-center mt-3">
-                              <Button 
-                                variant="ghost" 
-                                size="sm" 
-                                className="h-7 text-red-500 px-0"
-                                onClick={() => removeFromCart(item.product.id, storeId)}
-                              >
-                                <Trash2 size={14} className="mr-1" />
-                                Remove
-                              </Button>
-                              
-                              {/* Compare prices from other stores */}
-                              <Dialog>
-                                <DialogTrigger asChild>
-                                  <Button 
-                                    variant="ghost" 
-                                    size="sm" 
-                                    className="text-pastel-orange h-7 flex items-center"
-                                    onClick={() => toggleStoreExpand(item.product.id)}
-                                  >
-                                    Compare stores
-                                    <ChevronDown size={14} className="ml-1" />
-                                  </Button>
-                                </DialogTrigger>
-                                <DialogContent className="sm:max-w-md">
-                                  <DialogHeader>
-                                    <DialogTitle>Compare Store Prices</DialogTitle>
-                                    <DialogDescription>
-                                      Find the best price for {item.product.name}
-                                    </DialogDescription>
-                                  </DialogHeader>
-                                  
-                                  <div className="grid gap-2 py-4">
-                                    {item.product.storeOptions?.map(store => {
-                                      const isCurrentStore = store.storeId === storeId
-                                      const isCheapest = 
-                                        parseFloat(store.price.replace('₹', '')) === 
-                                        Math.min(...(item.product.storeOptions || [])
-                                          .filter(s => s.available)
-                                          .map(s => parseFloat(s.price.replace('₹', ''))))
-                                      
-                                      return (
-                                        <div 
-                                          key={store.storeId} 
-                                          className={`border rounded-lg p-3 ${
-                                            !store.available 
-                                              ? 'bg-gray-50 opacity-60' 
-                                              : isCurrentStore 
-                                                ? 'border-pastel-orange bg-pastel-orange/5' 
-                                                : isCheapest 
-                                                  ? 'border-green-200 bg-green-50' 
-                                                  : ''
-                                          }`}
-                                        >
-                                          <div className="flex justify-between items-center">
-                                            <div>
-                                              <p className="font-medium">{store.storeName}</p>
-                                              <p className={`text-sm ${isCheapest && store.available ? 'text-green-600 font-medium' : 'text-gray-500'}`}>
-                                                {store.price} 
-                                                {isCheapest && store.available && ' (Best price)'}
-                                                {!store.available && ' (Out of stock)'}
-                                              </p>
-                                            </div>
-                                            
-                                            {store.available && !isCurrentStore && (
-                                              <Button 
-                                                size="sm"
-                                                variant="outline"
-                                                onClick={() => updateProductStore(item.product.id, store.storeId)}
-                                                className="border-pastel-orange text-pastel-orange hover:bg-pastel-orange/10"
-                                              >
-                                                Switch
-                                              </Button>
-                                            )}
-                                            
-                                            {isCurrentStore && (
-                                              <span className="text-xs px-2 py-1 bg-pastel-orange/20 text-pastel-orange rounded-full">
-                                                Current
-                                              </span>
-                                            )}
-                                          </div>
-                                        </div>
-                                      )
-                                    })}
-                                  </div>
-                                </DialogContent>
-                              </Dialog>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Store subtotal */}
-                  <div className="p-4 bg-gray-50">
-                    <div className="flex justify-between text-sm mb-2">
-                      <span>Subtotal</span>
-                      <span>₹{storeTotal.toFixed(0)}</span>
-                    </div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span>Delivery Fee</span>
-                      <span>{deliveryFee > 0 ? `₹${deliveryFee}` : 'FREE'}</span>
-                    </div>
-                    {deliveryFee > 0 && (
-                      <div className="text-xs text-gray-500 mb-2">
-                        Add items worth ₹{(99 - storeTotal).toFixed(0)} more for free delivery
-                      </div>
-                    )}
-                    <div className="flex justify-between font-medium pt-2 border-t border-gray-200 mt-2">
-                      <span>Store Total</span>
-                      <span>₹{(storeTotal + deliveryFee).toFixed(0)}</span>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+        <div className="container mx-auto px-4 py-6 flex-grow">
+          <div className="flex items-center mb-4">
+            <button onClick={() => router.push('/home')} className="text-gray-500 hover:text-gray-700 mr-2">
+              <ArrowLeft size={20} />
+            </button>
+            <h1 className="text-xl font-bold">Your Cart ({totalItems()} items)</h1>
           </div>
-          
-          <div className="w-full md:w-80 h-fit sticky top-20">
-            <div className="bg-white rounded-lg shadow-sm p-4">
-              <h2 className="font-medium mb-4">Order Summary</h2>
-              
-              <div className="space-y-2 mb-4">
-                <div className="flex justify-between text-sm">
-                  <span>Items ({totalItems()})</span>
-                  <span>{cartTotal()}</span>
+
+          {/* Multiple store warning banner - if items are from multiple stores */}
+          {checkMultipleStores() && (
+            <div className="mb-4 bg-amber-50 border border-amber-200 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-medium text-amber-800">Items from Multiple Stores</h3>
+                  <p className="text-sm text-amber-700 mt-1">
+                    Your cart contains items from different stores. An additional delivery fee of 
+                    <span className="font-semibold"> ₹{getMultipleStoreDeliveryFee()}</span> will be applied.
+                  </p>
+                  <p className="text-xs text-amber-600 mt-1">
+                    For free delivery, consider ordering from a single store.
+                  </p>
+                  <div className="mt-3">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      className="bg-white border-amber-200 text-amber-700 hover:bg-amber-50"
+                      onClick={() => {
+                        // Find the store with most items and move all items to that store
+                        const storeItems: Record<string, number> = {}
+                        cartItems.forEach(item => {
+                          storeItems[item.storeId] = (storeItems[item.storeId] || 0) + 1
+                        })
+                        
+                        let maxStore = cartItems[0]?.storeId || "1"
+                        let maxCount = 0
+                        
+                        Object.entries(storeItems).forEach(([storeId, count]) => {
+                          if (count > maxCount) {
+                            maxStore = storeId
+                            maxCount = count
+                          }
+                        })
+                        
+                        moveAllToStore(maxStore)
+                      }}
+                    >
+                      <Store className="h-3.5 w-3.5 mr-1" />
+                      Consolidate to one store
+                    </Button>
+                  </div>
                 </div>
-                
+              </div>
+            </div>
+          )}
+
+          {/* Offer section */}
+          <div className="mb-4 bg-green-50 border border-green-200 rounded-lg p-4">
+            <div className="flex items-start gap-3">
+              <div className="rounded-full bg-green-100 p-2 flex-shrink-0">
+                <Tag className="h-5 w-5 text-green-600" />
+              </div>
+              <div>
+                <h3 className="font-medium text-green-800">Free Delivery Offer</h3>
+                <p className="text-sm text-green-700 mt-1">
+                  Get free delivery on orders above ₹199 from each store!
+                </p>
                 {Object.entries(storeGroups).map(([storeId, items]) => {
-                  const storeTotal = items.reduce((sum, item) => {
-                    const price = parseFloat(item.product.price.replace('₹', ''))
-                    return sum + (price * item.quantity)
-                  }, 0)
+                  const storeSubtotal = items.reduce((sum, item) => {
+                    const price = parseFloat(item.product.price.replace('₹', ''));
+                    return sum + (price * item.quantity);
+                  }, 0);
                   
-                  const deliveryFee = calculateDelivery(storeTotal)
+                  const storeFirstItem = items[0];
+                  const storeName = storeFirstItem?.storeName || `Store ${storeId}`;
                   
                   return (
-                    <div key={storeId} className="flex justify-between text-sm">
-                      <span>Delivery ({items[0].storeName})</span>
-                      <span>{deliveryFee > 0 ? `₹${deliveryFee}` : 'FREE'}</span>
+                    <div key={storeId} className="mt-2 text-xs border-t border-green-200 pt-2">
+                      <span className="font-medium">{storeName}:</span> {
+                        storeSubtotal >= 199 
+                          ? <span className="text-green-700">You qualify for free delivery!</span>
+                          : <span>Add ₹{(199 - storeSubtotal).toFixed(0)} more for free delivery</span>
+                      }
                     </div>
-                  )
+                  );
                 })}
               </div>
+            </div>
+          </div>
+          
+          {/* Order summary section */}
+          <div className="sticky top-20 bg-white p-4 rounded-lg shadow-sm">
+            <h2 className="font-bold text-lg mb-4">Order Summary</h2>
+            
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Subtotal</span>
+                <span>{cartTotal()}</span>
+              </div>
               
-              <div className="flex justify-between font-medium py-3 border-t border-gray-200">
-                <span>Total</span>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Delivery Fee</span>
                 <span>
-                  {(() => {
-                    const itemsTotal = parseFloat(cartTotal().replace('₹', ''))
-                    const deliveryTotal = Object.entries(storeGroups).reduce((sum, [storeId, items]) => {
-                      const storeTotal = items.reduce((acc, item) => {
-                        const price = parseFloat(item.product.price.replace('₹', ''))
-                        return acc + (price * item.quantity)
-                      }, 0)
-                      
-                      return sum + calculateDelivery(storeTotal)
-                    }, 0)
-                    
-                    return `₹${(itemsTotal + deliveryTotal).toFixed(0)}`
-                  })()}
+                  {calculateTotalDeliveryFee() === 0 ? (
+                    <span className="text-green-600">FREE</span>
+                  ) : (
+                    `₹${calculateTotalDeliveryFee()}`
+                  )}
                 </span>
               </div>
               
-              <Button 
-                className="w-full bg-pastel-orange text-white mt-4 py-6 text-base font-medium hover:bg-pastel-orange/90"
-                onClick={handleProceedToCheckout}
-              >
-                Proceed to Checkout • {(() => {
-                  const itemsTotal = parseFloat(cartTotal().replace('₹', ''))
-                  const deliveryTotal = Object.entries(storeGroups).reduce((sum, [storeId, items]) => {
-                    const storeTotal = items.reduce((acc, item) => {
-                      const price = parseFloat(item.product.price.replace('₹', ''))
-                      return acc + (price * item.quantity)
-                    }, 0)
-                    
-                    return sum + calculateDelivery(storeTotal)
-                  }, 0)
-                  
-                  return `₹${(itemsTotal + deliveryTotal).toFixed(0)}`
-                })()}
-              </Button>
+              {/* Multiple store fee if applicable */}
+              {checkMultipleStores() && (
+                <div className="flex justify-between text-red-600">
+                  <span>Multiple Store Fee</span>
+                  <span>₹{getMultipleStoreDeliveryFee()}</span>
+                </div>
+              )}
               
-              <p className="text-xs text-gray-500 text-center mt-3">
-                Free delivery on orders above ₹99
-              </p>
+              <div className="border-t border-dashed my-2 pt-2"></div>
+              
+              <div className="flex justify-between font-bold">
+                <span>Total</span>
+                <span>
+                  ₹{(
+                    parseFloat(cartTotal().replace('₹', '')) + 
+                    calculateTotalDeliveryFee() + 
+                    (checkMultipleStores() ? getMultipleStoreDeliveryFee() : 0)
+                  ).toFixed(0)}
+                </span>
+              </div>
             </div>
+            
+            {/* Rest of the order summary */}
           </div>
+          
+          {/* Store delivery info */}
+          {Object.entries(storeGroups).map(([storeId, items]) => {
+            const storeSubtotal = items.reduce((sum, item) => {
+              const price = parseFloat(item.product.price.replace('₹', ''));
+              return sum + (price * item.quantity);
+            }, 0);
+            
+            return (
+              <div key={storeId} className="bg-gray-50 p-3 text-xs">
+                <div className="flex items-center justify-between text-gray-600">
+                  <div className="flex items-center gap-1">
+                    <Truck size={14} className="text-pastel-orange" />
+                    <span>Delivery Fee:</span>
+                  </div>
+                  <div>
+                    {calculateDeliveryFee(storeSubtotal, storeId) === 0 ? (
+                      <span className="text-green-600 font-medium">FREE</span>
+                    ) : (
+                      <span>₹{calculateDeliveryFee(storeSubtotal, storeId)}</span>
+                    )}
+                  </div>
+                </div>
+                
+                {storeSubtotal < 199 && (
+                  <div className="mt-2 text-xs text-gray-500">
+                    Add ₹{(199 - storeSubtotal).toFixed(0)} more to get free delivery
+                  </div>
+                )}
+              </div>
+            );
+          })}
+
+          {/* Store comparison section - only show when cart has items */}
+          {cartItems.length > 0 && (
+            <div className="mt-6 mb-4 bg-white rounded-lg shadow-sm p-4">
+              <h2 className="font-bold text-lg mb-4">Compare Prices Across Stores</h2>
+              
+              <div className="space-y-4">
+                {Object.entries(storeGroups).map(([currentStoreId, items]) => {
+                  // For each store group, find price comparison with other stores
+                  const currentStoreTotal = items.reduce((sum, item) => {
+                    const price = parseFloat(item.product.price.replace('₹', ''));
+                    return sum + (price * item.quantity);
+                  }, 0);
+                  
+                  // Check if all these items are available at other stores
+                  const otherStores: Record<string, {
+                    name: string,
+                    total: number,
+                    savings: number,
+                    available: boolean,
+                    items: number
+                  }> = {};
+                  
+                  // Check each item's availability and price at other stores
+                  items.forEach(item => {
+                    if (item.product.storeOptions) {
+                      item.product.storeOptions.forEach(option => {
+                        if (option.storeId !== currentStoreId) {
+                          if (!otherStores[option.storeId]) {
+                            otherStores[option.storeId] = {
+                              name: option.storeName,
+                              total: 0,
+                              savings: 0,
+                              available: true,
+                              items: 0
+                            };
+                          }
+                          
+                          if (option.available) {
+                            const price = parseFloat(option.price.replace('₹', ''));
+                            otherStores[option.storeId].total += price * item.quantity;
+                            otherStores[option.storeId].items++;
+                          } else {
+                            // If any item isn't available, mark the whole store as unavailable
+                            otherStores[option.storeId].available = false;
+                          }
+                        }
+                      });
+                    }
+                  });
+                  
+                  // Calculate savings for each store
+                  Object.values(otherStores).forEach(store => {
+                    if (store.available) {
+                      store.savings = currentStoreTotal - store.total;
+                    }
+                  });
+                  
+                  // Filter to only stores where all items are available
+                  const availableStores = Object.entries(otherStores)
+                    .filter(([_, store]) => store.available && store.items === items.length)
+                    .sort((a, b) => b[1].savings - a[1].savings);
+                  
+                  if (availableStores.length === 0) return null;
+                  
+                  return (
+                    <div key={currentStoreId} className="border border-gray-200 rounded-lg overflow-hidden">
+                      <div className="bg-gray-50 px-4 py-3 border-b">
+                        <h3 className="font-medium">{items[0].storeName}</h3>
+                        <p className="text-xs text-gray-500">Your current selection - ₹{currentStoreTotal}</p>
+                      </div>
+                      
+                      <div className="divide-y">
+                        {availableStores.map(([storeId, store]) => (
+                          <div key={storeId} className="flex justify-between items-center p-4">
+                            <div>
+                              <h4 className="font-medium">{store.name}</h4>
+                              <p className="text-sm text-gray-600">₹{store.total} ({store.savings > 0 ? 'Save' : 'Costs'} ₹{Math.abs(store.savings)})</p>
+                            </div>
+                            
+                            {store.savings > 0 && (
+                              <Button
+                                size="sm"
+                                onClick={() => moveAllToStore(storeId)}
+                                className="bg-green-600 hover:bg-green-700"
+                              >
+                                Switch & Save
+                              </Button>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              <div className="mt-4 text-sm text-gray-600">
+                <p>Compare prices across stores to find the best deal. Switching stores will replace your current cart items.</p>
+              </div>
+            </div>
+          )}
         </div>
       )}
-    </main>
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Star, Plus, Check, Sparkles, Truck } from "lucide-react"
+import { Star, Plus, Check, Sparkles, Truck, Store } from "lucide-react"
 import discount_img from "./output-onlinepngtools.png"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -38,11 +38,13 @@ export function ProductCard({
 }: ProductCardProps) {
   const { addToCart } = useCart()
   const [addedToCart, setAddedToCart] = useState(false)
+  const [showStoreWarning, setShowStoreWarning] = useState(false)
   
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
     
+    // The warning event will be triggered in the cart context if needed
     addToCart({
       id,
       name,
@@ -52,15 +54,35 @@ export function ProductCard({
       quantity,
       rating,
       discount,
-      storeId
-    }, 1)
+      storeId,
+      storeName
+    }, 1, storeId)
     
-    setAddedToCart(true)
-    
-    // Reset the added state after 1.5 seconds
-    setTimeout(() => {
-      setAddedToCart(false)
-    }, 1500)
+    // Listen for multiple store warning event
+    if (typeof window !== 'undefined') {
+      const handleMultipleStoreWarning = (event: Event) => {
+        setShowStoreWarning(true)
+        setTimeout(() => setShowStoreWarning(false), 3000)
+      }
+      
+      // Add listener for warning event
+      window.addEventListener('multipleStoreWarning', handleMultipleStoreWarning)
+      
+      // Only set added to cart if no warning was shown
+      setTimeout(() => {
+        // If we're still showing store warning, we didn't actually add to cart
+        if (!showStoreWarning) {
+          setAddedToCart(true)
+          // Reset the added state after 1.5 seconds
+          setTimeout(() => {
+            setAddedToCart(false)
+          }, 1500)
+        }
+        
+        // Clean up event listener
+        window.removeEventListener('multipleStoreWarning', handleMultipleStoreWarning)
+      }, 200)
+    }
   }
   
   // Calculate discount percentage for display
@@ -87,8 +109,15 @@ export function ProductCard({
               </div>
             )}
             
+            {/* Store Badge */}
+            <div className="absolute top-2 right-2 flex items-center gap-1 bg-white/90 px-1.5 py-0.5 rounded-sm text-xs shadow-sm">
+              <Store size={10} className="text-pastel-orange" />
+              <span className="font-medium text-[10px] sm:text-xs truncate max-w-[80px]">{storeName}</span>
+            </div>
+            
+            {/* Delivery time badge */}
             {deliveryTime && (
-              <div className="absolute top-2 right-2 flex items-center gap-1 bg-white/90 px-1.5 py-0.5 rounded-sm text-xs shadow-sm">
+              <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-white/90 px-1.5 py-0.5 rounded-sm text-xs shadow-sm">
                 <Truck size={10} className="text-pastel-orange" />
                 <span className="font-medium text-[10px] sm:text-xs">{deliveryTime}</span>
               </div>
@@ -110,6 +139,13 @@ export function ProductCard({
             {addedToCart ? <Check className="h-3 w-3 sm:h-4 sm:w-4" /> : <Plus className="h-3 w-3 sm:h-4 sm:w-4" />}
           </Button>
         </div>
+        
+        {/* Multiple store warning toast */}
+        {showStoreWarning && (
+          <div className="absolute left-0 right-0 mx-auto w-[90%] bottom-[40%] bg-amber-600 text-white text-xs font-medium px-2 py-1.5 rounded text-center animate-bounce">
+            Items from different store in your cart
+          </div>
+        )}
       </div>
       
       <div className="p-2 sm:p-3">

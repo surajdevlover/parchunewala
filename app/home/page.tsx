@@ -15,6 +15,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import Footer from "../footer/footer"
 import { useRouter } from "next/navigation"
 import { useMediaQuery } from "@/hooks/use-media-query"
+import { Badge } from "@/components/ui/badge"
 
 export default function HomeScreen() {
   const [location, setLocation] = useState("")
@@ -175,11 +176,11 @@ export default function HomeScreen() {
     }
   ]
   
-  // New product categories sections
+  // Product sections - REPLACE with store-based sections
   const productSections = [
     {
-      id: "snacks",
-      title: "Snacks & Munchies",
+      id: "satish",
+      title: "Products from Satish General Store",
       products: [
         {
           id: "s1",
@@ -212,7 +213,7 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/kurkure-masala-munch.jpeg?height=100&width=100",
           rating: 4.2,
           discount: "20% OFF",
-          storeId: "2"
+          storeId: "1"
         },
         {
           id: "s4",
@@ -223,7 +224,7 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/bingo-mad-angles-achaari-masti.jpeg?height=100&width=100",
           rating: 4.0,
           discount: "14% OFF",
-          storeId: "3"
+          storeId: "1"
         },
         {
           id: "s5",
@@ -234,7 +235,7 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/bingo-mad-angles-achaari-masti.jpeg?height=100&width=100",
           rating: 4.0,
           discount: "14% OFF",
-          storeId: "3"
+          storeId: "1"
         },
         {
           id: "s6",
@@ -245,14 +246,177 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/bingo-mad-angles-achaari-masti.jpeg?height=100&width=100",
           rating: 4.0,
           discount: "14% OFF",
-          storeId: "3"
+          storeId: "1"
         }
       ]
     },
     {
-      id: "dairy",
-      title: "Dairy, Bread & Eggs",
+      id: "pandit",
+      title: "Products from Pandit General Store",
       products: [
+        {
+          id: "d1",
+          name: "Amul Butter",
+          price: "₹54",
+          mrp: "₹60",
+          quantity: "100 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/amul-butter.jpeg?height=100&width=100",
+          rating: 4.8,
+          discount: "10% OFF",
+          storeId: "2"
+        },
+        {
+          id: "d2",
+          name: "Mother Dairy Milk",
+          price: "₹67",
+          mrp: "₹70",
+          quantity: "1 L",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/mother-dairy-toned-milk.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "4% OFF",
+          storeId: "2"
+        },
+        {
+          id: "d3",
+          name: "Britannia Bread",
+          price: "₹45",
+          mrp: "₹50",
+          quantity: "400 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/britannia-brown-bread.jpeg?height=100&width=100",
+          rating: 4.4,
+          discount: "10% OFF",
+          storeId: "2"
+        },
+        {
+          id: "d4",
+          name: "Amul Cheese Slices",
+          price: "₹138",
+          mrp: "₹145",
+          quantity: "200 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/amul-cheese-slices.jpeg?height=100&width=100",
+          rating: 4.7,
+          discount: "5% OFF",
+          storeId: "2"
+        },
+        {
+          id: "d5",
+          name: "Amul Cheese Slices",
+          price: "₹138",
+          mrp: "₹145",
+          quantity: "200 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/amul-cheese-slices.jpeg?height=100&width=100",
+          rating: 4.7,
+          discount: "5% OFF",
+          storeId: "2"
+        },
+        {
+          id: "d6",
+          name: "Amul Cheese Slices",
+          price: "₹138",
+          mrp: "₹145",
+          quantity: "200 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/amul-cheese-slices.jpeg?height=100&width=100",
+          rating: 4.7,
+          discount: "5% OFF",
+          storeId: "2"
+        }
+      ]
+    },
+    {
+      id: "anuj",
+      title: "Products from Anuj Kirana Store",
+      products: [
+        {
+          id: "c1",
+          name: "Coca-Cola",
+          price: "₹40",
+          mrp: "₹45",
+          quantity: "750 mL",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/coca-cola-soft-drink.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "11% OFF",
+          storeId: "3"
+        },
+        {
+          id: "c2",
+          name: "Sprite",
+          price: "₹42",
+          mrp: "₹45",
+          quantity: "750 mL",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/sprite-soft-drink.jpeg?height=100&width=100",
+          rating: 4.5,
+          discount: "7% OFF",
+          storeId: "3"
+        },
+        {
+          id: "c3",
+          name: "Minute Maid Orange",
+          price: "₹38",
+          mrp: "₹40",
+          quantity: "1 L",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/minute-maid-pulpy-orange-juice.jpeg?height=100&width=100",
+          rating: 4.3,
+          discount: "5% OFF",
+          storeId: "3"
+        },
+        {
+          id: "c4",
+          name: "Red Bull Energy Drink",
+          price: "₹115",
+          mrp: "₹125",
+          quantity: "250 mL",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/red-bull-energy-drink.jpeg?height=100&width=100",
+          rating: 4.4,
+          discount: "8% OFF",
+          storeId: "3"
+        },
+        {
+          id: "c5",
+          name: "Red Bull Energy Drink",
+          price: "₹115",
+          mrp: "₹125",
+          quantity: "250 mL",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/red-bull-energy-drink.jpeg?height=100&width=100",
+          rating: 4.4,
+          discount: "8% OFF",
+          storeId: "3"
+        },
+        {
+          id: "c6",
+          name: "Red Bull Energy Drink",
+          price: "₹115",
+          mrp: "₹125",
+          quantity: "250 mL",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/red-bull-energy-drink.jpeg?height=100&width=100",
+          rating: 4.4,
+          discount: "8% OFF",
+          storeId: "3"
+        }
+      ]
+    }
+  ]
+
+  // Store-based product organization
+  const storeProducts = [
+    {
+      id: "1",
+      title: "Satish General Store",
+      description: "10-15 min delivery • 0.5 km",
+      products: [
+        {
+          id: "s1",
+          name: "Lay's Classic Salted Chips",
+          price: "₹20",
+          mrp: "₹25",
+          quantity: "52 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/lay-s-classic-salted-chips.jpeg?height=100&width=100",
+          rating: 4.5,
+          discount: "20% OFF",
+          storeId: "1",
+          storeName: "Satish General Store",
+          storeDistance: "0.5 km",
+          deliveryTime: "10-15 min"
+        },
         {
           id: "d1",
           name: "Amul Butter",
@@ -262,7 +426,38 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/amul-butter.jpeg?height=100&width=100",
           rating: 4.7,
           discount: "8% OFF",
-          storeId: "1"
+          storeId: "1",
+          storeName: "Satish General Store",
+          storeDistance: "0.5 km",
+          deliveryTime: "10-15 min"
+        },
+        {
+          id: "b1",
+          name: "Coca-Cola",
+          price: "₹40",
+          mrp: "₹45",
+          quantity: "750 ml",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/coca-cola.jpeg?height=100&width=100",
+          rating: 4.4,
+          discount: "11% OFF",
+          storeId: "1",
+          storeName: "Satish General Store",
+          storeDistance: "0.5 km",
+          deliveryTime: "10-15 min"
+        },
+        {
+          id: "s2",
+          name: "Haldiram's Aloo Bhujia",
+          price: "₹55",
+          mrp: "₹70",
+          quantity: "200 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/haldiram-s-aloo-bhujia.jpeg?height=100&width=100",
+          rating: 4.3,
+          discount: "21% OFF",
+          storeId: "1",
+          storeName: "Satish General Store",
+          storeDistance: "0.5 km",
+          deliveryTime: "10-15 min"
         },
         {
           id: "d2",
@@ -273,68 +468,10 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/mother-dairy-milk.jpeg?height=100&width=100",
           rating: 4.5,
           discount: "6% OFF",
-          storeId: "1"
-        },
-        {
-          id: "d3",
-          name: "Farm Fresh Eggs",
-          price: "₹90",
-          mrp: "₹100",
-          quantity: "12 pcs",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/farm-fresh-eggs.jpeg?height=100&width=100",
-          rating: 4.3,
-          discount: "10% OFF",
-          storeId: "2"
-        },
-        {
-          id: "d4",
-          name: "Britannia Brown Bread",
-          price: "₹45",
-          mrp: "₹50",
-          quantity: "400 g",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/britannia-brown-bread.jpeg?height=100&width=100",
-          rating: 4.6,
-          discount: "10% OFF",
-          storeId: "1"
-        },
-        {
-          id: "d5",
-          name: "Britannia Brown Bread",
-          price: "₹45",
-          mrp: "₹50",
-          quantity: "400 g",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/britannia-brown-bread.jpeg?height=100&width=100",
-          rating: 4.6,
-          discount: "10% OFF",
-          storeId: "1"
-        },
-        {
-          id: "d6",
-          name: "Britannia Brown Bread",
-          price: "₹45",
-          mrp: "₹50",
-          quantity: "400 g",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/britannia-brown-bread.jpeg?height=100&width=100",
-          rating: 4.6,
-          discount: "10% OFF",
-          storeId: "1"
-        }
-      ]
-    },
-    {
-      id: "beverages",
-      title: "Cold Drinks & Juices",
-      products: [
-        {
-          id: "b1",
-          name: "Coca-Cola",
-          price: "₹40",
-          mrp: "₹45",
-          quantity: "750 ml",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/coca-cola.jpeg?height=100&width=100",
-          rating: 4.4,
-          discount: "11% OFF",
-          storeId: "1"
+          storeId: "1",
+          storeName: "Satish General Store",
+          storeDistance: "0.5 km",
+          deliveryTime: "10-15 min"
         },
         {
           id: "b2",
@@ -345,7 +482,45 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/real-fruit-juice.jpeg?height=100&width=100",
           rating: 4.3,
           discount: "12% OFF",
-          storeId: "1"
+          storeId: "1",
+          storeName: "Satish General Store",
+          storeDistance: "0.5 km",
+          deliveryTime: "10-15 min"
+        }
+      ]
+    },
+    {
+      id: "2",
+      title: "Pandit General Store",
+      description: "15-20 min delivery • 3.1 km",
+      products: [
+        {
+          id: "s3",
+          name: "Kurkure Masala Munch",
+          price: "₹20",
+          mrp: "₹25",
+          quantity: "90 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/kurkure-masala-munch.jpeg?height=100&width=100",
+          rating: 4.2,
+          discount: "20% OFF",
+          storeId: "2",
+          storeName: "Pandit General Store",
+          storeDistance: "3.1 km",
+          deliveryTime: "15-20 min"
+        },
+        {
+          id: "d3",
+          name: "Farm Fresh Eggs",
+          price: "₹90",
+          mrp: "₹100",
+          quantity: "12 pcs",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/farm-fresh-eggs.jpeg?height=100&width=100",
+          rating: 4.3,
+          discount: "10% OFF",
+          storeId: "2",
+          storeName: "Pandit General Store",
+          storeDistance: "3.1 km",
+          deliveryTime: "15-20 min"
         },
         {
           id: "b3",
@@ -356,7 +531,73 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/red-bull-energy-drink.jpeg?height=100&width=100",
           rating: 4.5,
           discount: "8% OFF",
-          storeId: "2"
+          storeId: "2",
+          storeName: "Pandit General Store",
+          storeDistance: "3.1 km",
+          deliveryTime: "15-20 min"
+        },
+        {
+          id: "g1",
+          name: "Tata Sampann Toor Dal",
+          price: "₹160",
+          mrp: "₹189",
+          quantity: "1 kg",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/tata-toor-dal.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "15% OFF",
+          storeId: "2",
+          storeName: "Pandit General Store",
+          storeDistance: "3.1 km",
+          deliveryTime: "15-20 min"
+        },
+        {
+          id: "g2",
+          name: "Aashirvaad Atta",
+          price: "₹345",
+          mrp: "₹380",
+          quantity: "5 kg",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/ashirwad-atta.jpeg?height=100&width=100",
+          rating: 4.7,
+          discount: "9% OFF",
+          storeId: "2",
+          storeName: "Pandit General Store",
+          storeDistance: "3.1 km",
+          deliveryTime: "15-20 min"
+        },
+        {
+          id: "pc1",
+          name: "Dove Soap",
+          price: "₹89",
+          mrp: "₹95",
+          quantity: "100 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/dove-soap.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "6% OFF",
+          storeId: "2",
+          storeName: "Pandit General Store",
+          storeDistance: "3.1 km",
+          deliveryTime: "15-20 min"
+        }
+      ]
+    },
+    {
+      id: "3",
+      title: "Anuj Kirana Store",
+      description: "25-30 min delivery • 3.5 km",
+      products: [
+        {
+          id: "s4",
+          name: "Bingo Mad Angles",
+          price: "₹30",
+          mrp: "₹35",
+          quantity: "130 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/bingo-mad-angles-achaari-masti.jpeg?height=100&width=100",
+          rating: 4.0,
+          discount: "14% OFF",
+          storeId: "3",
+          storeName: "Anuj Kirana Store",
+          storeDistance: "3.5 km",
+          deliveryTime: "25-30 min"
         },
         {
           id: "b4",
@@ -367,29 +608,66 @@ export default function HomeScreen() {
           image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/pepsi-black.jpeg?height=100&width=100",
           rating: 4.1,
           discount: "12% OFF",
-          storeId: "3"
+          storeId: "3",
+          storeName: "Anuj Kirana Store",
+          storeDistance: "3.5 km",
+          deliveryTime: "25-30 min"
         },
         {
-          id: "b5",
-          name: "Pepsi Black",
-          price: "₹35",
-          mrp: "₹40",
-          quantity: "750 ml",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/pepsi-black.jpeg?height=100&width=100",
-          rating: 4.1,
-          discount: "12% OFF",
-          storeId: "3"
+          id: "f1",
+          name: "Fresh Oranges",
+          price: "₹90",
+          mrp: "₹110",
+          quantity: "500 g",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/oranges.jpeg?height=100&width=100",
+          rating: 4.4,
+          discount: "18% OFF",
+          storeId: "3",
+          storeName: "Anuj Kirana Store",
+          storeDistance: "3.5 km",
+          deliveryTime: "25-30 min"
         },
         {
-          id: "b6",
-          name: "Pepsi Black",
-          price: "₹35",
-          mrp: "₹40",
-          quantity: "750 ml",
-          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/pepsi-black.jpeg?height=100&width=100",
-          rating: 4.1,
+          id: "h1",
+          name: "Surf Excel Liquid Detergent",
+          price: "₹245",
+          mrp: "₹290",
+          quantity: "2 L",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/surf-excel.jpeg?height=100&width=100",
+          rating: 4.7,
+          discount: "16% OFF",
+          storeId: "3",
+          storeName: "Anuj Kirana Store",
+          storeDistance: "3.5 km",
+          deliveryTime: "25-30 min"
+        },
+        {
+          id: "f2",
+          name: "Fresh Apples",
+          price: "₹140",
+          mrp: "₹160",
+          quantity: "4 pcs",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/apples.jpeg?height=100&width=100",
+          rating: 4.5,
           discount: "12% OFF",
-          storeId: "3"
+          storeId: "3",
+          storeName: "Anuj Kirana Store",
+          storeDistance: "3.5 km",
+          deliveryTime: "25-30 min"
+        },
+        {
+          id: "h2",
+          name: "Harpic Toilet Cleaner",
+          price: "₹170",
+          mrp: "₹190",
+          quantity: "1 L",
+          image: "https://cdn.zeptonow.com/catalog/products/images/optimized-product-image/harpic.jpeg?height=100&width=100",
+          rating: 4.6,
+          discount: "11% OFF",
+          storeId: "3",
+          storeName: "Anuj Kirana Store",
+          storeDistance: "3.5 km",
+          deliveryTime: "25-30 min"
         }
       ]
     }
@@ -801,18 +1079,27 @@ export default function HomeScreen() {
           </div>
         </div>
 
-        {/* Product Sections */}
-        {productSections.map(section => (
-          <div key={section.id} className="mt-8">
+        {/* Store Products Sections - Zomato Style */}
+        {storeProducts.map(store => (
+          <div key={store.id} className="mt-8 bg-white rounded-lg p-4 shadow-sm">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold">{section.title}</h2>
-              <Link href={`/search?category=${section.id}`} className="text-pastel-orange text-sm font-medium">
-                View All
+              <div>
+                <div className="flex items-center gap-2">
+                  <Store className="h-5 w-5 text-pastel-orange" />
+                  <h2 className="text-xl font-semibold">{store.title}</h2>
+                  <Badge variant="outline" className="ml-1 bg-green-50 text-green-700 border-green-200 text-xs">
+                    {store.id === "1" ? "Fastest Delivery" : store.id === "2" ? "Best Deals" : "Wide Selection"}
+                  </Badge>
+                </div>
+                <p className="text-sm text-gray-500 mt-1">{store.description}</p>
+              </div>
+              <Link href={`/store/${store.id}`} className="text-pastel-orange text-sm font-medium flex items-center">
+                View Store <ChevronRight size={16} />
               </Link>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-              {section.products.map(product => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+              {store.products.map(product => (
                 <ProductCard
                   key={product.id}
                   id={product.id}
@@ -823,6 +1110,40 @@ export default function HomeScreen() {
                   quantity={product.quantity}
                   rating={product.rating}
                   discount={product.discount}
+                  storeId={product.storeId}
+                  storeName={product.storeName}
+                  storeDistance={product.storeDistance}
+                  deliveryTime={product.deliveryTime}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* Product Sections */}
+        {productSections.map(section => (
+          <div key={section.id} className="mt-8">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold text-gray-900">{section.title}</h2>
+              <Link href={`/store/${section.id}`} className="text-pastel-orange text-sm font-medium flex items-center">
+                View Store <ChevronRight className="h-4 w-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-3">
+              {section.products.map((product) => (
+                <ProductCard 
+                  key={product.id}
+                  id={product.id}
+                  name={product.name}
+                  price={product.price}
+                  mrp={product.mrp}
+                  image={product.image}
+                  quantity={product.quantity}
+                  rating={product.rating}
+                  discount={product.discount}
+                  storeId={product.storeId}
+                  storeName={section.id === "satish" ? "Satish General Store" : section.id === "pandit" ? "Pandit General Store" : "Anuj Kirana Store"}
                 />
               ))}
             </div>

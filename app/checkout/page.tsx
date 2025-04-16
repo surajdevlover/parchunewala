@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { ArrowLeft, Home, Briefcase, MapPin, Check, CreditCard, Phone, Wallet, Clock, Plus } from "lucide-react"
+import { ArrowLeft, Home, Briefcase, MapPin, Check, CreditCard, Phone, Wallet, Clock, Plus, Tag } from "lucide-react"
 import { useCart } from "@/lib/cart-context"
 import { Button } from "@/components/ui/button"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -21,6 +21,31 @@ export default function CheckoutPage() {
   const [deliveryOption, setDeliveryOption] = useState<'standard' | 'express'>('standard')
   const [paymentMethod, setPaymentMethod] = useState<'online' | 'cod'>('online')
   const [loading, setLoading] = useState(false)
+  
+  // Auto-authenticate on page load if needed
+  // This ensures the checkout page is always accessible
+  useEffect(() => {
+    // Ensure user is authenticated
+    const userData = localStorage.getItem('user_data');
+    const authState = localStorage.getItem('auth_state');
+    
+    if (!userData || authState !== 'authenticated') {
+      console.log("Auto-authenticating on checkout page");
+      // Create a guest user
+      const guestUser = {
+        id: 'guest-checkout-' + Date.now(),
+        name: 'Guest Checkout',
+        email: 'guest-checkout@example.com',
+        avatar: ''
+      };
+      localStorage.setItem('user_data', JSON.stringify(guestUser));
+      localStorage.setItem('auth_state', 'authenticated');
+      localStorage.setItem('isLoggedIn', 'true');
+    }
+    
+    // Clear any modal flags
+    sessionStorage.removeItem('has_shown_login_modal');
+  }, []);
   
   // Sample addresses
   const addresses = [
@@ -78,13 +103,22 @@ export default function CheckoutPage() {
   
   const calculateSubtotal = () => {
     return cartItems.reduce((sum, item) => {
-      const price = parseFloat(item.product.price.replace('₹', ''))
+      const price = typeof item.product.price === 'string' 
+        ? parseFloat(item.product.price.replace('₹', '')) 
+        : item.product.price;
       return sum + (price * item.quantity)
     }, 0)
   }
   
   const calculateDeliveryFee = () => {
-    return deliveryOption === 'express' ? 30 : 15
+    // If using express delivery, charge ₹30 regardless of subtotal
+    if (deliveryOption === 'express') {
+      return 30;
+    }
+    
+    // For standard delivery, free if total purchase is above ₹199
+    const subtotal = calculateSubtotal();
+    return subtotal >= 199 ? 0 : 15;
   }
   
   const calculateTotal = () => {
@@ -292,6 +326,7 @@ export default function CheckoutPage() {
                 subtotal={calculateSubtotal()}
                 deliveryFee={calculateDeliveryFee()}
                 total={calculateTotal()}
+                storeGroups={storeGroups}
               />
               
               <motion.div variants={itemVariants}>
@@ -400,6 +435,7 @@ export default function CheckoutPage() {
                 subtotal={calculateSubtotal()}
                 deliveryFee={calculateDeliveryFee()}
                 total={calculateTotal()}
+                storeGroups={storeGroups}
               />
               
               <motion.div 
@@ -453,10 +489,12 @@ export default function CheckoutPage() {
                       
                       <div>
                         <h3 className="font-medium text-sm">{item.product.name}</h3>
-                        <p className="text-xs text-gray-500 mb-1">{item.product.weight}</p>
+                        <div className="text-xs text-gray-500">
+                          {item.product.quantity} · 1 pc
+                        </div>
                         <div className="flex items-center gap-2">
                           <span className="text-sm">₹{item.product.price} × {item.quantity}</span>
-                          <span className="font-medium">₹{item.product.price * item.quantity}</span>
+                          <span className="font-medium">₹{+item.product.price * item.quantity}</span>
                         </div>
                       </div>
                     </div>
@@ -509,6 +547,7 @@ export default function CheckoutPage() {
                 deliveryFee={calculateDeliveryFee()}
                 total={calculateTotal()}
                 showItems={false}
+                storeGroups={storeGroups}
               />
               
               <motion.div 
@@ -614,17 +653,53 @@ function OrderSummary({
   subtotal, 
   deliveryFee, 
   total,
-  showItems = true 
+  showItems = true,
+  storeGroups = {},
 }: { 
   items: any[]; 
   subtotal: number; 
   deliveryFee: number; 
   total: number;
   showItems?: boolean;
+  storeGroups?: Record<string, any[]>;
 }) {
   return (
     <div className="bg-white rounded-lg shadow-sm p-4 sticky top-20">
       <h2 className="text-lg font-medium mb-4">Order Summary</h2>
+      
+      {/* Free Delivery Offer */}
+      <div className="mb-4 bg-green-50 border border-green-200 rounded-lg p-3">
+        <div className="flex items-start gap-2">
+          <div className="rounded-full bg-green-100 p-1.5 flex-shrink-0">
+            <Tag className="h-4 w-4 text-green-600" />
+          </div>
+          <div>
+            <h3 className="font-medium text-sm text-green-800">Free Delivery Offer</h3>
+            <p className="text-xs text-green-700 mt-0.5">
+              Get free delivery on orders above ₹199 from each store!
+            </p>
+            {Object.entries(storeGroups).map(([storeId, items]) => {
+              const storeSubtotal = items.reduce((sum: number, item: any) => {
+                const price = parseFloat(item.product.price.replace('₹', ''));
+                return sum + (price * item.quantity);
+              }, 0);
+              
+              const storeFirstItem = items[0];
+              const storeName = storeFirstItem?.storeName || `Store ${storeId}`;
+              
+              return (
+                <div key={storeId} className="mt-1.5 text-xs border-t border-green-200 pt-1">
+                  <span className="font-medium">{storeName}:</span> {
+                    storeSubtotal >= 199 
+                      ? <span className="text-green-700">You qualify for free delivery!</span>
+                      : <span>Add ₹{(199 - storeSubtotal).toFixed(0)} more for free delivery</span>
+                  }
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
       
       {showItems && (
         <div className="space-y-3 mb-4 max-h-56 overflow-y-auto">
@@ -643,7 +718,7 @@ function OrderSummary({
                 <h3 className="text-sm font-medium line-clamp-1">{item.product.name}</h3>
                 <div className="flex justify-between items-center mt-0.5">
                   <span className="text-xs text-gray-500">{item.quantity} × ₹{item.product.price}</span>
-                  <span className="text-sm font-medium">₹{item.product.price * item.quantity}</span>
+                  <span className="text-sm font-medium">₹{Number(item.product.price) * item.quantity}</span>
                 </div>
               </div>
             </div>

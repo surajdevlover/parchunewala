@@ -48,6 +48,9 @@ interface CartContextType {
   totalItems: () => number
   viewProductStores: (productId: string) => Product["storeOptions"] | undefined
   updateProductStore: (productId: string, storeId: string) => void
+  moveAllToStore: (targetStoreId: string) => void
+  hasMultipleStores: () => boolean
+  getMultipleStoreDeliveryFee: () => number
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
@@ -141,6 +144,38 @@ export function CartProvider({ children }: { children: ReactNode }) {
     const selectedStore = stores.find(store => store.id === selectedStoreId)
     
     if (!selectedStore) return
+    
+    // Check if cart has items from a different store
+    if (cartItems.length > 0) {
+      const existingStoreIds = new Set(cartItems.map(item => item.storeId))
+      
+      // If adding from a new store
+      if (!existingStoreIds.has(selectedStoreId) && existingStoreIds.size > 0) {
+        // Creating a function to return this info for use in UI
+        const differentStoreInfo = {
+          hasMultipleStores: true,
+          currentStores: Array.from(existingStoreIds).map(id => {
+            const store = stores.find(s => s.id === id)
+            return store ? store.name : 'Unknown Store'
+          }),
+          newStore: selectedStore.name
+        }
+        
+        // Store this information in localStorage so it can be retrieved for alert/modal
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('multiple_store_warning', JSON.stringify(differentStoreInfo))
+          
+          // Dispatch a custom event to notify any listeners
+          const event = new CustomEvent('multipleStoreWarning', { 
+            detail: differentStoreInfo 
+          })
+          window.dispatchEvent(event)
+          
+          // Don't add the item yet - wait for user confirmation from the modal
+          return;
+        }
+      }
+    }
     
     // Check if this product from this store is already in cart
     const existingItemIndex = cartItems.findIndex(
@@ -251,54 +286,128 @@ export function CartProvider({ children }: { children: ReactNode }) {
     if (itemIndex === -1) return
     
     const item = cartItems[itemIndex]
-    const newStore = stores.find(store => store.id === newStoreId)
-    const storeOption = item.product.storeOptions?.find(option => option.storeId === newStoreId)
+    const storeOption = item.product.storeOptions?.find(s => s.storeId === newStoreId)
     
-    if (!newStore || !storeOption) return
+    if (!storeOption || !storeOption.available) return
     
+    const store = stores.find(s => s.id === newStoreId)
+    if (!store) return
+    
+    // Create updated product with new store info
+    const updatedProduct = {
+      ...item.product,
+      price: storeOption.price,
+      storeId: newStoreId,
+      storeName: storeOption.storeName
+    }
+    
+    // Update cart item with new store info
     const updatedItems = [...cartItems]
-    
-    // Remove the item from its current store
-    updatedItems.splice(itemIndex, 1)
-    
-    // Check if this product already exists in the new store's cart
-    const existingInNewStoreIndex = updatedItems.findIndex(
-      i => i.product.id === productId && i.storeId === newStoreId
-    )
-    
-    if (existingInNewStoreIndex >= 0) {
-      // If it exists in the new store, update quantity
-      updatedItems[existingInNewStoreIndex].quantity += item.quantity
-    } else {
-      // Otherwise add as new item in the new store
-      updatedItems.push({
-        product: {
-          ...item.product,
-          price: storeOption.price,
-          storeId: newStoreId,
-          storeName: newStore.name
-        },
-        quantity: item.quantity,
-        storeId: newStoreId,
-        storeName: newStore.name
-      })
+    updatedItems[itemIndex] = {
+      ...item,
+      product: updatedProduct,
+      storeId: newStoreId,
+      storeName: storeOption.storeName
     }
     
     setCartItems(updatedItems)
   }
+  
+  // Move all products to a single store to consolidate the order
+  const moveAllToStore = (targetStoreId: string) => {
+    // Find the store
+    const store = stores.find(s => s.id === targetStoreId)
+    if (!store) return
+    
+    // Update each item individually if it has that store option
+    const updatedItems = cartItems.map(item => {
+      // Check if this product has an option for the target store
+      const storeOption = item.product.storeOptions?.find(
+        s => s.storeId === targetStoreId && s.available
+      )
+      
+      // If not available at target store, leave it unchanged
+      if (!storeOption) return item
+      
+      // Otherwise update to the target store
+      const updatedProduct = {
+        ...item.product,
+        price: storeOption.price,
+        storeId: targetStoreId,
+        storeName: storeOption.storeName
+      }
+      
+      return {
+        ...item,
+        product: updatedProduct,
+        storeId: targetStoreId,
+        storeName: storeOption.storeName
+      }
+    })
+    
+    setCartItems(updatedItems)
+  }
+
+  // Function to check if cart has items from multiple stores
+  const hasMultipleStores = () => {
+    if (cartItems.length === 0) return false;
+    
+    const storeIds = new Set(cartItems.map(item => item.storeId));
+    return storeIds.size > 1;
+  }
+  
+  // Function to get extra delivery fee for multiple stores
+  const getMultipleStoreDeliveryFee = () => {
+    if (!hasMultipleStores()) return 0;
+    
+    // Base charge for each additional store
+    const baseMultiStoreCharge = 25;
+    
+    // Number of different stores
+    const storeIds = new Set(cartItems.map(item => item.storeId));
+    const extraStores = storeIds.size - 1;
+    
+    return baseMultiStoreCharge * extraStores;
+  }
+
+  // Calculate delivery fee - free over ₹199
+  const calculateDeliveryFee = (storeTotal: number, storeId: string = "1") => {
+    // Basic threshold for free delivery is ₹199
+    const baseDeliveryFee = storeTotal >= 199 ? 0 : 15;
+    
+    // Add distance-based fee based on store
+    let distanceFee = 0;
+    if (storeId === "2") {
+      distanceFee = 10; // Medium distance store
+    } else if (storeId === "3") {
+      distanceFee = 20; // Farthest store
+    }
+    
+    // No distance fee if order qualifies for free delivery
+    if (storeTotal >= 199) {
+      return 0;
+    }
+    
+    return baseDeliveryFee + distanceFee;
+  }
 
   return (
-    <CartContext.Provider value={{
-      cartItems,
-      addToCart,
-      removeFromCart,
-      updateQuantity,
-      clearCart,
-      cartTotal,
-      totalItems,
-      viewProductStores,
-      updateProductStore
-    }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        cartTotal,
+        totalItems,
+        viewProductStores,
+        updateProductStore,
+        moveAllToStore,
+        hasMultipleStores,
+        getMultipleStoreDeliveryFee
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
