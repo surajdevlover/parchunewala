@@ -1,0 +1,68 @@
+{
+    "aashirvaad organic whole wheat atta": {
+        "name": "aashirvaad organic whole wheat atta",
+        "productCount": 22,
+        "storeData": {},
+        "averagePrice": 0,
+        "priceRange": {
+            "min": null,
+            "max": 0
+        },
+        "totalProducts": 0
+    },
+    "daawat basmati rice": {
+        "name": "daawat basmati rice",
+        "productCount": 26,
+        "storeData": {},
+        "averagePrice": 0,
+        "priceRange": {
+            "min": null,
+            "max": 0
+        },
+        "totalProducts": 0
+    },
+    "fortune chakki fresh atta": {
+        "name": "fortune chakki fresh atta",
+        "productCount": 17,
+        "storeData": {},
+        "averagePrice": 0,
+        "priceRange": {
+            "min": null,
+            "max": 0
+        },
+        "totalProducts": 0
+    },
+    "fortune everyday basmati rice": {
+        "name": "fortune everyday basmati rice",
+        "productCount": 27,
+        "storeData": {},
+        "averagePrice": 0,
+        "priceRange": {
+            "min": null,
+            "max": 0
+        },
+        "totalProducts": 0
+    },
+    "india gate basmati rice": {
+        "name": "india gate basmati rice",
+        "productCount": 50,
+        "storeData": {},
+        "averagePrice": 0,
+        "priceRange": {
+            "min": null,
+            "max": 0
+        },
+        "totalProducts": 0
+    },
+    "test result": {
+        "name": "test result",
+        "productCount": 26,
+        "storeData": {},
+        "averagePrice": 0,
+        "priceRange": {
+            "min": null,
+            "max": 0
+        },
+        "totalProducts": 0
+    }
+}

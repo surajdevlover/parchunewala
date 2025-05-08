@@ -3,243 +3,200 @@
 import { useState } from "react"
 import { SharedHeader } from "@/components/shared-header"
 import { Button } from "@/components/ui/button"
-import { Filter, SlidersHorizontal, Star } from "lucide-react"
+import { Search, SlidersHorizontal, Store } from "lucide-react"
 import Footer from "@/app/footer/footer"
-import Link from "next/link"
-import Image from "next/image"
-
-// Define interface for store data
-interface Store {
-  id: string;
-  name: string;
-  address: string;
-  image: string;
-  rating: number;
-  distance: string;
-  deliveryTime: string;
-  discount: string;
-  isOpen: boolean;
-}
-
-// Sample store data - in a real app this would come from an API
-const stores = [
-  {
-    id: "store1",
-    name: "Satish General Store",
-    address: "Near Gandhi Market, Tilak Nagar",
-    image: "/images/stores/store1.jpg",
-    rating: 4.7,
-    distance: "0.5 km",
-    deliveryTime: "10-15 min",
-    discount: "Upto 20% OFF",
-    isOpen: true
-  },
-  {
-    id: "store2",
-    name: "Pandit General Store",
-    address: "Block A, Rajouri Garden",
-    image: "/images/stores/store2.jpg",
-    rating: 4.5,
-    distance: "3.1 km",
-    deliveryTime: "25-30 min",
-    discount: "Upto 15% OFF",
-    isOpen: true
-  },
-  {
-    id: "store3",
-    name: "Anuj Kirana Store",
-    address: "Sector 7, Dwarka",
-    image: "/images/stores/store3.jpg",
-    rating: 4.3,
-    distance: "3.5 km",
-    deliveryTime: "30-35 min",
-    discount: "Upto 18% OFF",
-    isOpen: true
-  },
-  {
-    id: "store4",
-    name: "Sharma Brothers Mart",
-    address: "DDA Market, Janakpuri",
-    image: "/images/stores/store4.jpg",
-    rating: 4.8,
-    distance: "4.2 km",
-    deliveryTime: "35-40 min",
-    discount: "Upto 25% OFF", 
-    isOpen: true
-  },
-  {
-    id: "store5",
-    name: "PVR Market Grocery",
-    address: "Near PVR, Saket",
-    image: "/images/stores/store5.jpg",
-    rating: 4.6,
-    distance: "5.7 km",
-    deliveryTime: "40-45 min",
-    discount: "Upto 22% OFF",
-    isOpen: true
-  },
-  {
-    id: "store6",
-    name: "Malhotra Supermarket",
-    address: "Main Road, Pitampura",
-    image: "/images/stores/store6.jpg",
-    rating: 4.4,
-    distance: "6.1 km",
-    deliveryTime: "45-50 min",
-    discount: "Upto 18% OFF",
-    isOpen: false
-  },
-  {
-    id: "store7",
-    name: "Singh Brothers Store",
-    address: "Phase 1, Mayur Vihar",
-    image: "/images/stores/store7.jpg",
-    rating: 4.2,
-    distance: "7.3 km",
-    deliveryTime: "50-55 min",
-    discount: "Upto 15% OFF",
-    isOpen: true
-  },
-  {
-    id: "store8",
-    name: "Aggarwal Groceries",
-    address: "Near Metro Station, Rohini",
-    image: "/images/stores/store8.jpg",
-    rating: 4.7,
-    distance: "8.2 km",
-    deliveryTime: "55-60 min",
-    discount: "Upto 20% OFF",
-    isOpen: true
-  },
-  {
-    id: "store9",
-    name: "New Delhi Supermart",
-    address: "Connaught Place",
-    image: "/images/stores/store9.jpg",
-    rating: 4.9,
-    distance: "9.5 km",
-    deliveryTime: "60-65 min",
-    discount: "Upto 30% OFF",
-    isOpen: false
-  },
-  {
-    id: "store10",
-    name: "Krishna Grocery",
-    address: "Block D, Vasant Kunj",
-    image: "/images/stores/store10.jpg",
-    rating: 4.6,
-    distance: "10.3 km",
-    deliveryTime: "65-70 min",
-    discount: "Upto 25% OFF",
-    isOpen: true
-  }
-];
-
-// Filter options
-const sortOptions = [
-  { id: "nearest", name: "Nearest" },
-  { id: "fastest", name: "Fastest Delivery" },
-  { id: "rating", name: "Top Rated" },
-  { id: "discount", name: "Best Offers" }
-];
-
-function StoreCard({ store }: { store: Store }) {
-  return (
-    <Link href={`/store/${store.id}`}>
-      <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-        <div className="relative h-36">
-          <Image 
-            src={store.image || "/images/placeholder-store.jpg"} 
-            alt={store.name}
-            className="object-cover"
-            fill
-          />
-          <div className="absolute bottom-2 left-2 bg-white px-2 py-1 rounded text-xs font-medium">
-            {store.discount}
-          </div>
-          {!store.isOpen && (
-            <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-              <span className="text-white font-medium">Closed Now</span>
-            </div>
-          )}
-        </div>
-        <div className="p-3">
-          <h3 className="font-medium text-gray-900 truncate">{store.name}</h3>
-          <p className="text-xs text-gray-500 truncate mt-1">{store.address}</p>
-          
-          <div className="flex items-center justify-between mt-2">
-            <div className="flex items-center">
-              <Star size={12} className="text-yellow-500 fill-yellow-500" />
-              <span className="text-xs font-medium ml-1">{store.rating}</span>
-            </div>
-            <div className="text-xs text-gray-500">{store.distance}</div>
-          </div>
-          
-          <div className="mt-2 pt-2 border-t border-gray-100 flex items-center justify-between">
-            <span className="text-xs font-medium text-gray-700">
-              {store.deliveryTime}
-            </span>
-            <Button size="sm" variant="ghost" className="h-7 px-2 text-xs">
-              View Store
-            </Button>
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-}
+import { motion } from "framer-motion"
+import { StoreCard } from "@/components/store-card"
 
 export default function AllStoresPage() {
-  const [activeSort, setActiveSort] = useState("nearest");
-  const [showFilters, setShowFilters] = useState(false);
+  const [activeSort, setActiveSort] = useState("nearest")
+  const [showFilters, setShowFilters] = useState(false)
+
+  // Available stores - identical to the one used in the home page
+  const stores = [
+    {
+      id: "1",
+      name: "Satish General Store",
+      location: "Sector 44, Noida",
+      image: "https://content3.jdmagicbox.com/v2/comp/noida/k9/011pxx11.xx11.160125130009.a8k9/catalogue/anjali-general-store-noida-sector-44-noida-general-stores-2egpcjw.jpg?height=150&width=300",
+      timing: "Open 8 AM - 10 PM",
+      rating: 4.2,
+      distance: "0.5 km"
+    },
+    {
+      id: "2",
+      name: "Pandit General Store",
+      location: "Sector 18, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB87a87mmqARf0sUuN4nXF-hUTfKpjt4Y8hZZoj-JKj4sfEJDNV2Nl1s9EX9mLnPa8MBS5Fd0Y2YvIkhLl1iD8WKYkCyUhc2AeBqO1SJpY74s19AICUnLxJ37C3ayAkzpxlj25bf=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 7 AM - 11 PM",
+      rating: 4.5,
+      distance: "3.1 km"
+    },
+    {
+      id: "3",
+      name: "Anuj Kirana Store",
+      location: "Sector 126, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_QAIR4rpDjU1ofWAq01ZqBN0Zds7Yuz0aeaFjF0PQ1sAXnAgCYw16L1WEBWKcTaK-CiWGmkqHo1RhOZ9M4z9RRo_yABuvZIMki9by6Efiwmq_FKTfWceBVprj9txNRLCgsjuE=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 9 AM - 9 PM",
+      rating: 4.0,
+      distance: "3.5 km"
+    },
+    {
+      id: "4",
+      name: "Sharma General Store",
+      location: "Sector 15, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_QAIR4rpDjU1ofWAq01ZqBN0Zds7Yuz0aeaFjF0PQ1sAXnAgCYw16L1WEBWKcTaK-CiWGmkqHo1RhOZ9M4z9RRo_yABuvZIMki9by6Efiwmq_FKTfWceBVprj9txNRLCgsjuE=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 8 AM - 9 PM",
+      rating: 4.3,
+      distance: "2.3 km"
+    },
+    {
+      id: "5",
+      name: "Gupta General Store",
+      location: "Sector 62, Noida",
+      image: "https://content3.jdmagicbox.com/v2/comp/noida/k9/011pxx11.xx11.160125130009.a8k9/catalogue/anjali-general-store-noida-sector-44-noida-general-stores-2egpcjw.jpg?height=150&width=300",
+      timing: "Open 7 AM - 10 PM",
+      rating: 4.1,
+      distance: "4.2 km"
+    },
+    {
+      id: "6",
+      name: "Singh Provision Store",
+      location: "Sector 34, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB87a87mmqARf0sUuN4nXF-hUTfKpjt4Y8hZZoj-JKj4sfEJDNV2Nl1s9EX9mLnPa8MBS5Fd0Y2YvIkhLl1iD8WKYkCyUhc2AeBqO1SJpY74s19AICUnLxJ37C3ayAkzpxlj25bf=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 8 AM - 10 PM",
+      rating: 4.4,
+      distance: "1.8 km"
+    }
+  ]
+
+  // Sort options
+  const sortOptions = [
+    { id: "nearest", name: "Nearest" },
+    { id: "fastest", name: "Fastest Delivery" },
+    { id: "rating", name: "Top Rated" },
+    { id: "discount", name: "Best Offers" }
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  }
 
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col">
-      <SharedHeader title="All Stores" showBackButton={true} />
+    <main className="bg-gradient-to-br from-orange-50 to-amber-50 min-h-screen">
+      <SharedHeader title="All Stores" showBackButton={true} showLogo={true} />
       
-      {/* Filters */}
-      <div className="bg-white border-b sticky top-[56px] z-10">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between">
-            <div className="flex overflow-x-auto scrollbar-hide py-1 gap-3">
-              {sortOptions.map(option => (
-                <button
-                  key={option.id}
-                  className={`whitespace-nowrap px-3 py-1 rounded-full text-sm ${
-                    activeSort === option.id 
-                      ? 'bg-pastel-orange text-white' 
-                      : 'bg-gray-100 text-gray-700'
-                  }`}
-                  onClick={() => setActiveSort(option.id)}
-                >
-                  {option.name}
-                </button>
-              ))}
+      <div className="container mx-auto px-4 py-6">
+        {/* Search and Filter */}
+        <motion.div 
+          className="mb-6"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <div className="flex gap-2">
+            <div className="flex-1 relative">
+              <input
+                type="text"
+                placeholder="Search stores..."
+                className="w-full py-2.5 pl-10 pr-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pastel-orange focus:border-transparent shadow-sm transition-all"
+              />
+              <Search className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
             </div>
-            
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="flex-shrink-0"
-              onClick={() => setShowFilters(!showFilters)}
-            >
-              <SlidersHorizontal size={16} className="mr-1" />
-              Filters
+            <Button variant="outline" className="border-gray-300 rounded-xl hover:bg-pastel-orange hover:text-white hover:border-pastel-orange transition-colors">
+              <SlidersHorizontal className="h-5 w-5" />
             </Button>
           </div>
-        </div>
-      </div>
-      
-      {/* Stores Grid */}
-      <div className="container mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        </motion.div>
+
+        {/* Sorting Options */}
+        <motion.div
+          className="mb-6 overflow-x-auto"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
+          <div className="flex gap-3 pb-2">
+            {sortOptions.map(option => (
+              <button
+                key={option.id}
+                className={`whitespace-nowrap px-4 py-2 rounded-full text-sm ${
+                  activeSort === option.id 
+                    ? 'bg-pastel-orange text-white' 
+                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
+                onClick={() => setActiveSort(option.id)}
+              >
+                {option.name}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Store Info Banner */}
+        <motion.div 
+          className="bg-white rounded-xl p-4 mb-6 shadow-sm"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="bg-pastel-orange/10 p-3 rounded-full">
+              <Store className="h-6 w-6 text-pastel-orange" />
+            </div>
+            <div>
+              <h2 className="font-bold text-lg text-gray-800">All Available Stores</h2>
+              <p className="text-sm text-gray-500">Find local stores and compare prices</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Stores Grid */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
           {stores.map(store => (
-            <StoreCard key={store.id} store={store} />
+            <motion.div
+              key={store.id}
+              variants={itemVariants}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            >
+              <StoreCard
+                id={store.id}
+                name={store.name}
+                location={store.location}
+                image={store.image}
+                timing={store.timing}
+                rating={store.rating}
+                distance={store.distance}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-      
+
       <Footer />
     </main>
-  );
+  )
 } 

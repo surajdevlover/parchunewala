@@ -1,0 +1,690 @@
+[
+    {
+        "data": [
+            {
+                "id": 380156,
+                "name": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/e9fe9166-122a-4599-b1a3-77dce820db7a.jpg?ts=1721242870",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c7384fcc-d6e9-4024-8316-ca2588ff2833.jpg?ts=1732881928",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/60dcda4f-4912-4d94-ae99-6e8ead04049f.jpg?ts=1721242872",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d971de43-bdb4-4056-9fbc-a46f686fc3c4.jpg?ts=1721242874",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f1feaa56-cd11-44df-94d6-05a5585ee821.jpg?ts=1721242875",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4dd480a9-e74b-439c-b2fd-9bbbe75934d8.jpg?ts=1721242876",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/33ce52d3-2389-483f-b452-4b15c214ceed.jpg?ts=1721242878",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/bcc81820-72ee-4252-849d-877859b4e0df.jpg?ts=1721242879",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/13f2f7e2-fdf8-4605-b7a4-bcb0b1348bcb.jpg"
+                ],
+                "mrp": 253,
+                "offer_price": 227,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/380156",
+                "rank": 1,
+                "is_ad": false,
+                "inventory": 8,
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    380156
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491417435",
+                "name": "Fortune Chakki Fresh Atta 5 kg",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491417435/fortune-chakki-fresh-atta-5-kg-product-images-o491417435-p491417435-0-202205181222.jpg"
+                ],
+                "mrp": 258,
+                "offer_price": 231,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/fortune-chakki-fresh-atta-5-kg/491417435",
+                "id": "491417435",
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491417435"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 380157,
+                "name": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta (10 kg)",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d2b0f1bf-5e1c-4011-aab1-f2673637cb6e.jpg?ts=1739412575",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/b80100f9-26ae-4c7b-87cc-f15b445e4522.jpg?ts=1739412575",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8cad817e-343a-4adf-b422-d42eb64ba6dd.jpg?ts=1739412575",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/9c0e17b0-9cf3-4015-8778-ab3cd29587d9.jpg?ts=1739412575",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/21790351-ec54-4c06-94f1-6c97eeacb9eb.jpg?ts=1739412575",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/29c62619-196f-4845-b315-af9c11e6e2c8.jpg?ts=1739412575",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7692cffb-0c88-4f87-8e85-467492cda414.jpg?ts=1739412575"
+                ],
+                "mrp": 485,
+                "offer_price": 443,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/380157",
+                "rank": 2,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    380157
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491417436",
+                "name": "Fortune Chakki Fresh Whole Wheat Atta 10 kg",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491417436/fortune-chakki-fresh-whole-wheat-atta-10-kg-product-images-o491417436-p491417436-0-202203170527.jpg"
+                ],
+                "mrp": 495,
+                "offer_price": 449,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/fortune-chakki-fresh-whole-wheat-atta-10-kg/491417436",
+                "id": "491417436",
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491417436"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 55399,
+                "name": "Pillsbury Chakki Fresh Atta",
+                "brand": "Pillsbury",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/774c047c-2e86-4a3a-97f1-7975ec9d83f9.jpg?ts=1737097729",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/808430d5-c918-44aa-bf1b-39d5df96b5a3.jpg?ts=1737097729",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/7545f5b1-94d2-465e-9d99-c2f824ede65f.jpg?ts=1737097729",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/30da7ba3-9a71-4381-be7e-b234fbc0e3e2.jpg?ts=1737097730",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3b4354c6-1e20-46ec-8975-99a078dffb13.jpg?ts=1737097730",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/38a3aa9b-b918-4a7b-9c59-7fe9cab2fa47.jpg?ts=1741159769",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/43250585-499d-4cd2-affa-0d293ebd7021.jpg?ts=1737097730",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2d58d9a8-f264-403a-b48e-92ea9f5a1ec1.jpg?ts=1737097731",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5cab20ed-a6e0-4a6b-b127-b2e2fbe60231.jpg?ts=1737097731",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/37f8be29-e135-4f0d-a21d-8e8a7b674493.jpg?ts=1737097731"
+                ],
+                "mrp": 253,
+                "offer_price": 226,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/55399",
+                "rank": 3,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    55399
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 23694,
+                "name": "Pillsbury Chakki Fresh Atta -10 Kg",
+                "brand": "Pillsbury",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/12f6ff62-779a-4060-9426-c8e838460c4f.jpg?ts=1741159763",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8cf03013-524e-4552-af4e-1b4e2e128614.jpg?ts=1741159763",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/54592503-b11d-4cb3-a13a-895ea5068d80.jpg?ts=1741159764",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d2f7d1e3-3e9b-4cf6-a192-959bcb5c6ae3.jpg?ts=1741159765",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/779fc153-04d6-4f13-91db-68488493393a.jpg?ts=1741159765",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e6bfff7d-93c0-4d2d-895e-f9fcde493589.jpg?ts=1741159766",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/7aaabe92-bc4e-487a-b9a7-ab7ccc87ef78.jpg?ts=1741159766",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/167f7072-796c-423e-986f-7eb8f05ec082.jpg?ts=1741159766",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d36dd8d0-803f-47f8-8134-6b481a262d25.jpg?ts=1741159767",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/43ca86bc-c138-4bb7-aa5a-b7047c9a9f6f.jpg?ts=1741159767",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/63cee0b2-593d-4a30-af6a-56ddc0cf5899.jpg?ts=1741159767",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2612a9ea-5f0c-49b5-9d54-d350e6815386.jpg"
+                ],
+                "mrp": 495,
+                "offer_price": 427,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/23694",
+                "rank": 4,
+                "is_ad": false,
+                "inventory": 8,
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    23694
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 55388,
+                "name": "Patanjali Traditional Whole Wheat Chakki Atta (with Bran)",
+                "brand": "Patanjali",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a3e14899-cdda-46c3-9062-69e94f778f9d.jpg?ts=1720100197",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/30704a36-7a11-4e32-b54d-fb857dfd7141.jpg?ts=1720100198",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/bf843aea-2ec4-446f-a766-46517d019cd2.jpg?ts=1720100200",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a4b360a4-2a0a-4ee4-a6ce-24190115cdaf.jpg?ts=1720100201",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/59c1c55f-ef74-4922-994e-1048a87166b7.jpg?ts=1720100203",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/083582db-8468-4470-a8f8-128813f5c263.jpg?ts=1720100204",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2421186b-81cb-40bb-8f39-4cb551986517.jpg?ts=1720100205",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7ec033fa-3a39-45c3-8a5f-71ed741872a5.jpg?ts=1720100206",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/46f24e8f-e34d-4fc0-9a2d-b2bcc27b77a8.jpg?ts=1720100208"
+                ],
+                "mrp": 480,
+                "offer_price": 452,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/55388",
+                "rank": 5,
+                "is_ad": false,
+                "inventory": 6,
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    55388
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 55389,
+                "name": "Patanjali Whole Wheat Chakki Atta (with Bran) 5 kg",
+                "brand": "Patanjali",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/432b4f48-b68a-42ec-aff4-790b0977cc8f.jpg?ts=1720100212",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7b50d221-51e3-4a09-9828-e4c306ecde12.jpg?ts=1720100213",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/62a2a8c0-8dfe-4d95-b001-b81953ae4f42.jpg?ts=1720100214",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4eda3f6b-8b56-473f-bfb3-0b3be0a852f2.jpg?ts=1720100215",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/6498d15a-ff42-49bf-aef4-20abfc5648dc.jpg?ts=1720100217",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/439935bc-12ab-4672-b33a-fdffa44be72e.jpg?ts=1720100218",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/03a3826f-1376-4a64-a7e9-87efaea796a3.jpg?ts=1720100219",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/99dbfc0d-bee0-4efc-9b57-a000fb9825bd.jpg?ts=1720100221",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/569838f4-48c3-4222-a98f-631246ff5f1a.jpg?ts=1720100222"
+                ],
+                "mrp": 250,
+                "offer_price": 245,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/55389",
+                "rank": 6,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    55389
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 544463,
+                "name": "Fortune Premium Sharbati Atta",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6266daab-d01a-4deb-9ec8-e18195b6efe1.jpg?ts=1740738901",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a426e781-a2be-43ad-9f6d-5f126d999dc8.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/93d75381-20d0-4b9c-9dcd-924ae85a9d11.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/bb1cfb70-77f2-4395-81c1-5ab3d057eb11.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/27b126f9-c6ab-4fd4-bb6a-e651a73d1961.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/59f92b5e-831f-471a-a876-6a2d3a18571f.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9265e3d7-ac8b-4145-a86a-b93137764036.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e05b6f4b-2481-42bd-afa5-eb47cccaf6a9.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/7aeaf314-67c5-4714-a58c-f25bbd5b083b.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8f9c5b99-ff27-4fa6-9adb-396db826ec70.jpg?ts=1739345232",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/16dac594-c503-4f9b-a9ae-898bb39042ae.jpg?ts=1739345232"
+                ],
+                "mrp": 355,
+                "offer_price": 279,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/544463",
+                "rank": 7,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    544463
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 540333,
+                "name": "Natureland Fresh Chakki Organic Atta",
+                "brand": "Natureland",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/540333a.jpg?ts=1704347683",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/540333b.jpg?ts=1704347683",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/540333c.jpg?ts=1704347683",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/540333d.jpg?ts=1704347683"
+                ],
+                "mrp": 248,
+                "offer_price": 184,
+                "unit_level_price": "",
+                "quantity": "3 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/540333",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    540333
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 40912,
+                "name": "Nature Fresh Superior MP Atta",
+                "brand": "Nature Fresh",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f1876739-2f1f-4143-8d4e-71ecfbf83cc7.jpg?ts=1743684328",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6105b226-9289-47f0-9105-00b259163579.jpg?ts=1743684328",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2877ecaa-d644-45b0-99ee-dc15acef0b1b.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c61e9e36-ab27-4846-919c-e1fec3a8df03.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e1e6f09b-f211-4f7c-8d64-41b96c8e876e.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/96385149-a4ab-4c89-a1e1-649e41f71254.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/93da15af-60d6-4129-8ac4-8a2621d405b5.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f6d6317c-6693-449b-a1a2-96aba09bd4f2.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/89742ea8-9cb0-42e7-8ee5-01ff17464bfb.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5d2eca16-6854-4a2c-8dd5-dee65dc8e3ec.jpg?ts=1743684329",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1837587a-c8a9-47ad-b91e-bebb7cafc1c1.jpg?ts=1743684329"
+                ],
+                "mrp": 260,
+                "offer_price": 216,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/40912",
+                "rank": 9,
+                "is_ad": false,
+                "inventory": 7,
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    40912
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 500269,
+                "name": "Vikram Mills Fresh Chakki Atta",
+                "brand": "Vikram Mills",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/5038d433-fc4a-4783-b697-62818f1f9dad.jpg?ts=1707977309",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269b.jpg?ts=1697724871",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269c.jpg?ts=1697718977",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269d.jpg?ts=1697718977",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269e.jpg?ts=1697718977",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269f.jpg?ts=1697718977",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269g.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500269h.jpg"
+                ],
+                "mrp": 431,
+                "offer_price": 409,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/500269",
+                "rank": 10,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    500269
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 525463,
+                "name": "Aashirvaad 0% Maida, 100 % M.P. Chakki Atta",
+                "brand": "Aashirvaad",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/46f58abe-9d6e-4cf8-842f-3bece04549c4.jpg?ts=1741855483",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5b650899-3972-4ace-ad3a-ecd8170cdea8.jpg?ts=1741855483",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e5c4304f-48a4-4d41-bc1e-fa44a6444994.jpg?ts=1741855484",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0f1f1aa0-66cf-490a-acd1-5767b4e73fd8.jpg?ts=1741855484",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/63ffac21-83d5-45b5-a6ef-4c0c05678753.jpg?ts=1741855485",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/56ce78f7-00f2-4f13-8b8e-d9288d2dcbe8.jpg?ts=1741855485",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/86cf48c9-66b9-48e0-85c3-cf58ed57955f.jpg?ts=1741855486",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/721eca79-d0e1-4ea2-8f4b-14a0ef1857b2.jpg?ts=1741855486",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/01c3ab03-d542-489a-a715-6b1b5bb90f1d.jpg?ts=1741855487",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c5547a8d-7a96-4a57-b265-899f46dfb112.jpg?ts=1741855487",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3ece0912-5f88-4ffb-90e8-5a66160f9f24.jpg?ts=1741855488",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/19d53c27-3371-42f2-bf78-8497d47a02d9.jpg?ts=1741855488"
+                ],
+                "mrp": 299,
+                "offer_price": 266,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/525463",
+                "rank": 11,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    525463
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 500270,
+                "name": "Vikram Mills Fresh Chakki Atta",
+                "brand": "Vikram Mills",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d2b316fc-2b75-4569-9708-44ea02a948f7.jpg?ts=1707977309",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500270b.jpg?ts=1697718978",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500270c.jpg?ts=1697718978",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500270d.jpg?ts=1697718978",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500270e.jpg?ts=1697718978",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500270f.jpg?ts=1697718978",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/500270g.jpg?ts=1697718978"
+                ],
+                "mrp": 233,
+                "offer_price": 199,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/500270",
+                "rank": 12,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 11,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    500270
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 23951,
+                "name": "Nature Fresh Sampoorna Chakki Atta",
+                "brand": "Nature Fresh",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8720e501-7eeb-432e-8f45-e31226a94a1c.jpg?ts=1743684323",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/dba15017-a494-405b-9939-319c3a6d8286.jpg?ts=1743684323",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cde7cc09-b776-46df-a704-fee7332cba6e.jpg?ts=1743684323",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d8959389-8bc7-4676-b39d-24fea079085f.jpg?ts=1743684324",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/42858b21-4c74-4ba4-983e-5203deb6e091.jpg?ts=1743684324",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f5572c87-1560-4cce-94c1-e5663222360f.jpg?ts=1743684324",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5708c75c-125b-4442-845c-b053f775a4ed.jpg?ts=1743684324",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/60ad2085-1fe1-4a35-b472-47c41ee06456.jpg?ts=1743684324",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a6ba7dad-8ea6-4192-b556-af8cef4500c3.jpg?ts=1743684325",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/df543859-15d0-4359-9151-dcf0c6d550f0.jpg?ts=1743684325",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/36552134-999a-43f5-b2ca-bc26e545ee21.jpg?ts=1743684326"
+                ],
+                "mrp": 495,
+                "offer_price": 437,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/23951",
+                "rank": 13,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 12,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    23951
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 333764,
+                "name": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (5 kg)",
+                "brand": "Aashirvaad",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4bd9a25b-9a7a-4130-87ce-2cb2d184665f.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e51bd1a6-3622-4d23-b1ad-f0dd67606a9d.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1d4881ad-1c77-4c88-bb59-3e129baceea3.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/533da331-9816-439c-9238-f85450f5b0fa.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cdf72b58-3690-4f5b-8ad4-6c4c5ac9be19.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/79b57cd6-f71c-4346-9675-8829f78525e2.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c36d57ca-87d8-4651-a8d2-85f203350514.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5fbf7571-e670-46c2-96c5-72e31738b47d.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/de12a4bd-f3ee-4d3f-868c-38e8971938b6.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/12fb6cef-d7a3-4a2f-bc1c-a6b0d721d49f.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d9a2c28c-0db9-47c3-8958-ac4bac7c3ec1.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ebd9f61e-ae56-4577-9cb8-95db7dd5f930.jpg?ts=1733471277",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cc17fc18-299f-45a5-b1c3-7a6710381d9a.jpg?ts=1733471277"
+                ],
+                "mrp": 259,
+                "offer_price": 243,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/333764",
+                "rank": 14,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 13,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    333764
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 333324,
+                "name": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (10 kg)",
+                "brand": "Aashirvaad",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e5e7ccbb-d18c-4a03-a193-44502188a9b9.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9e787f3a-2e56-4458-a57a-059b017b2ec6.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b810911e-9faa-4f09-913f-b34b10b40b50.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3a1b67b7-2add-4b50-86ee-dcbbc1b243e7.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/980074bf-c3f0-48df-85db-b7a7df33fbf3.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/15ca7306-6581-4abf-99bf-f445abf99fd0.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4301696b-a4c6-433a-ad30-c83da8b763f3.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2a7678bd-0374-43b4-b2f9-d095e0c8f350.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e2420889-0d10-46bf-9440-f6bfd29a3707.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/72e71b0f-67e2-46e0-b71e-6516ff4bae63.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f9a36020-2a84-469a-bcbd-84beb2dc373a.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3676ed2c-e067-4596-b016-d19c78bdbbfa.jpg?ts=1733471299",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/21fd8fd8-9f3b-4937-a0a9-2d53734b7b0e.jpg?ts=1733471299"
+                ],
+                "mrp": 495,
+                "offer_price": 455,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/333324",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 14,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    333324
+                ]
+            }
+        ]
+    }
+]

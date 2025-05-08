@@ -16,6 +16,8 @@ import Footer from "../footer/footer"
 import { useRouter } from "next/navigation"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
+import MobileAppPrompt from "@/components/mobile-app-prompt"
 
 export default function HomeScreen() {
   const [location, setLocation] = useState("")
@@ -29,6 +31,7 @@ export default function HomeScreen() {
   const [showUserMenu, setShowUserMenu] = useState(false)
   const router = useRouter()
   const isMobile = useMediaQuery("(max-width: 640px)")
+  const todaysDealsRef = useRef<HTMLDivElement>(null)
 
   // Categories with icons
   const categories = [
@@ -62,7 +65,12 @@ export default function HomeScreen() {
       image: "https://content3.jdmagicbox.com/v2/comp/noida/k9/011pxx11.xx11.160125130009.a8k9/catalogue/anjali-general-store-noida-sector-44-noida-general-stores-2egpcjw.jpg?height=150&width=300",
       timing: "Open 8 AM - 10 PM",
       rating: 4.2,
-      distance: "0.5 km"
+      distance: "0.5 km",
+      contact: "+91-9876543210",
+      address: "Shop No. 12, Market Road, Sector 44, Noida",
+      deliveryTime: "15-20 min",
+      description: "Your neighborhood supermarket with all daily essentials, fresh produce, and household items at affordable prices.",
+      tags: ["Groceries", "Household", "Daily Essentials"]
     },
     {
       id: "2",
@@ -71,7 +79,12 @@ export default function HomeScreen() {
       image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB87a87mmqARf0sUuN4nXF-hUTfKpjt4Y8hZZoj-JKj4sfEJDNV2Nl1s9EX9mLnPa8MBS5Fd0Y2YvIkhLl1iD8WKYkCyUhc2AeBqO1SJpY74s19AICUnLxJ37C3ayAkzpxlj25bf=s1360-w1360-h1020?height=150&width=300",
       timing: "Open 7 AM - 11 PM",
       rating: 4.5,
-      distance: "3.1 km"
+      distance: "3.1 km",
+      contact: "+91-9876543211",
+      address: "Shop No. 5, Market Complex, Sector 18, Noida",
+      deliveryTime: "20-30 min",
+      description: "Family-run general store offering groceries, personal care items, and household essentials at competitive prices.",
+      tags: ["Personal Care", "Groceries", "Family Owned"]
     },
     {
       id: "3",
@@ -80,7 +93,12 @@ export default function HomeScreen() {
       image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_QAIR4rpDjU1ofWAq01ZqBN0Zds7Yuz0aeaFjF0PQ1sAXnAgCYw16L1WEBWKcTaK-CiWGmkqHo1RhOZ9M4z9RRo_yABuvZIMki9by6Efiwmq_FKTfWceBVprj9txNRLCgsjuE=s1360-w1360-h1020?height=150&width=300",
       timing: "Open 9 AM - 9 PM",
       rating: 4.0,
-      distance: "3.5 km"
+      distance: "3.5 km",
+      contact: "+91-9876543212",
+      address: "Near City Center, Sector 126, Noida",
+      deliveryTime: "25-35 min",
+      description: "Local convenience store with a wide selection of daily needs, snacks, and beverages.",
+      tags: ["Snacks", "Beverages", "Convenience"]
     }
   ]
   
@@ -735,11 +753,33 @@ export default function HomeScreen() {
     router.push('/login');
   }, [logout, router]);
 
+  // Update the handleStoreSelect function to provide a smoother scrolling experience
+  const handleStoreSelect = (storeId: string | null) => {
+    setSelectedStore(storeId);
+    
+    // Scroll to Today's Deals section with enhanced smooth behavior
+    if (todaysDealsRef.current) {
+      // Give time for filtered products to update
+      setTimeout(() => {
+        todaysDealsRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+        
+        // Add a small offset to account for sticky header
+        window.scrollBy({
+          top: -80, // Adjust based on your header height
+          behavior: 'smooth'
+        });
+      }, 200); // Slightly longer delay for better transition
+    }
+  }
+
   return (
     <main className="flex min-h-screen flex-col bg-gray-50">
       {/* Location Popup */}
       {showLocationPopup && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
             <h2 className="text-xl font-semibold mb-4">Choose your location</h2>
             <p className="text-gray-600 mb-4">To enjoy all that Quick Grocery has to offer you, we need your location</p>
@@ -763,19 +803,19 @@ export default function HomeScreen() {
       )}
       
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-white shadow-sm">
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-pastel-orange/20 shadow-sm">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className={`${isMobile ? 'hidden' : 'block'}`}>
-          <Logo size="md"/>
+                <Logo size="md"/>
               </div>
               
-              <Link href="/location" className="flex items-center gap-1 text-gray-700 ml-4">
+              <Link href="/location" className="flex items-center gap-1 text-gray-700 ml-4 hover:bg-pastel-orange/10 rounded-lg p-1.5 transition-colors">
                 <MapPin size={16} className="text-pastel-orange" />
                 <div className="flex flex-col">
-                  <span className="text-xs font-medium">DELIVERY TO</span>
-                  <span className="text-sm font-medium truncate max-w-36">
+                  <span className="text-xs font-medium text-gray-500">DELIVERY TO</span>
+                  <span className="text-sm font-medium truncate max-w-36 text-gray-700">
                     {location || "Select location"}
                   </span>
                 </div>
@@ -786,9 +826,9 @@ export default function HomeScreen() {
             <div className={`${isMobile ? 'hidden' : 'flex-grow max-w-md mx-4'}`}>
               <Link href="/search" className="relative w-full block">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                  <Search size={18} className="text-gray-400" />
+                  <Search size={18} className="text-pastel-orange" />
                 </div>
-                <div className="w-full pl-10 pr-4 py-2 rounded-md bg-gray-100 text-gray-500 text-sm border border-gray-200">
+                <div className="w-full pl-10 pr-4 py-2 rounded-full bg-white text-gray-700 text-sm border border-gray-200 hover:border-pastel-orange/50 transition-colors shadow-sm">
                   Search for groceries, essentials...
                 </div>
               </Link>
@@ -797,8 +837,8 @@ export default function HomeScreen() {
             {/* Mobile Search Button */}
             {isMobile && (
               <Link href="/search" className="mr-2">
-                <Button variant="ghost" size="icon" className="h-9 w-9">
-                  <Search size={20} className="text-gray-600" />
+                <Button variant="ghost" size="icon" className="h-9 w-9 bg-pastel-orange/10 hover:bg-pastel-orange/20 text-pastel-orange">
+                  <Search size={20} className="text-pastel-orange" />
                 </Button>
               </Link>
             )}
@@ -808,20 +848,20 @@ export default function HomeScreen() {
                 <div className="relative">
                   <button 
                     onClick={() => setShowUserMenu(!showUserMenu)}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 bg-pastel-orange/10 rounded-full p-1.5 hover:bg-pastel-orange/20 transition-colors"
                   >
-                    <Avatar className="h-9 w-9 border border-gray-200">
+                    <Avatar className="h-7 w-7 border-2 border-pastel-orange/30">
                       <AvatarFallback className="bg-pastel-orange/10 text-pastel-orange">
                         {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
                       </AvatarFallback>
                     </Avatar>
                     <span className="text-sm font-medium text-gray-700 hidden md:inline">
                       {user?.name?.split(' ')[0] || 'User'}
-                </span>
+                    </span>
                   </button>
                   
                   {showUserMenu && (
-                    <div className="absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg z-50 py-1">
+                    <div className="absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg z-40 py-1 border border-gray-100">
                       <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         My Profile
                       </Link>
@@ -841,14 +881,14 @@ export default function HomeScreen() {
                 </div>
               ) : (
                 <Link href="/login" className="block"> 
-                  <Button className="bg-pastel-orange text-white flex items-center gap-1">
+                  <Button className="bg-pastel-orange text-white flex items-center gap-1 hover:bg-pastel-orange/90">
                     <LogIn size={16} />
                     <span className="hidden md:inline">Login</span>
-              </Button>
-            </Link>
+                  </Button>
+                </Link>
               )}
 
-            <Link href="/cart">
+              <Link href="/cart">
                 <div className="relative">
                   <Button variant="outline" className="gap-2 h-9 bg-pastel-orange/10 border-pastel-orange text-pastel-orange hover:bg-pastel-orange/20">
                     <ShoppingCart size={18} />
@@ -857,22 +897,22 @@ export default function HomeScreen() {
                   {cartItemCount() > 0 && (
                     <span className="absolute -top-1 -right-1 bg-pastel-orange text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                       {cartItemCount()}
-                </span>
+                    </span>
                   )}
                 </div>
-            </Link>
+              </Link>
             </div>
           </div>
         </div>
         
         {/* Category Navigation */}
-        <div className="bg-white border-t overflow-x-auto scrollbar-hide">
+        {/* <div className="bg-pastel-orange/5 overflow-x-auto scrollbar-hide border-t border-gray-100">
           <div className="container mx-auto px-4">
             <div className="flex space-x-6 py-2">
               {categories.map(category => (
                 <button
                   key={category.id}
-                  className={`whitespace-nowrap px-1 py-1.5 text-sm font-medium ${
+                  className={`whitespace-nowrap px-2 py-1.5 text-sm font-medium ${
                     activeCategory === category.id 
                       ? 'text-pastel-orange border-b-2 border-pastel-orange' 
                       : 'text-gray-600 hover:text-pastel-orange'
@@ -885,292 +925,437 @@ export default function HomeScreen() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </header>
 
-      <div className="container mx-auto px-4 py-4">
-        {/* Store Selection */}
-        <div className="bg-white rounded-lg p-4 mb-6 shadow-sm">
-          <h2 className="font-bold text-lg text-gray-800 mb-3">Shop by Store</h2>
-          <div className="flex overflow-x-auto gap-3 pb-2">
-            <button 
-              className={`flex-shrink-0 px-4 py-2 rounded-full ${
-                selectedStore === null 
-                  ? 'bg-pastel-orange text-white' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-              onClick={() => setSelectedStore(null)}
-            >
-              All Stores
-            </button>
-            {stores.map(store => (
-              <button 
-                key={store.id}
-                className={`flex items-center gap-2 flex-shrink-0 px-4 py-2 rounded-full ${
-                  selectedStore === store.id 
-                    ? 'bg-pastel-orange text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-                onClick={() => setSelectedStore(store.id)}
+      {/* Main content with added top padding to prevent overlapping */}
+      <div className="container mx-auto px-4 py-4 mt-2">
+        {/* Categories Grid */}
+        <div className="mb-6 bg-white rounded-xl shadow-sm p-5 relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-60 h-60 opacity-5">
+            <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="100" fill="#FDA47E"/>
+              <circle cx="100" cy="100" r="80" fill="#FDA47E"/>
+              <circle cx="100" cy="100" r="60" fill="#FDA47E"/>
+            </svg>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-4 relative z-10">
+            <div className="p-2 rounded-full bg-pastel-orange/10">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 3H3V10H10V3Z" stroke="#FDA47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M21 3H14V10H21V3Z" stroke="#FDA47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M21 14H14V21H21V14Z" stroke="#FDA47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10 14H3V21H10V14Z" stroke="#FDA47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h2 className="font-bold text-xl text-gray-800">Shop by Category</h2>
+          </div>
+          
+          <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-10 gap-3">
+            {categories.slice(1).map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ y: -5, scale: 1.05 }}
               >
-                <Store size={16} />
-                {store.name}
-              </button>
+                <Link 
+                  href={`/category/${category.id}`}
+                  className="bg-white rounded-lg p-3 text-center flex flex-col items-center h-full border border-gray-100 hover:border-pastel-orange hover:shadow-md transition-all"
+                >
+                  <div className="text-3xl mb-2 bg-pastel-orange/10 w-12 h-12 rounded-full flex items-center justify-center text-pastel-orange">{category.icon}</div>
+                  <p className="text-xs font-medium truncate w-full text-gray-700">{category.name}</p>
+                </Link>
+              </motion.div>
             ))}
+          </div>
+        </div>
+        
+        {/* Modified Shop by Store section */}
+        <div className="mb-6 bg-white rounded-xl shadow-sm p-5 relative overflow-hidden">
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <div className="p-2 rounded-full bg-pastel-orange/10">
+                  <Store className="h-5 w-5 text-pastel-orange" />
+                </div>
+                <h2 className="font-bold text-xl text-gray-800">Shop by Store</h2>
+              </div>
+              <Link href="/store" className="text-sm text-pastel-orange font-medium flex items-center px-3 py-1 bg-pastel-orange/10 rounded-full hover:bg-pastel-orange/20 transition-colors">
+                View All <ChevronRight size={14} className="ml-1" />
+              </Link>
+            </div>
+            
+            <div className="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
+              <motion.button 
+                className={`flex-shrink-0 px-3 py-1 rounded-full text-xs ${
+                  selectedStore === null 
+                    ? 'bg-pastel-orange text-white' 
+                    : 'bg-pastel-orange/10 text-gray-700 hover:bg-pastel-orange/20'
+                }`}
+                onClick={() => handleStoreSelect(null)}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                All Stores
+              </motion.button>
+              
+              {stores.map(store => (
+                <motion.button 
+                  key={store.id}
+                  className={`flex items-center gap-1.5 flex-shrink-0 px-3 py-1 rounded-full text-xs ${
+                    selectedStore === store.id 
+                      ? 'bg-pastel-orange text-white' 
+                      : 'bg-pastel-orange/10 text-gray-700 hover:bg-pastel-orange/20'
+                  }`}
+                  onClick={() => handleStoreSelect(store.id)}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <Store size={12} />
+                  <span>{store.name}</span>
+                </motion.button>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Banner Slider */}
-        <div className="relative rounded-lg overflow-hidden mb-6 h-48 md:h-64">
+        <div className="relative rounded-xl overflow-hidden mb-6 h-48 md:h-64 shadow-lg">
           {banners.map((banner, index) => (
-            <div
+            <motion.div
               key={index}
               className={`absolute inset-0 transition-opacity duration-500 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ 
+                opacity: index === currentSlide ? 1 : 0, 
+                scale: index === currentSlide ? 1 : 1.05 
+              }}
+              transition={{ duration: 0.5 }}
             >
               <div className="relative w-full h-full">
                 <Image 
                   src={banner} 
                   alt={`Promotional banner ${index + 1}`} 
                   fill 
-                  className="object-cover rounded-lg"
+                  className="object-cover rounded-xl"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
               </div>
-            </div>
+            </motion.div>
           ))}
           
-          <button 
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md"
+          <motion.button 
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-md z-[5]"
             onClick={prevSlide}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <ChevronLeft size={20} />
-          </button>
+            <ChevronLeft size={20} className="text-pastel-orange" />
+          </motion.button>
           
-          <button 
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md"
+          <motion.button 
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-md z-[5]"
             onClick={nextSlide}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <ChevronRight size={20} />
-          </button>
+            <ChevronRight size={20} className="text-pastel-orange" />
+          </motion.button>
           
           {/* Dots indicator */}
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-[5]">
             {banners.map((_, index) => (
-              <button
+              <motion.button
                 key={index}
-                className={`w-2 h-2 rounded-full ${
+                className={`w-2.5 h-2.5 rounded-full ${
                   index === currentSlide ? 'bg-pastel-orange' : 'bg-white/70'
                 }`}
                 onClick={() => setCurrentSlide(index)}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                animate={{ scale: index === currentSlide ? 1.2 : 1 }}
+                transition={{ duration: 0.2 }}
               />
             ))}
           </div>
         </div>
         
         {/* Delivery Promise */}
-        <div className="bg-white rounded-lg p-4 mb-6 shadow-sm">
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+        <div className="bg-white rounded-xl p-5 mb-6 shadow-sm border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <motion.div 
+              className="flex items-center gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="relative w-14 h-14">
                 <Image 
                   src="/15-mins.png" 
                   alt="15 minute delivery" 
                   fill 
-                  className="object-contain"
+                  className="object-contain drop-shadow-md"
                 />
               </div>
               <div>
-                <h3 className="font-medium text-sm">Express Delivery</h3>
-                <p className="text-xs text-gray-500">Get your order in minutes</p>
+                <h3 className="font-semibold text-gray-800">Express Delivery</h3>
+                <p className="text-sm text-gray-500">Get your order in minutes</p>
               </div>
-            </div>
+            </motion.div>
             
-            <div className="flex items-center gap-3">
-              <div className="bg-green-100 p-2 rounded-full">
-                <Smile size={18} className="text-green-600" />
+            <motion.div 
+              className="flex items-center gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="bg-green-100 p-3 rounded-full">
+                <Smile size={24} className="text-green-600" />
               </div>
               <div>
-                <h3 className="font-medium text-sm">100% Satisfaction</h3>
-                <p className="text-xs text-gray-500">Easy returns & refunds</p>
+                <h3 className="font-semibold text-gray-800">100% Satisfaction</h3>
+                <p className="text-sm text-gray-500">Easy returns & refunds</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-3">
-              <div className="bg-blue-100 p-2 rounded-full">
-                <Store size={18} className="text-blue-600" />
+            <motion.div 
+              className="flex items-center gap-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="bg-blue-100 p-3 rounded-full">
+                <Store size={24} className="text-blue-600" />
               </div>
               <div>
-                <h3 className="font-medium text-sm">Multiple Stores</h3>
-                <p className="text-xs text-gray-500">Compare prices across stores</p>
+                <h3 className="font-semibold text-gray-800">Multiple Stores</h3>
+                <p className="text-sm text-gray-500">Compare prices across stores</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Special Category Offers */}
         <div className="mb-6">
-          <h2 className="font-bold text-lg text-gray-800 mb-3">Special Offers</h2>
+          <div className="flex items-center gap-2 mb-4">
+            <div className="p-2 rounded-full bg-pink-100">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#F472B6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M7 10L12 15L17 10" stroke="#F472B6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 15V3" stroke="#F472B6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h2 className="font-bold text-xl text-gray-800">Special Offers</h2>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {categoryOffers.map(offer => (
-              <Link 
-                key={offer.id} 
-                href={`/category/${offer.id}`} 
-                className="relative rounded-lg overflow-hidden aspect-[2/1] group"
+            {categoryOffers.map((offer, index) => (
+              <motion.div
+                key={offer.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="shadow-sm"
               >
-                <Image 
-                  src={offer.image} 
-                  alt={offer.title} 
-                  fill 
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center p-4">
-                  <h3 className="text-white font-bold text-lg">{offer.title}</h3>
-                  <p className="text-white text-sm">{offer.discount}</p>
-                  <span className="text-white text-xs mt-2 inline-flex items-center gap-1 group-hover:underline">
-                    Shop now <ExternalLink size={12} />
-                  </span>
-                </div>
-            </Link>
+                <Link 
+                  href={`/category/${offer.id}`} 
+                  className="relative rounded-xl overflow-hidden aspect-[2/1] group block"
+                >
+                  <Image 
+                    src={offer.image} 
+                    alt={offer.title} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex flex-col justify-center p-5">
+                    <h3 className="text-white font-bold text-xl mb-1">{offer.title}</h3>
+                    <p className="text-white text-sm mb-3">{offer.discount}</p>
+                    <span className="text-white text-xs inline-flex items-center gap-1 bg-white/20 backdrop-blur-sm py-1 px-3 rounded-full w-fit group-hover:bg-white group-hover:text-pastel-orange transition-colors">
+                      Shop now <ExternalLink size={12} className="ml-1" />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Categories Grid */}
-        <div className="mb-6">
-          <h2 className="font-bold text-lg text-gray-800 mb-3">Shop by Category</h2>
-          <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-10 gap-2">
-            {categories.slice(1).map(category => (
-              <Link 
-                key={category.id} 
-                href={`/category/${category.id}`}
-                className="bg-white rounded-lg p-2 text-center hover:shadow-md transition-shadow"
-              >
-                <div className="text-2xl mb-1">{category.icon}</div>
-                <p className="text-xs font-medium truncate">{category.name}</p>
-              </Link>
-            ))}
+        {/* Featured Products - Today's Deals */}
+        <div ref={todaysDealsRef} className="bg-white rounded-xl p-5 mb-6 shadow-sm border border-gray-100 relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-40 h-40 opacity-5">
+            <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M197.269 135.002C217.403 93.0863 189.493 50.2053 156.788 32.678C127.127 16.8582 94.9708 17.0498 68.8505 42.2764C50.4506 60.0156 40.1301 81.5863 21.7302 99.3255C-2.55982 123.043 -7.54847 161.161 20.7385 182.708C48.1512 203.52 80.5359 189.045 115.295 182.934C152.146 176.505 177.136 176.918 197.269 135.002Z" fill="#FDA47E"/>
+            </svg>
           </div>
-        </div>
-
-        {/* Featured Products */}
-        <div className="bg-white rounded-lg p-4 mb-6 shadow-sm">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="font-bold text-lg text-gray-800">Today's Deals</h2>
-            <Link href="/category/deals" className="text-sm text-pastel-orange font-medium">
-              View All
+          
+          <div className="flex justify-between items-center mb-5 relative z-10">
+            <div className="flex items-center gap-2">
+              <div className="p-2 rounded-full bg-pastel-orange/10">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.59 13.41L13.42 20.58C13.2343 20.766 13.0137 20.9135 12.7709 21.0141C12.5281 21.1148 12.2678 21.1666 12.005 21.1666C11.7422 21.1666 11.4819 21.1148 11.2391 21.0141C10.9963 20.9135 10.7757 20.766 10.59 20.58L2 12V2H12L20.59 10.59C20.9625 10.9647 21.1716 11.4716 21.1716 12C21.1716 12.5284 20.9625 13.0353 20.59 13.41Z" stroke="#FDA47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M7 7H7.01" stroke="#FDA47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h2 className="font-bold text-xl text-gray-800">Today's Deals</h2>
+            </div>
+            <Link href="/category/deals" className="text-sm text-pastel-orange font-medium flex items-center px-3 py-1 bg-pastel-orange/10 rounded-full hover:bg-pastel-orange/20 transition-colors">
+              View All <ChevronRight size={14} className="ml-1" />
             </Link>
           </div>
+          
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredProducts.map(product => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                price={product.price}
-                mrp={product.mrp}
-                quantity={product.quantity}
-                image={product.image}
-                rating={product.rating}
-                discount={product.discount}
-                storeId={product.storeId}
-              />
-            ))}
+            {filteredProducts.map((product, index) => {
+              // Find the store for this product
+              const productStore = stores.find(store => store.id === product.storeId);
+              
+              return (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <ProductCard
+                    id={product.id}
+                    name={product.name}
+                    price={product.price}
+                    mrp={product.mrp}
+                    quantity={product.quantity}
+                    image={product.image}
+                    rating={product.rating}
+                    discount={product.discount}
+                    storeId={product.storeId}
+                    storeName={productStore?.name}
+                    storeDistance={productStore?.distance}
+                    deliveryTime={productStore?.deliveryTime}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
-        {/* Store Products Sections - Zomato Style */}
-        {storeProducts.map(store => (
-          <div key={store.id} className="mt-8 bg-white rounded-lg p-4 shadow-sm">
-            <div className="flex items-center justify-between mb-4">
+        {/* Store Products Sections */}
+        {storeProducts.map((store, index) => (
+          <motion.div 
+            key={store.id} 
+            className="mb-6 bg-white rounded-xl p-5 shadow-sm border border-gray-100 relative overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <div className="absolute right-0 top-0 w-40 h-40 opacity-5">
+              <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none">
+                <path d="M156.409 12.3734C197.581 34.6181 224.719 76.9494 203.862 118.794C183.005 160.639 114.153 202 56.6815 183.929C-0.790478 165.858 -10.775 88.3526 10.0823 46.5076C30.9396 4.66259 115.237 -9.86116 156.409 12.3734Z" fill="#FDA47E"/>
+              </svg>
+            </div>
+            
+            <div className="flex items-center justify-between mb-5 relative z-10">
               <div>
                 <div className="flex items-center gap-2">
-                  <Store className="h-5 w-5 text-pastel-orange" />
-                  <h2 className="text-xl font-semibold">{store.title}</h2>
-                  <Badge variant="outline" className="ml-1 bg-green-50 text-green-700 border-green-200 text-xs">
-                    {store.id === "1" ? "Fastest Delivery" : store.id === "2" ? "Best Deals" : "Wide Selection"}
-                  </Badge>
+                  <div className="p-2 rounded-full bg-pastel-orange/10">
+                    <Store className="h-5 w-5 text-pastel-orange" />
+                  </div>
+                  <h2 className="text-xl font-bold text-gray-800">{store.title}</h2>
                 </div>
                 <p className="text-sm text-gray-500 mt-1">{store.description}</p>
               </div>
-              <Link href={`/store/${store.id}`} className="text-pastel-orange text-sm font-medium flex items-center">
-                View Store <ChevronRight size={16} />
+              <Link href={`/store/${store.id}`} className="text-pastel-orange text-sm font-medium flex items-center px-3 py-1 bg-pastel-orange/10 rounded-full hover:bg-pastel-orange/20 transition-colors">
+                View Store <ChevronRight size={14} className="ml-1" />
               </Link>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-              {store.products.map(product => (
-                <ProductCard
+              {store.products.map((product, productIndex) => (
+                <motion.div
                   key={product.id}
-                  id={product.id}
-                  name={product.name}
-                  price={product.price}
-                  mrp={product.mrp}
-                  image={product.image}
-                  quantity={product.quantity}
-                  rating={product.rating}
-                  discount={product.discount}
-                  storeId={product.storeId}
-                  storeName={product.storeName}
-                  storeDistance={product.storeDistance}
-                  deliveryTime={product.deliveryTime}
-                />
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: productIndex * 0.05 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <ProductCard
+                    id={product.id}
+                    name={product.name}
+                    price={product.price}
+                    mrp={product.mrp}
+                    image={product.image}
+                    quantity={product.quantity}
+                    rating={product.rating}
+                    discount={product.discount}
+                    storeId={product.storeId}
+                    storeName={product.storeName}
+                    storeDistance={product.storeDistance}
+                    deliveryTime={product.deliveryTime}
+                  />
+                </motion.div>
               ))}
             </div>
-          </div>
-        ))}
-
-        {/* Product Sections */}
-        {productSections.map(section => (
-          <div key={section.id} className="mt-8">
-            <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-gray-900">{section.title}</h2>
-              <Link href={`/store/${section.id}`} className="text-pastel-orange text-sm font-medium flex items-center">
-                View Store <ChevronRight className="h-4 w-4 ml-1" />
-              </Link>
-            </div>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-3">
-              {section.products.map((product) => (
-                <ProductCard 
-                  key={product.id}
-                  id={product.id}
-                  name={product.name}
-                  price={product.price}
-                  mrp={product.mrp}
-                  image={product.image}
-                  quantity={product.quantity}
-                  rating={product.rating}
-                  discount={product.discount}
-                  storeId={product.storeId}
-                  storeName={section.id === "satish" ? "Satish General Store" : section.id === "pandit" ? "Pandit General Store" : "Anuj Kirana Store"}
-                />
-              ))}
-            </div>
-          </div>
+          </motion.div>
         ))}
 
         {/* Nearby Stores */}
-        <div className="bg-white rounded-lg p-4 mb-6 shadow-sm">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="font-bold text-lg text-gray-800">Nearby Stores</h2>
-            <Link href="/store" className="text-sm text-pastel-orange font-medium">
-              View All
+        <div className="bg-gradient-to-r from-pastel-orange/5 to-orange-100 rounded-xl p-5 mb-6 shadow-sm relative overflow-hidden">
+          <div className="absolute right-0 top-0 w-32 h-32 opacity-10">
+            <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="100" fill="#FDA47E"/>
+              <circle cx="100" cy="100" r="80" fill="#FDA47E"/>
+              <circle cx="100" cy="100" r="60" fill="#FDA47E"/>
+            </svg>
+          </div>
+          
+          <div className="flex justify-between items-center mb-5 relative z-10">
+            <div className="flex items-center gap-2">
+              <div className="bg-pastel-orange/20 p-2 rounded-full">
+                <Store className="h-5 w-5 text-pastel-orange" />
+              </div>
+              <h2 className="font-bold text-xl text-gray-800">Nearby Stores</h2>
+            </div>
+            <Link href="/store" className="text-sm text-pastel-orange font-medium flex items-center px-3 py-1 bg-pastel-orange/20 rounded-full hover:bg-pastel-orange/30 transition-colors">
+              View All <ChevronRight size={14} className="ml-1" />
             </Link>
           </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {stores.map(store => (
-              <StoreCard
+            {stores.map((store, index) => (
+              <motion.div
                 key={store.id}
-                id={store.id}
-                name={store.name}
-                location={store.location}
-                image={store.image}
-                timing={store.timing}
-                rating={store.rating}
-                distance={store.distance}
-              />
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <StoreCard
+                  id={store.id}
+                  name={store.name}
+                  location={store.location}
+                  image={store.image}
+                  timing={store.timing}
+                  rating={store.rating}
+                  distance={store.distance}
+                  tags={store.tags}
+                  size="default"
+                />
+              </motion.div>
             ))}
+          </div>
+          
+          <div className="mt-5 flex justify-center relative z-10">
+            <Link href="/store">
+              <Button className="bg-white border border-pastel-orange text-pastel-orange hover:bg-pastel-orange hover:text-white transition-colors">
+                Explore all stores in your area
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -1178,12 +1363,15 @@ export default function HomeScreen() {
       {/* Back to top button */}
       {showTopButton && (
         <button 
-          className="fixed bottom-6 right-6 bg-pastel-orange text-white p-3 rounded-full shadow-lg"
+          className="fixed bottom-6 right-6 bg-pastel-orange text-white p-3 rounded-full shadow-lg z-30"
           onClick={scrollToTop}
         >
           <ChevronLeft size={20} className="rotate-90" />
         </button>
       )}
+
+      {/* Mobile app prompt for mobile devices */}
+      {isMobile && <MobileAppPrompt />}
 
       <Footer />
     </main>

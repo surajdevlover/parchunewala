@@ -1,0 +1,12 @@
+{
+    "BlinkIt": {
+        "name": "BlinkIt",
+        "productCount": 108,
+        "lowestPriceCount": 5
+    },
+    "Jiomart": {
+        "name": "Jiomart",
+        "productCount": 60,
+        "lowestPriceCount": 1
+    }
+}

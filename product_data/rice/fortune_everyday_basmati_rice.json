@@ -1,0 +1,1038 @@
+[
+    {
+        "data": [
+            {
+                "id": 52676,
+                "name": "Fortune Everyday Full Grain Basmati Rice",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/cd288637-3be2-4b15-b145-fbdcf80c6d32.jpg?ts=1708592754",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/52676b.jpg?ts=1624964816",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/52676c.jpg?ts=1624964816",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/52676d.jpg?ts=1624964816",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/52676e.jpg?ts=1624964816",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/52676f.jpg?ts=1624964816",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/52676g.jpg"
+                ],
+                "mrp": 169,
+                "offer_price": 135,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/52676",
+                "rank": 2,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    52676
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491215480",
+                "name": "Fortune Everyday Full Grain Basmati Rice 5 kg",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491215480/fortune-everyday-full-grain-basmati-rice-5-kg-product-images-o491215480-p491215480-0-202203151912.jpg"
+                ],
+                "mrp": 845,
+                "offer_price": 549,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/kohinoor-authentic-supreme-basmati-rice-1-kg/491215480",
+                "id": "491215480",
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491215480"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 545228,
+                "name": "India Gate Everyday Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1a9d7660-0b61-4397-a15d-107a70787ec7.jpg?ts=1738400192",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ff53187c-ed63-4768-9af7-9a17c5289013.jpg?ts=1738400192",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/56a06a2a-c33d-4a8a-805d-6bf86e7c9d19.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f393d77c-e667-4856-aa45-8ebf43fd98e5.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/781496c6-2fdf-435c-9227-f983c3494fe4.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1e7a135d-0578-4bce-850f-b24c322269d4.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a010d855-81f4-4fd7-b4ae-405caceb8417.jpg?ts=1738400193"
+                ],
+                "mrp": 97,
+                "offer_price": 86,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/545228",
+                "rank": 3,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    545228
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "611207242",
+                "name": "Fortune Physically Refined Rice Bran Oil 3 L (Can) + Fortune Everyday Full Grain Basmati Rice 5 kg",
+                "brand": "Fortune+Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/494334105f/fortune-physically-refined-rice-bran-oil-3-l-can-fortune-everyday-full-grain-basmati-rice-5-kg-product-images-o494334105f-p611207242-0-202503242241.jpg"
+                ],
+                "mrp": 1494,
+                "offer_price": 799,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/fortune-physically-refined-rice-bran-oil-3-l-can-fortune-everyday-full-grain-basmati-rice-5-kg/611207242",
+                "id": "611207242",
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "611207242"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 608512,
+                "name": "India Gate Everyday Pure Basmati Rice (Medium)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/fa40cdac-b505-44b1-9796-8b508d22864b.jpg?ts=1737462308",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/26456d10-5689-47ba-8fa6-c843388b3c63.jpg?ts=1737462308",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/486b5af9-fd28-4307-a88f-3f3fe58eecba.jpg?ts=1737462308",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1d7e1dbe-1ca5-4ef6-8c03-c7cf48eb7bbb.jpg?ts=1737462309",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c052a395-b9d8-4a97-820a-e24e1313db17.jpg?ts=1737462309"
+                ],
+                "mrp": 899,
+                "offer_price": 742,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/608512",
+                "rank": 4,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    608512
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491638884",
+                "name": "Daawat Devaaya Everyday Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491638884/daawat-devaaya-everyday-rice-5-kg-product-images-o491638884-p491638884-0-202203151831.jpg"
+                ],
+                "mrp": 650,
+                "offer_price": 325,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-devaaya-everyday-rice-5-kg/491638884",
+                "id": "491638884",
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491638884"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 497459,
+                "name": "India Gate Everyday Pure Basmati Rice (Medium)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6d5e411a-73b4-44aa-8544-87236a8b3980.jpg?ts=1739269694",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c872d515-5a9e-4686-9cb2-bd6a4802110d.jpg?ts=1739269602",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/06a4fb9c-5b78-4e5b-81f1-0dcb3aae1bde.jpg?ts=1739269602",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3084aee7-aef4-471a-a496-06bd40ba687e.jpg?ts=1739269602",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ffd2dfa1-eaf4-4738-bdc3-3c75c81c457d.jpg?ts=1739269602",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1a83757e-93b1-4e2b-a9de-5229f6c8e57c.jpg?ts=1739269602",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d6084d6c-94a2-447c-a42d-13880f4edd87.jpg?ts=1739269602"
+                ],
+                "mrp": 480,
+                "offer_price": 359,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/497459",
+                "rank": 5,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    497459
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 556674,
+                "name": "Whole Farm Premium Everyday Basmati Rice",
+                "brand": "Whole Farm",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/46f2e6d8-7d6e-40e6-8c21-7cec0874046f.jpg?ts=1718880448",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f360e5d0-2723-492b-a156-645cafbc7d5d.jpg?ts=1743764760",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/80cc4e2e-83ec-4649-b7b4-927d51abc0ed.jpg?ts=1718880451",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d6bedcfc-b9a3-49f3-bf22-27e1e90d4cf2.jpg?ts=1718880452"
+                ],
+                "mrp": 120,
+                "offer_price": 83,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/556674",
+                "rank": 6,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    556674
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 497460,
+                "name": "India Gate Daily Premium Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/338f2cd4-9cb3-408b-9517-0b51d0783f1c.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3e3b9938-a3a5-400d-b1a1-058a05113fc3.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5cb5d16a-349b-4c5f-8194-91b9e5576ff6.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f132d7f5-37cd-4e9c-a8eb-70359177a406.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ec653fa3-ee69-42c6-8a8a-6b8c0268227a.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6f03a025-8ca5-43ae-b7fc-c30e0930111a.jpg?ts=1738400187",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f4576646-d62f-4bae-a683-b606351973ee.jpg?ts=1738400187",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/435846f0-4487-454e-8447-2594ac5fbe17.jpg?ts=1738400188"
+                ],
+                "mrp": 630,
+                "offer_price": 462,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/497460",
+                "rank": 7,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    497460
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 73577,
+                "name": "Fortune Rozana Gold Basmati Rice",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/50392127-6d0b-4364-8c61-f3b9404d927c.jpg?ts=1737006135",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/52a51450-2e36-4653-859d-b507c6827486.jpg?ts=1737006135",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/aa042f43-2a3c-412b-aa69-ab63e67c919f.jpg?ts=1737006136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d07b7d53-6c9f-47c3-90d6-b8655e5e9476.jpg?ts=1737006136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/dd5fdf50-4f6d-44a6-a740-aff6f731b0b9.jpg?ts=1737006136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/43262e5d-6066-45bf-a9ec-4d80a247f680.jpg?ts=1737006137",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1485606f-3d2c-47f8-8595-f21f831995e3.jpg?ts=1737006137",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a8668f7d-4e57-45bf-8f67-083ee91aa842.jpg"
+                ],
+                "mrp": 130,
+                "offer_price": 97,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/73577",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    73577,
+                    124532
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 124532,
+                "name": "Fortune Rozana Gold Basmati Rice",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b54c0d41-bc5c-464a-9d8e-725b82c514ab.jpg?ts=1737006141",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/90ec714d-fdd8-42ad-8393-d7b22fdc8e02.jpg?ts=1737006142",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/960eccf8-f4a1-4cb2-853c-3f4d64b81e8e.jpg?ts=1737006142",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2c039612-a00a-4339-b5e3-5fe3f85607c1.jpg?ts=1737006142",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/51e8645c-7b9f-4606-88ce-6c04d92a6036.jpg?ts=1737006143",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/63ba1364-ec0c-4541-a5e3-71c8a2a31655.jpg?ts=1737006143",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/92e04f2d-ba6e-4a02-b527-af4cbc339ab3.jpg?ts=1737006143",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e967358c-4f4e-4435-8f2f-613c1582f8e6.jpg"
+                ],
+                "mrp": 585,
+                "offer_price": 406,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/124532",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 6,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    73577,
+                    124532
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 391805,
+                "name": "Fortune Hamesha Mini Dubar Basmati Rice",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805a.jpg?ts=1693205731",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805b.jpg?ts=1693205731",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805c.jpg?ts=1693205731",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805d.jpg?ts=1693205731",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805e.jpg?ts=1693205731",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805f.jpg?ts=1693205731",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/391805g.jpg?ts=1693205731"
+                ],
+                "mrp": 465,
+                "offer_price": 385,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/391805",
+                "rank": 9,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    391805
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 547514,
+                "name": "Crown Daily Basmati Rice",
+                "brand": "Crown",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/df87d365-6ed0-4012-a334-dd8465bb5a96.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8d26b2b7-6794-4cec-864e-51db0f6fdb96.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/43c93cd4-3ee6-4f1a-b77b-d87bd41ebb11.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8831ca5d-25c0-403e-bbce-1f3a3e782f28.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f53dd312-cee7-45c4-9ff5-2a24824daa59.jpg"
+                ],
+                "mrp": 575,
+                "offer_price": 360,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/547514",
+                "rank": 10,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    547514,
+                    547513
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 547513,
+                "name": "Crown Daily Basmati Rice",
+                "brand": "Crown",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1446dda3-f32d-421f-bc17-9c28efe36666.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/91339449-932c-48ac-af66-615a00624324.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4e45ad6a-6fcf-4403-ae25-5385339674be.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/57362276-eec5-418a-9c3e-41fe2f7220df.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f0e3cc07-eefc-4904-a991-6be4e3820d08.jpg"
+                ],
+                "mrp": 130,
+                "offer_price": 76,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/547513",
+                "rank": 10,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 8,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    547514,
+                    547513
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 372896,
+                "name": "India Gate Regular Choice Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cb0e2108-1616-4ef8-8080-06f31f65ebff.jpg?ts=1741674504",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0f86d41e-5b46-44c3-b492-b8e3475ec237.jpg?ts=1741674505",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/18aced55-c7c8-407f-bd00-f07ccb47c186.jpg?ts=1741674505",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/891cb124-2391-474a-b692-3f4faed5246c.jpg?ts=1741674506",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/473ec560-3584-43c6-9654-0ffd6a3cf9ca.jpg?ts=1741674507",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6046ffd8-448e-4bd5-9798-454cc07b7696.jpg"
+                ],
+                "mrp": 525,
+                "offer_price": 409,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/372896",
+                "rank": 11,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    372896
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 607689,
+                "name": "Fortune Rozana Super Basmati Rice (Medium)",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/eb0bcd8a-8e5c-4588-939d-84bd9cf454d1.jpg?ts=1737377792",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6bb384ba-427e-4039-a9e1-1637c10a087b.jpg?ts=1737377792",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8d93328c-e3bc-4fd1-96aa-06dcbf0c321c.jpg?ts=1737377792",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/33e0b257-845f-496d-b6fa-82b1eeff5923.jpg?ts=1737377792",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/85e765d0-bbd3-4a0b-83b2-518d4cc5dbed.jpg?ts=1737377793",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a9f45783-d195-4ae9-8054-cc9e0e740ff9.jpg?ts=1737377793",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a5f7a5a7-ea93-4821-adba-6b030a72269b.jpg?ts=1737377793",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/97a69226-f87e-44f7-bcbb-a0c5b8c8dde7.jpg?ts=1737377793",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/661795f1-da9b-4039-b1e4-75af61f0d522.jpg?ts=1737377794",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6b846330-99eb-4e1b-aa89-8f10ecfbc303.jpg?ts=1737377794"
+                ],
+                "mrp": 95,
+                "offer_price": 91,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/607689",
+                "rank": 12,
+                "is_ad": false,
+                "inventory": 8,
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    607689,
+                    607706
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 607706,
+                "name": "Fortune Rozana Super Basmati Rice (Medium)",
+                "brand": "Fortune",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/17e95528-0b2e-424b-9c78-f8f86202f90f.jpg?ts=1737377821",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/63755e39-77e1-45ea-8a8f-b48bd324c31a.jpg?ts=1737377821",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/160e66c9-570d-450f-9fa8-07cb34488581.jpg?ts=1737377821",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f1f721e8-7fb5-4382-96dd-42a8132c559a.jpg?ts=1737377822",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c3560bcb-6a34-4d5a-8a0f-ec0b601f1076.jpg?ts=1737377822",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4f685993-5e24-4128-8ddb-b80c5506ed0d.jpg?ts=1737377823"
+                ],
+                "mrp": 465,
+                "offer_price": 383,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/607706",
+                "rank": 12,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 10,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    607689,
+                    607706
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 435962,
+                "name": "Daawat Devaaya Everyday Basmati Rice",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/93696988-ca83-487e-81b3-5fc679a1f137.jpg?ts=1725884503",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a03c33ea-378a-4887-9129-046c22346e3d.jpg?ts=1725884504",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/396bdb28-a2de-4d6e-ab0d-13c8ada8836b.jpg?ts=1725884506",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/5d4c4d61-82f6-485c-9361-b0038328b2b3.jpg?ts=1725884507",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/924c53bc-086f-4492-b235-1f8f2cf9c08e.jpg?ts=1725884508"
+                ],
+                "mrp": 650,
+                "offer_price": 344,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/435962",
+                "rank": 13,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 11,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    435962
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 498761,
+                "name": "Amul Organic Basmati Rice",
+                "brand": "Amul",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761a.jpg?ts=1688442747",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761b.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761c.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761d.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761e.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761f.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/498761g.jpg"
+                ],
+                "mrp": 180,
+                "offer_price": 180,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/498761",
+                "rank": 14,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 12,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    498761
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 10967,
+                "name": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b8230b80-4791-457f-bcb2-e053e2112734.jpg?ts=1738400125",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c3c4b5bd-f7a8-4c82-9f56-e6a0d850bc77.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4945b1c6-c26e-4c2d-bf76-6e14c3012b0a.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6b4ee722-c80e-49ac-afc4-9774427f594b.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/86c6e4c7-b4aa-474f-a798-3612021655d7.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/80a3eb55-3929-4b32-ba5d-9cb63cb47461.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9bf30238-ad23-45f7-98fc-9bb4b58a44d6.jpg?ts=1738400127"
+                ],
+                "mrp": 585,
+                "offer_price": 445,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/10967",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 13,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10967,
+                    36183
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 36183,
+                "name": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/795d5e3b-3b05-4fe8-b3ec-9fc03e75ee78.jpg?ts=1738400151",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/54d0fd70-7c16-442f-82ec-c0d293e39d6e.jpg?ts=1738400151",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/bdfb7d94-015b-4ebc-a9a9-87ea9a0b9cce.jpg?ts=1738400151",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/48f6be2a-ba42-44f5-b539-ea76565716e5.jpg?ts=1738400152",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c8f82209-7b05-409d-a3e9-7cb02951b9a8.jpg?ts=1738400152",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9c15900f-69d0-440a-9371-27edc889c917.jpg?ts=1738400152",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c4c7b224-69ca-4154-83cf-f538b8c232b7.jpg?ts=1738400152"
+                ],
+                "mrp": 118,
+                "offer_price": 107,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/36183",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 8,
+                "parentIndex": 13,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10967,
+                    36183
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 10968,
+                "name": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/02d12701-6b00-4400-904f-3cadfe6672d1.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/72011753-5dbb-48b4-afdb-d8efda8a9ec5.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c71307ab-fe1b-4097-b26c-0b678cd7f6b2.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/340a5516-0017-410a-9ba5-3fa7b96a82ca.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/dc38bc5d-e6ed-4f86-b2b1-ad65821a2077.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2518f88a-f7d6-4062-98ec-57f4bdd63262.jpg?ts=1738400129"
+                ],
+                "mrp": 460,
+                "offer_price": 369,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/10968",
+                "rank": 16,
+                "is_ad": false,
+                "inventory": 5,
+                "parentIndex": 14,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10968,
+                    18770
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 18770,
+                "name": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/08cb4c85-45fa-4475-a9b2-8c14c5260d21.jpg?ts=1738400135",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0ed8f727-4087-485e-a3d7-010330fc9ab5.jpg?ts=1738400135",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5d15145c-2d4b-4df4-a8d2-5bed3f2d9931.jpg?ts=1738400136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a45fc32c-6301-4232-b2f6-fbc56c229540.jpg?ts=1738400136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e7ea56c9-5812-4303-b2fb-94bebd71693a.jpg?ts=1738400137",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/061b5f95-d094-4697-846e-48742035e403.jpg?ts=1738400137",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0798fdfc-8566-4de0-9a51-e0459368a511.jpg?ts=1738400137"
+                ],
+                "mrp": 865,
+                "offer_price": 689,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/18770",
+                "rank": 16,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 14,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10968,
+                    18770
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 100633,
+                "name": "India Gate Mini Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ec0b2ece-4e0d-445c-8314-d45a62d3d7eb.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d4c0f6b7-250d-488d-b6f7-0a24221839be.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/076f8925-2a43-42fe-82ba-9eb62094e3e7.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d0d7f740-f174-41f5-b34e-14866f102570.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ec04b872-1fe3-4274-bdb8-1aeac2a4781a.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d73c3289-b32b-47f8-ab41-d20e4516b50a.jpg?ts=1738400161",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d953a8c4-deb8-48e1-9aa3-2d4d893d3200.jpg?ts=1738400161"
+                ],
+                "mrp": 378,
+                "offer_price": 319,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/100633",
+                "rank": 17,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 15,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    100633
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 20,
+                "name": "India Gate Super Basmati Rice (1 kg + 500 g)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c9dc542a-3ffa-4618-acd8-fdbbf76eb83d.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a3004b0c-9ce3-4743-bcbe-89b9867c757f.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/846960df-9f70-425e-8b61-56a922f9115a.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/584d7ee5-ebcc-4c0c-a32c-2775d8be78c3.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cd43f331-c5da-4c75-9779-92cedd467ab2.jpg?ts=1738400112",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5ef80ae5-af2c-4cdc-97c0-35390d021b4d.jpg?ts=1738400112",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0d8f9ed9-3a1e-49e7-804e-cd9dd87f6908.jpg?ts=1738400112",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/6643ed93-c450-418f-a6af-324d77d222ed.jpg?ts=1737549809",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1f1a2251-d47c-44d3-b134-99d8b7ca21ff.jpg?ts=1737549809",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8316f1bd-23eb-4b3f-a6c3-c7207703008e.jpg?ts=1737549809"
+                ],
+                "mrp": 280,
+                "offer_price": 239,
+                "unit_level_price": "",
+                "quantity": "1 kg + 500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/20",
+                "rank": 18,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 16,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 24203,
+                "name": "India Gate Tibar Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/11242088-2dcc-4757-80fe-546b003aee7e.jpg?ts=1738400139",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/7f9b4f31-861e-4d49-8928-fec06a61a286.jpg?ts=1738400139",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e5c1237b-cfae-4a20-8467-c8ed499108ca.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/bb79d46b-a72d-4c97-bdfd-5ac1ddbce30b.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0cbfbd5f-dd5a-48c1-a9da-9b4414673c29.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/35f39849-983d-448c-b8fd-bb40606675fa.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f1237b49-d9a4-478b-b19a-ba7ff6498768.jpg?ts=1738400141",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0191fdba-2437-4b6c-8432-7aa209df435b.jpg?ts=1738400141"
+                ],
+                "mrp": 157,
+                "offer_price": 149,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/24203",
+                "rank": 19,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 17,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    24203
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 36188,
+                "name": "India Gate Super Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/81866988-26f3-443b-be83-0933eed9b4db.jpg?ts=1738400155",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/61c6a543-ec59-499f-bc6e-0232431a14a9.jpg?ts=1738400155",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/84211aca-a096-4da4-9cd9-c8157f415d85.jpg?ts=1738400155",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4b60153e-2153-480d-a626-e330ec4cd03f.jpg?ts=1738400155",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e2871c0d-dd08-4161-9049-a9ea3d922552.jpg?ts=1738400156",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5a7e1bfb-c97e-4466-9335-048b806fc7a0.jpg?ts=1738400156",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c703ea85-3646-4b0d-b27b-bf882e90e1a0.jpg?ts=1738400156",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6ae1a8d9-88c5-4cbf-bd9b-ea7e730125f2.jpg?ts=1738400157"
+                ],
+                "mrp": 1100,
+                "offer_price": 771,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/36188",
+                "rank": 20,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 18,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    36188
+                ]
+            }
+        ]
+    }
+]

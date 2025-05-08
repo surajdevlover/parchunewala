@@ -21,7 +21,7 @@ interface StoreComparisonProps {
     name: string
     price: string
     mrp: string
-    image: string
+    image?: string
     quantity: string
     rating?: number
     discount?: string
@@ -62,7 +62,8 @@ export function StoreComparison({ product }: StoreComparisonProps) {
       ...product,
       price: storeOption.price,
       storeId: storeOption.storeId,
-      storeName: storeOption.storeName
+      storeName: storeOption.storeName,
+      image: product.image || ''
     }, 1, storeOption.storeId)
     
     setAddedStores(prev => ({
@@ -80,7 +81,7 @@ export function StoreComparison({ product }: StoreComparisonProps) {
   }
   
   return (
-    <div className="mt-8 border border-gray-200 rounded-lg overflow-hidden">
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
       <div className="bg-gray-50 px-4 py-3 border-b">
         <h3 className="font-semibold text-gray-800">Compare Prices from Different Stores</h3>
         <p className="text-xs text-gray-500 mt-1">

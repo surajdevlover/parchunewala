@@ -1,0 +1,934 @@
+[
+    {
+        "data": [
+            {
+                "id": 105,
+                "name": "Tata Salt (Vacuum Evaporated Iodised)",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/167b98c4-9e70-4204-b618-fc3f29f16747.jpg?ts=1733299682",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b4d4cec6-f0dc-40d8-9f4c-27e9df34f4b9.jpg?ts=1733299683",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d3363de0-e1f7-4c2e-81ff-bfda8826780b.jpg?ts=1733299683",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d7cd01a7-2e9c-4eee-87cb-e6aa3154bd99.jpg?ts=1733299684",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6183645b-0a04-4792-a6fa-199aa36637cc.jpg?ts=1733299684",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cb441313-6663-4fba-b0ec-d931cbf07a21.jpg?ts=1733299685",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5a6acf7d-a287-4a7c-8cd3-c6d72841ac20.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2540780e-2233-4a89-8ed6-62b3821c6069.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/73adbc66-b67f-4683-950c-e04b6c8260e8.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4262e18a-e0b8-462b-89d1-176252514104.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9b430e54-8d80-4980-9626-bc59855d38bb.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/fddaa359-bdb9-4bed-929a-b007592c231a.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c8e51d80-f7e8-4750-82fc-eafec8f6a4cc.jpg"
+                ],
+                "mrp": 30,
+                "offer_price": 30,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/105",
+                "rank": 2,
+                "is_ad": false,
+                "inventory": 16,
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    105
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490000073",
+                "name": "Tata Iodised Salt 1 kg",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490000073/tata-iodised-salt-1-kg-product-images-o490000073-p490000073-0-202302131739.jpg"
+                ],
+                "mrp": 30,
+                "offer_price": 28,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/tata-iodised-salt-1-kg/490000073",
+                "id": "490000073",
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490000073"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 106,
+                "name": "Tata Salt Lite (15% Less Sodium)",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1bd2030a-7b3a-49fd-bf96-745ac015e0e5.jpg?ts=1707312312",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106c.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106d.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106e.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106f.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106g.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106h.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106b.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106i.jpg?ts=1707298542",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/106j.jpg?ts=1707298542"
+                ],
+                "mrp": 50,
+                "offer_price": 50,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/106",
+                "rank": 3,
+                "is_ad": false,
+                "inventory": 5,
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    106
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490347196",
+                "name": "Tata Lite Sodium Curtailed Iodised Salt 1 kg",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490347196/tata-lite-sodium-curtailed-iodised-salt-1-kg-product-images-o490347196-p490347196-0-202301120313.jpg"
+                ],
+                "mrp": 60,
+                "offer_price": 55,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/tata-lite-free-flow-iodised-salt-1-kg/490347196",
+                "id": "490347196",
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490347196"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 460669,
+                "name": "Tata Salt Superlite (30% Less Sodium)",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669a.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669b.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669c.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669d.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669e.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669f.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669g.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669h.jpg?ts=1678450413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669i.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669j.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/460669k.jpg"
+                ],
+                "mrp": 75,
+                "offer_price": 73,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/460669",
+                "rank": 4,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    460669
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491551213",
+                "name": "Tata Rock Salt 1 kg",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491551213/tata-rock-salt-1-kg-product-images-o491551213-p491551213-0-202402011628.jpg"
+                ],
+                "mrp": 120,
+                "offer_price": 104,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/tata-rock-salt-1-kg/491551213",
+                "id": "491551213",
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491551213"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 527975,
+                "name": "Whole Farm Premium Rock Salt / Sendha Namak Powder (Sendha Namak)",
+                "brand": "Whole Farm",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/527975a.jpg?ts=1698769629",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9134a59c-6c51-4816-b7d3-24ad44311c73.jpg?ts=1743764729",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/527975c.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/527975d.jpg"
+                ],
+                "mrp": 40,
+                "offer_price": 22,
+                "unit_level_price": "",
+                "quantity": "200 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/527975",
+                "rank": 5,
+                "is_ad": false,
+                "inventory": 50,
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    527975
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491458243",
+                "name": "Good Life Free Flow Iodised Salt 1 kg",
+                "brand": "Good Life",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491458243/good-life-free-flow-iodised-salt-1-kg-product-images-o491458243-p491458243-0-202204281549.jpg"
+                ],
+                "mrp": 30,
+                "offer_price": 22,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/good-life-free-flow-iodised-salt-1-kg/491458243",
+                "id": "491458243",
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491458243"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 531199,
+                "name": "Whole Farm Premium Powder Black Salt (Kala Namak)",
+                "brand": "Whole Farm",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/3f9afb0c-2517-4ec3-af92-7893878b9f3d.jpg?ts=1719677499",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b53af508-e513-4919-bd86-bce236ab644d.jpg?ts=1743764716",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/531199c.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/531199d.jpg"
+                ],
+                "mrp": 40,
+                "offer_price": 21,
+                "unit_level_price": "",
+                "quantity": "200 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/531199",
+                "rank": 6,
+                "is_ad": false,
+                "inventory": 8,
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    531199
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491188727",
+                "name": "Tata Salt 2 kg",
+                "brand": "Tata",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491188727/tata-salt-2-kg-product-images-o491188727-p491188727-0-202203150034.jpg"
+                ],
+                "mrp": 58,
+                "offer_price": 49,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/tata-salt-2-kg/491188727",
+                "id": "491188727",
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491188727"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 525552,
+                "name": "Whole Farm Premium Black Salt (Kala Namak)",
+                "brand": "Whole Farm",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/237513ae-a90b-453a-a2dc-cb8076be7270.jpg?ts=1719677494",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4e7e7960-acb9-4081-8998-6cee2c55ec5e.jpg?ts=1743764646",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/525552c.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/525552d.jpg"
+                ],
+                "mrp": 20,
+                "offer_price": 13,
+                "unit_level_price": "",
+                "quantity": "100 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/525552",
+                "rank": 7,
+                "is_ad": false,
+                "inventory": 5,
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    525552
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490000070",
+                "name": "Aashirvaad Iodized Salt 1 kg",
+                "brand": "Aashirvaad",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490000070/aashirvaad-iodized-salt-1-kg-product-images-o490000070-p490000070-0-202502202244.jpg"
+                ],
+                "mrp": 28,
+                "offer_price": 25,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/aashirvaad-pure-iodised-salt-1-kg/490000070",
+                "id": "490000070",
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490000070"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 480365,
+                "name": "Catch Premium Pink Rock Salt / Sendha Namak (Sendha Namak)",
+                "brand": "Catch",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a29ea00a-37f1-48ad-baba-750175a4a059.jpg?ts=1723634337",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/08afb7bf-eaee-4783-96b1-4dd567f84793.jpg?ts=1717998656",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/ab09a0aa-1f6b-4e38-8669-ddf685073423.jpg?ts=1717998657",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/24d8819f-e9c5-4b50-95c9-34976ab644b8.jpg?ts=1717998659",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8544649c-b935-4130-addb-c1b8f0a384aa.jpg?ts=1717998660",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/539f18cc-f0ae-491f-a21e-981e8039eb95.jpg?ts=1717998661",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d01b514f-47f0-4ba6-b2c7-601784799d08.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a0e6151c-9df4-407d-9325-1756eefe805f.jpg"
+                ],
+                "mrp": 130,
+                "offer_price": 87,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/480365",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 9,
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    480365
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 108,
+                "name": "Catch Sprinklers - Black Salt (Kala Namak)",
+                "brand": "Catch",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/16d403c2-5c24-4bd1-a86d-9ee94b848904.jpg?ts=1723622145",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/c89025dc-9c40-48c5-a044-14c84bf1d844.jpg?ts=1718869831",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/bf7280c1-12c7-4280-8429-35d7f1c01dac.jpg?ts=1718869832",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/b7e4a322-0b21-40be-bee7-6e137d080e7d.jpg?ts=1718869834",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/b9f37533-b6c1-4fc0-8645-0495a85b93ff.jpg?ts=1718869835",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/571503c3-92e5-4a9c-881a-3618541f8f7a.jpg?ts=1718869836",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/dc6fff44-fb47-4452-84d2-8606f5f82b11.jpg?ts=1718869837"
+                ],
+                "mrp": 47,
+                "offer_price": 47,
+                "unit_level_price": "",
+                "quantity": "200 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/108",
+                "rank": 9,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    108
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 381536,
+                "name": "Puro Healthy Salt",
+                "brand": "Puro",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d9f0e993-0f44-4d54-8751-dfdd851fca62.jpg?ts=1742298882",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6049d7f8-0450-405b-81f1-214b2ad1b4ce.jpg?ts=1742298883",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c6a577b9-4c4f-4b61-a381-ff4431116f97.jpg?ts=1742298883",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/78e6e0e4-3247-400d-832b-2d84574a8922.jpg?ts=1742298884",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8122679a-899c-464a-9881-71c04fbebb68.jpg?ts=1742298884",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/597db7c9-93d3-4766-adda-a9a5b3a72085.jpg?ts=1742298885",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d7bba6e2-35ab-47dd-a3e1-79bf6e688740.jpg?ts=1742298886",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/aa581772-f64c-45db-828f-7be84985800e.jpg?ts=1742298886",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8a0fccf3-bf30-4204-8ada-10e0a3fd88e9.jpg?ts=1742298887",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/eb69e17c-ee33-4b16-8200-3060a9a46700.jpg?ts=1742298887",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/db670710-0fae-4373-8c42-0814735e70b1.jpg?ts=1742298888"
+                ],
+                "mrp": 110,
+                "offer_price": 110,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/381536",
+                "rank": 10,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    381536
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 104,
+                "name": "Aashirvaad Iodized Natural Salt 1 kg",
+                "brand": "Aashirvaad",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0f5ac12c-8d6a-4380-a434-a172b1af6e65.jpg?ts=1742972693",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2c5da9c5-f72f-4b04-a8a7-361c2afae086.jpg?ts=1742972694",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/78be65f1-d2d7-4e26-a524-04dcc06a84e1.jpg?ts=1742972694",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/fe93515f-951c-4ba2-ae78-fd85c550194f.jpg?ts=1742972695",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/946c1b49-0bb1-4ecf-8e55-8da04fd9bce9.jpg?ts=1742972695",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/72b0bc93-f1ff-4f1c-b3a3-f33312b426b2.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e19a1c4d-20bd-4b41-b25d-502e30e3be4f.jpg"
+                ],
+                "mrp": 30,
+                "offer_price": 29,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/104",
+                "rank": 11,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    104
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 525554,
+                "name": "Whole Farm Premium Rock Salt (Crystal) (Sendha Namak)",
+                "brand": "Whole Farm",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/525554a.jpg?ts=1698769627",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3dd302fe-30c8-4b8d-9fd9-2fc752a7c945.jpg?ts=1743764648",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/525554c.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/525554d.jpg"
+                ],
+                "mrp": 35,
+                "offer_price": 20,
+                "unit_level_price": "",
+                "quantity": "200 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/525554",
+                "rank": 12,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    525554
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 5451,
+                "name": "Natural Tattva Rock Salt / Sendha Namak",
+                "brand": "Natural Tattva",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/5451a.jpg?ts=1700650925",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/5451b.jpg?ts=1700650925",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/569ca1e2-806a-4741-be73-cd255c28b264.jpg?ts=1745908003",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/abb26ca7-9b97-4189-aded-b785a1ce60cc.jpg?ts=1745908004",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a3afe6f3-23b2-4101-8cd5-7e607338dbd1.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5a5c8384-e5cb-4f62-a455-ee1082d3a9a1.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c624a411-3713-4872-be93-24a60725d514.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/93a22be4-2cd7-499b-a67b-1b933b5d2722.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/27d887e3-5e34-4c31-8f4c-68aa3c04bfc8.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/adce06c2-5088-479c-962e-66dc9023cac7.jpg"
+                ],
+                "mrp": 60,
+                "offer_price": 53,
+                "unit_level_price": "",
+                "quantity": "500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/5451",
+                "rank": 13,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 11,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    5451
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 539734,
+                "name": "Aashirvaad Himalayan Pink Salt",
+                "brand": "Aashirvaad",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/127fb53d-b656-4128-98c2-3a882f4015f1.jpg?ts=1724167951",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2d2c97c0-d383-492a-b885-7bc3ca2beef2.jpg?ts=1724167952",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/28362dfd-7fcb-433d-b11f-b28464869bd3.jpg?ts=1724167954",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2451c35f-3d9e-499b-af20-b92555b8e11b.jpg?ts=1724167955",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/3e6743ee-9bb7-4c60-861d-3cd9dd1075f5.jpg?ts=1724167957",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/c52ae4bf-6c25-4afc-a410-8b8b7901cd35.jpg?ts=1724167958",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/478bd019-5171-40f2-8f2a-eeba9fabd9c6.jpg?ts=1724167960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d6238a8c-7320-489e-876b-740f53b68aa0.jpg?ts=1724167961",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2b1e3287-4724-4914-a496-6e7ed492efc3.jpg?ts=1724167962"
+                ],
+                "mrp": 120,
+                "offer_price": 105,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/539734",
+                "rank": 14,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 12,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    539734
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 475642,
+                "name": "Natureland Himalayan Rock Organic Pink Salt",
+                "brand": "Natureland",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/c71c80a3-437b-4ddc-9076-f525ee9c0204.jpg?ts=1718171413",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/475642b.jpg?ts=1639654789",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/475642c.jpg?ts=1639654789",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/475642d.jpg?ts=1639654789"
+                ],
+                "mrp": 50,
+                "offer_price": 40,
+                "unit_level_price": "",
+                "quantity": "500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/475642",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 13,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    475642
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 107,
+                "name": "Catch Sprinklers - Iodized Table Salt",
+                "brand": "Catch",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/e1ff50c6-ef8a-4266-b1d0-2b3fce3d9a6f.jpg?ts=1723801389",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2a31cdd9-74c6-4f61-b19f-f07a66604ce7.jpg?ts=1718869819",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f448ae28-f01a-4c5b-9ace-ddc0888e0639.jpg?ts=1718869821",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2a03d1f3-3bef-4573-9659-57bf6073d31e.jpg?ts=1718869822",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/75571f9a-0a13-4a02-83d8-743b4a545945.jpg?ts=1718869824",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4dca0fd8-507c-4218-a7db-a8c46d94c3a2.jpg?ts=1718869825",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/21117eb9-c545-461a-a4a6-768080ff3bf7.jpg?ts=1718869826"
+                ],
+                "mrp": 50,
+                "offer_price": 50,
+                "unit_level_price": "",
+                "quantity": "200 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/107",
+                "rank": 16,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 14,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    107
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 15470,
+                "name": "Catch Sprinklers - Iodized Table Salt",
+                "brand": "Catch",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2a6adc86-80e2-4846-a0e4-8519fa39c4e1.jpg?ts=1723622162",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f8be14c5-a29d-473b-b637-d0fea5361818.jpg?ts=1718869854",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/57664fac-9df8-45bd-b37c-8b80243ac02a.jpg?ts=1718869856",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f86a9bd4-6c92-47c8-8a48-93405baaa9e0.jpg?ts=1718869857",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2a402a7a-8cf3-47aa-b086-4fdcaca7083a.jpg?ts=1718869859",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/832cf78e-06cb-4981-9841-359f69a4cd12.jpg?ts=1718869860",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/b5923446-89fa-4aeb-942b-95fe91ca3100.jpg?ts=1718869861"
+                ],
+                "mrp": 30,
+                "offer_price": 30,
+                "unit_level_price": "",
+                "quantity": "100 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/15470",
+                "rank": 17,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 15,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    15470
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 497048,
+                "name": "Pro Nature Classic Rock Salt (Sendha Namak)",
+                "brand": "Pro Nature",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/d58c93a5-d6aa-4ae0-b4b4-27e08d1d9521.jpg?ts=1713777210",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/497048b.jpg?ts=1696590241",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/497048c.jpg?ts=1696590241",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/497048d.jpg?ts=1696590241",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/497048e.jpg"
+                ],
+                "mrp": 64,
+                "offer_price": 57,
+                "unit_level_price": "",
+                "quantity": "500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/497048",
+                "rank": 18,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 16,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    497048
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 28854,
+                "name": "Conscious Food Rock Salt / Sendha Namak",
+                "brand": "Conscious Food",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f44c9777-c4eb-4bd0-8ff5-db918bce3cd4.jpg?ts=1741685258",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/692210db-b641-460c-819f-ea0c453f4dd6.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2ed0ac58-0079-48a2-b9fc-f8d582448815.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3768d8de-c735-4c18-b976-f1c0268be382.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e67ca966-a576-4c26-9367-4568a36713cc.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/38faa3f0-412c-481c-b4da-ed6cb7927db1.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/64fc0d20-443e-4aba-8167-73ba0cba3e65.jpg"
+                ],
+                "mrp": 69,
+                "offer_price": 66,
+                "unit_level_price": "",
+                "quantity": "500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/28854",
+                "rank": 19,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 17,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    28854
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 364165,
+                "name": "24 Mantra Organic Himalayan Crystal Rock Salt (Sendha Namak)",
+                "brand": "24 Mantra Organic",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a70f2b88-775f-45a1-9bd3-7ac3fdf6495d.jpg?ts=1745228021",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e17334f8-c76f-4a22-83de-cad0b701217e.jpg?ts=1745228022",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6b510510-ef84-49f3-943f-abe91f555035.jpg?ts=1745228022",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cafd8d67-253f-4f31-9003-0a7e05bb5249.jpg?ts=1745228023",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/bffcd4fb-dc59-4c57-a77a-9ea8908658b7.jpg?ts=1745228023",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cddd5e76-48db-4297-8f00-01e6517af545.jpg"
+                ],
+                "mrp": 120,
+                "offer_price": 119,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/364165",
+                "rank": 20,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 18,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "10 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    364165
+                ]
+            }
+        ]
+    }
+]

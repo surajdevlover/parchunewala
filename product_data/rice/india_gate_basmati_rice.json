@@ -1,0 +1,1683 @@
+[
+    {
+        "data": [
+            {
+                "id": 10964,
+                "name": "India Gate Dubar Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8754aab4-f71e-4464-9b93-146f044ba4aa.jpg?ts=1738400118",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9693b0d1-f6e8-4989-8877-5a784acbd459.jpg?ts=1738400118",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/84373a6a-14fa-412b-a31b-4d6d312dc1af.jpg?ts=1738400118",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/474a3fcb-b0d3-40ef-9944-dfb093c4c34d.jpg?ts=1738400118",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a60604b1-62dc-4b48-9764-f52f0e1488ab.jpg?ts=1738400119",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1c0894e3-214a-435d-aa48-178da6a02a89.jpg?ts=1738400119",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/88600e0c-13d7-4ce3-a09b-b3c81b2d60d3.jpg?ts=1738400119"
+                ],
+                "mrp": 151,
+                "offer_price": 144,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/10964",
+                "rank": 2,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10964
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005500",
+                "name": "India Gate Dubar Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005500/india-gate-dubar-basmati-rice-1-kg-product-images-o490005500-p490005500-0-202502211853.jpg"
+                ],
+                "mrp": 151,
+                "offer_price": 135,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-dubar-basmati-rice-1-kg/490005500",
+                "id": "490005500",
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005500"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 21,
+                "name": "India Gate Classic Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9e4280be-97b9-4264-9a19-676ea19536fb.jpg?ts=1738400115",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/75d08410-c467-4214-8007-9812d47dcdac.jpg?ts=1738400115",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1fe64869-e1dc-45b2-93eb-9426fa52795e.jpg?ts=1738400116",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/47d013ac-db7d-403b-bcff-0a6719e8c0a1.jpg?ts=1738400116",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/caf6aba7-2efd-48eb-ab4b-f9b060a4c49a.jpg?ts=1738400116",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ef1379f2-1014-4183-9ea2-288ed2e96791.jpg?ts=1738400116",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2fb6b94a-373d-4f38-b30f-067843b46c3f.jpg?ts=1738400116"
+                ],
+                "mrp": 252,
+                "offer_price": 239,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/21",
+                "rank": 3,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    21
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490427669",
+                "name": "India Gate Rozana Basmati Rice 5 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490427669/india-gate-rozana-basmati-rice-5-kg-product-images-o490427669-p490427669-0-202411271349.jpg"
+                ],
+                "mrp": 605,
+                "offer_price": 429,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-feast-rozzana-basmati-rice-5-kg/490427669",
+                "id": "490427669",
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490427669"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 20,
+                "name": "India Gate Super Basmati Rice (1 kg + 500 g)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c9dc542a-3ffa-4618-acd8-fdbbf76eb83d.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a3004b0c-9ce3-4743-bcbe-89b9867c757f.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/846960df-9f70-425e-8b61-56a922f9115a.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/584d7ee5-ebcc-4c0c-a32c-2775d8be78c3.jpg?ts=1738400111",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cd43f331-c5da-4c75-9779-92cedd467ab2.jpg?ts=1738400112",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5ef80ae5-af2c-4cdc-97c0-35390d021b4d.jpg?ts=1738400112",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0d8f9ed9-3a1e-49e7-804e-cd9dd87f6908.jpg?ts=1738400112",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/6643ed93-c450-418f-a6af-324d77d222ed.jpg?ts=1737549809",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1f1a2251-d47c-44d3-b134-99d8b7ca21ff.jpg?ts=1737549809",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8316f1bd-23eb-4b3f-a6c3-c7207703008e.jpg?ts=1737549809"
+                ],
+                "mrp": 280,
+                "offer_price": 239,
+                "unit_level_price": "",
+                "quantity": "1 kg + 500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/20",
+                "rank": 4,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005504",
+                "name": "India Gate Mogra Basmati Rice 10 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005504/india-gate-mogra-basmati-rice-10-kg-product-images-o490005504-p490005504-0-202411271349.jpg"
+                ],
+                "mrp": 865,
+                "offer_price": 689,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-mogra-basmati-rice-10-kg/490005504",
+                "id": "490005504",
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005504"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 545228,
+                "name": "India Gate Everyday Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1a9d7660-0b61-4397-a15d-107a70787ec7.jpg?ts=1738400192",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ff53187c-ed63-4768-9af7-9a17c5289013.jpg?ts=1738400192",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/56a06a2a-c33d-4a8a-805d-6bf86e7c9d19.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f393d77c-e667-4856-aa45-8ebf43fd98e5.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/781496c6-2fdf-435c-9227-f983c3494fe4.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1e7a135d-0578-4bce-850f-b24c322269d4.jpg?ts=1738400193",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a010d855-81f4-4fd7-b4ae-405caceb8417.jpg?ts=1738400193"
+                ],
+                "mrp": 97,
+                "offer_price": 86,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/545228",
+                "rank": 6,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    545228
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490000004",
+                "name": "India Gate Super Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490000004/india-gate-super-basmati-rice-1-kg-product-images-o490000004-p490000004-0-202504202319.jpg"
+                ],
+                "mrp": 280,
+                "offer_price": 229,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-super-basmati-rice-1-kg/490000004",
+                "id": "490000004",
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490000004"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 10967,
+                "name": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b8230b80-4791-457f-bcb2-e053e2112734.jpg?ts=1738400125",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c3c4b5bd-f7a8-4c82-9f56-e6a0d850bc77.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/4945b1c6-c26e-4c2d-bf76-6e14c3012b0a.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6b4ee722-c80e-49ac-afc4-9774427f594b.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/86c6e4c7-b4aa-474f-a798-3612021655d7.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/80a3eb55-3929-4b32-ba5d-9cb63cb47461.jpg?ts=1738400126",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9bf30238-ad23-45f7-98fc-9bb4b58a44d6.jpg?ts=1738400127"
+                ],
+                "mrp": 585,
+                "offer_price": 445,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/10967",
+                "rank": 7,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10967,
+                    36183
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490008230",
+                "name": "India Gate Classic Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490008230/india-gate-classic-basmati-rice-1-kg-product-images-o490008230-p490008230-0-202502211854.jpg"
+                ],
+                "mrp": 250,
+                "offer_price": 219,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-classic-basmati-rice-1-kg/490008230",
+                "id": "490008230",
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490008230"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 36183,
+                "name": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/795d5e3b-3b05-4fe8-b3ec-9fc03e75ee78.jpg?ts=1738400151",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/54d0fd70-7c16-442f-82ec-c0d293e39d6e.jpg?ts=1738400151",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/bdfb7d94-015b-4ebc-a9a9-87ea9a0b9cce.jpg?ts=1738400151",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/48f6be2a-ba42-44f5-b539-ea76565716e5.jpg?ts=1738400152",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c8f82209-7b05-409d-a3e9-7cb02951b9a8.jpg?ts=1738400152",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/9c15900f-69d0-440a-9371-27edc889c917.jpg?ts=1738400152",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c4c7b224-69ca-4154-83cf-f538b8c232b7.jpg?ts=1738400152"
+                ],
+                "mrp": 118,
+                "offer_price": 107,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/36183",
+                "rank": 7,
+                "is_ad": false,
+                "inventory": 8,
+                "parentIndex": 4,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10967,
+                    36183
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490984316",
+                "name": "India Gate Rozana Choice 5 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490984316/india-gate-regular-choice-basmati-rice-5-kg-product-images-o490984316-p490984316-0-202411271349.jpg"
+                ],
+                "mrp": 515,
+                "offer_price": 409,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-regular-choice-basmati-rice-5-kg/490984316",
+                "id": "490984316",
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490984316"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 10968,
+                "name": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/02d12701-6b00-4400-904f-3cadfe6672d1.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/72011753-5dbb-48b4-afdb-d8efda8a9ec5.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c71307ab-fe1b-4097-b26c-0b678cd7f6b2.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/340a5516-0017-410a-9ba5-3fa7b96a82ca.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/dc38bc5d-e6ed-4f86-b2b1-ad65821a2077.jpg?ts=1738400129",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/2518f88a-f7d6-4062-98ec-57f4bdd63262.jpg?ts=1738400129"
+                ],
+                "mrp": 460,
+                "offer_price": 369,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/10968",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 5,
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10968,
+                    18770
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "596082925",
+                "name": "India Gate Everyday Basmati Rice 5 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/493645835/india-gate-everyday-basmati-rice-5-kg-product-images-o493645835-p596082925-0-202411271349.jpg"
+                ],
+                "mrp": 480,
+                "offer_price": 359,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-everyday-basmati-rice-5-kg/596082925",
+                "id": "596082925",
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "596082925"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 18770,
+                "name": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/08cb4c85-45fa-4475-a9b2-8c14c5260d21.jpg?ts=1738400135",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0ed8f727-4087-485e-a3d7-010330fc9ab5.jpg?ts=1738400135",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5d15145c-2d4b-4df4-a8d2-5bed3f2d9931.jpg?ts=1738400136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a45fc32c-6301-4232-b2f6-fbc56c229540.jpg?ts=1738400136",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e7ea56c9-5812-4303-b2fb-94bebd71693a.jpg?ts=1738400137",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/061b5f95-d094-4697-846e-48742035e403.jpg?ts=1738400137",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0798fdfc-8566-4de0-9a51-e0459368a511.jpg?ts=1738400137"
+                ],
+                "mrp": 865,
+                "offer_price": 689,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/18770",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 5,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    10968,
+                    18770
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491165093",
+                "name": "India Gate Mini Mogra-II Basmati Rice 10 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491165093/india-gate-mini-mogra-ii-basmati-rice-10-kg-product-images-o491165093-p491165093-0-202411271349.jpg"
+                ],
+                "mrp": 599,
+                "offer_price": 489,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-mini-mogra-ii-basmati-rice-10-kg/491165093",
+                "id": "491165093",
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491165093"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 100633,
+                "name": "India Gate Mini Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ec0b2ece-4e0d-445c-8314-d45a62d3d7eb.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d4c0f6b7-250d-488d-b6f7-0a24221839be.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/076f8925-2a43-42fe-82ba-9eb62094e3e7.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d0d7f740-f174-41f5-b34e-14866f102570.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ec04b872-1fe3-4274-bdb8-1aeac2a4781a.jpg?ts=1738400160",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d73c3289-b32b-47f8-ab41-d20e4516b50a.jpg?ts=1738400161",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/d953a8c4-deb8-48e1-9aa3-2d4d893d3200.jpg?ts=1738400161"
+                ],
+                "mrp": 378,
+                "offer_price": 319,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/100633",
+                "rank": 10,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    100633
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "590067273",
+                "name": "Good Life Biryani Basmati Rice 1 kg",
+                "brand": "Good Life",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491638653/good-life-biryani-basmati-rice-1-kg-product-images-o491638653-p590067273-0-202411182306.jpg"
+                ],
+                "mrp": 200,
+                "offer_price": 99,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/good-life-biryani-basmati-rice-1-kg/590067273",
+                "id": "590067273",
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "590067273"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 24203,
+                "name": "India Gate Tibar Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/11242088-2dcc-4757-80fe-546b003aee7e.jpg?ts=1738400139",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/7f9b4f31-861e-4d49-8928-fec06a61a286.jpg?ts=1738400139",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e5c1237b-cfae-4a20-8467-c8ed499108ca.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/bb79d46b-a72d-4c97-bdfd-5ac1ddbce30b.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0cbfbd5f-dd5a-48c1-a9da-9b4414673c29.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/35f39849-983d-448c-b8fd-bb40606675fa.jpg?ts=1738400140",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f1237b49-d9a4-478b-b19a-ba7ff6498768.jpg?ts=1738400141",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0191fdba-2437-4b6c-8432-7aa209df435b.jpg?ts=1738400141"
+                ],
+                "mrp": 157,
+                "offer_price": 149,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/24203",
+                "rank": 11,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    24203
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490000003",
+                "name": "Daawat Super Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490000003/daawat-super-basmati-rice-1-kg-product-images-o490000003-p490000003-0-202305171353.jpg"
+                ],
+                "mrp": 232,
+                "offer_price": 149,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-super-basmati-rice-1-kg/490000003",
+                "id": "490000003",
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490000003"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 497460,
+                "name": "India Gate Daily Premium Basmati Rice",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/338f2cd4-9cb3-408b-9517-0b51d0783f1c.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3e3b9938-a3a5-400d-b1a1-058a05113fc3.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5cb5d16a-349b-4c5f-8194-91b9e5576ff6.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f132d7f5-37cd-4e9c-a8eb-70359177a406.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ec653fa3-ee69-42c6-8a8a-6b8c0268227a.jpg?ts=1738400186",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6f03a025-8ca5-43ae-b7fc-c30e0930111a.jpg?ts=1738400187",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f4576646-d62f-4bae-a683-b606351973ee.jpg?ts=1738400187",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/435846f0-4487-454e-8447-2594ac5fbe17.jpg?ts=1738400188"
+                ],
+                "mrp": 630,
+                "offer_price": 462,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/497460",
+                "rank": 12,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    497460
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490507959",
+                "name": "India Gate Mini Mogra Basmati Rice 10 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490507959/india-gate-mini-mogra-basmati-rice-10-kg-product-images-o490507959-p490507959-0-202411271349.jpg"
+                ],
+                "mrp": 735,
+                "offer_price": 599,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-mini-mogra-basmati-rice-10-kg/490507959",
+                "id": "490507959",
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490507959"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 577627,
+                "name": "India Gate Pure Dubar Basmati Rice Jar (Long Grain)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ce7c0fc6-aeb8-4011-a2f2-fe87dbc6a828.jpg?ts=1738400206",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/95232c48-5cca-4768-a249-3ade789f494f.jpg?ts=1738400207",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ede6403c-1e9d-441f-b624-7d2ddf8c7460.jpg?ts=1738400207",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/131c2761-b038-41c2-9dea-bbed6e983fbc.jpg?ts=1738400207",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/955761b7-f594-43ea-908a-8fe3ebc8986a.jpg?ts=1738400207",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/89652ed8-72e7-4dcb-a824-ce32bf69eb9c.jpg?ts=1738400208",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0b19e8d0-7bed-4a39-83ce-b6128d21f1bc.jpg?ts=1738400208"
+                ],
+                "mrp": 302,
+                "offer_price": 298,
+                "unit_level_price": "",
+                "quantity": "2 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/577627",
+                "rank": 14,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    577627
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490197970",
+                "name": "India Gate Weight Watchers Special Brown Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490197970/india-gate-weight-watchers-special-brown-rice-1-kg-product-images-o490197970-p490197970-0-202308041829.jpg"
+                ],
+                "mrp": 152,
+                "offer_price": 125,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-weight-watcher-special-brown-rice-1-kg/490197970",
+                "id": "490197970",
+                "parentIndex": 11,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490197970"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 607577,
+                "name": "India Gate Pulav Pure Basmati Rice (Long)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/cc9f5386-0e59-4830-8543-97eaa98a118c.jpg?ts=1737377244",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b845c66a-61b6-4b44-a49d-0db4c1e9957a.jpg?ts=1737377244",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/ce0aa45a-808f-43c7-b975-377269325140.jpg?ts=1737377245"
+                ],
+                "mrp": 795,
+                "offer_price": 698,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/607577",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    607577,
+                    607585
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491551417",
+                "name": "India Gate Unity Biryani Basmati Rice 1 kg",
+                "brand": "Unity",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491551417/india-gate-unity-biryani-basmati-rice-1-kg-product-images-o491551417-p491551417-0-202402130909.jpg"
+                ],
+                "mrp": 230,
+                "offer_price": 149,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/unity-basmati-biryani-rice-1-kg/491551417",
+                "id": "491551417",
+                "parentIndex": 12,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491551417"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 607585,
+                "name": "India Gate Pulav Pure Basmati Rice (Long)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8609efee-cd72-4b9f-9f6a-361d1c018b4a.jpg?ts=1737377256",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0b60acfd-cf5f-430d-8441-dddeb0ddfc04.jpg?ts=1737377256",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/620676ac-824e-48b8-84ef-4dd5e40a937a.jpg?ts=1737377257"
+                ],
+                "mrp": 160,
+                "offer_price": 141,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/607585",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 10,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    607577,
+                    607585
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491361820",
+                "name": "India Gate 12 Min Active Health Special Brown Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491361820/india-gate-12-min-active-health-special-brown-basmati-rice-1-kg-product-images-o491361820-p491361820-0-202308160116.jpg"
+                ],
+                "mrp": 186,
+                "offer_price": 155,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-brain-metabolism-booster-brown-basmati-rice-1-kg/491361820",
+                "id": "491361820",
+                "parentIndex": 13,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491361820"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 608512,
+                "name": "India Gate Everyday Pure Basmati Rice (Medium)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/fa40cdac-b505-44b1-9796-8b508d22864b.jpg?ts=1737462308",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/26456d10-5689-47ba-8fa6-c843388b3c63.jpg?ts=1737462308",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/486b5af9-fd28-4307-a88f-3f3fe58eecba.jpg?ts=1737462308",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1d7e1dbe-1ca5-4ef6-8c03-c7cf48eb7bbb.jpg?ts=1737462309",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c052a395-b9d8-4a97-820a-e24e1313db17.jpg?ts=1737462309"
+                ],
+                "mrp": 899,
+                "offer_price": 742,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/608512",
+                "rank": 16,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 11,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    608512
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491469552",
+                "name": "India Gate Select Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491469552/india-gate-select-basmati-rice-1-kg-product-images-o491469552-p491469552-0-202207291813.jpg"
+                ],
+                "mrp": 197,
+                "offer_price": 189,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-select-basmati-rice-1-kg/491469552",
+                "id": "491469552",
+                "parentIndex": 14,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491469552"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 607597,
+                "name": "India Gate Biryani Pure Basmati Rice (Extra Long)",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/7ef1a4f5-7708-460d-ac8e-a73d07393e66.jpg?ts=1737377280",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/86f3cd61-ce91-457e-a127-b344b7d7d2fe.jpg?ts=1737377280",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c610f9e8-94da-4dda-b1c2-4ae0fcc48862.jpg?ts=1737377280"
+                ],
+                "mrp": 215,
+                "offer_price": 177,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/607597",
+                "rank": 17,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 12,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    607597
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005501",
+                "name": "India Gate Tibar Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005501/india-gate-tibar-basmati-rice-1-kg-product-images-o490005501-p490005501-0-202308111340.jpg"
+                ],
+                "mrp": 172,
+                "offer_price": 145,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/india-gate-tibar-basmati-rice-1-kg/490005501",
+                "id": "490005501",
+                "parentIndex": 15,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005501"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 531028,
+                "name": "India Gate Daily Delight Pure Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/50e85e3d-adf7-467a-b8d0-aa9b9a0b1902.jpg?ts=1738400190",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e00dcac2-d9ac-4eaf-8648-770135169269.jpg?ts=1738400190",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/b53525d9-8c1a-40ae-8bb6-d6d1ed25778c.jpg?ts=1738400190",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/a2beb15a-736f-41cc-a79e-3a1c34693aca.jpg?ts=1738400190",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5a7d9a24-c946-41f6-998e-68ed35fc6446.jpg?ts=1738400191",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6ccd6d25-bfca-4a01-a58c-ac3236adf74a.jpg?ts=1738400191"
+                ],
+                "mrp": 405,
+                "offer_price": 299,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/531028",
+                "rank": 18,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 13,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "16 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    531028
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491632838",
+                "name": "India Gate Super Rozzana Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491632838/india-gate-super-rozzana-basmati-rice-1-kg-product-images-o491632838-p491632838-0-202210031755.jpg"
+                ],
+                "mrp": 126,
+                "offer_price": 105,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/indiagate-basmati-super-rozzana-1kg-pouch/491632838",
+                "id": "491632838",
+                "parentIndex": 16,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491632838"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491019524",
+                "name": "Daawat Rozana Super Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491019524/daawat-rozana-super-basmati-rice-5-kg-product-images-o491019524-p491019524-0-202203171025.jpg"
+                ],
+                "mrp": 495,
+                "offer_price": 359,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-super-basmati-rice-5-kg/491019524",
+                "id": "491019524",
+                "parentIndex": 17,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491019524"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491551194",
+                "name": "Good Life Rozana Basmati Rice 1 kg",
+                "brand": "Good Life",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491551194/good-life-rozana-dubar-basmati-rice-1-kg-product-images-o491551194-p491551194-0-202411181636.jpg"
+                ],
+                "mrp": 140,
+                "offer_price": 75,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/good-life-rozana-dubar-basmati-rice-1-kg/491551194",
+                "id": "491551194",
+                "parentIndex": 18,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491551194"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491215480",
+                "name": "Fortune Everyday Full Grain Basmati Rice 5 kg",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491215480/fortune-everyday-full-grain-basmati-rice-5-kg-product-images-o491215480-p491215480-0-202203151912.jpg"
+                ],
+                "mrp": 845,
+                "offer_price": 549,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/kohinoor-authentic-supreme-basmati-rice-1-kg/491215480",
+                "id": "491215480",
+                "parentIndex": 19,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491215480"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490784891",
+                "name": "Kohinoor Charminar Rozana Basmati Rice 5 kg",
+                "brand": "Kohinoor",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490784891/kohinoor-charminar-rozana-basmati-rice-5-kg-product-images-o490784891-p490784891-0-202404241614.jpg"
+                ],
+                "mrp": 560,
+                "offer_price": 275,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/kohinoor-charminar-rozana-basmati-rice-5-kg/490784891",
+                "id": "490784891",
+                "parentIndex": 20,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490784891"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491173885",
+                "name": "Elina Long Grain Rice 1 kg",
+                "brand": "Elina",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491173885/elina-long-grain-rice-1-kg-product-images-o491173885-p491173885-0-202406251715.jpg"
+                ],
+                "mrp": 200,
+                "offer_price": 69,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/elina-long-grain-rice-1-kg/491173885",
+                "id": "491173885",
+                "parentIndex": 21,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491173885"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005638",
+                "name": "Daawat Rozana Gold Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005638/daawat-rozana-gold-basmati-rice-5-kg-product-images-o490005638-p490005638-0-202203171005.jpg"
+                ],
+                "mrp": 600,
+                "offer_price": 425,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-gold-basmati-rice-5-kg/490005638",
+                "id": "490005638",
+                "parentIndex": 22,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005638"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005640",
+                "name": "Daawat Devaaya Premium Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005640/daawat-devaaya-basmati-rice-5-kg-product-images-o490005640-p490005640-0-202411280929.jpg"
+                ],
+                "mrp": 845,
+                "offer_price": 489,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-devaaya-basmati-rice-5-kg/490005640",
+                "id": "490005640",
+                "parentIndex": 23,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005640"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490863678",
+                "name": "Daawat Pulav Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490863678/daawat-pulav-basmati-rice-1-kg-product-images-o490863678-p490863678-0-202205172225.jpg"
+                ],
+                "mrp": 177,
+                "offer_price": 129,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-pulav-basmati-rice-1-kg/490863678",
+                "id": "490863678",
+                "parentIndex": 24,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490863678"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "590731737",
+                "name": "Fortune Mogra Basmati Rice 10 kg",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/492491510/fortune-mogra-basmati-rice-10-kg-product-images-o492491510-p590731737-0-202203150247.jpg"
+                ],
+                "mrp": 800,
+                "offer_price": 549,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/fortune-mogra-basmati-rice-10-kg/590731737",
+                "id": "590731737",
+                "parentIndex": 25,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "590731737"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491317316",
+                "name": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491317316/daawat-sehat-mini-mogra-60-basmati-rice-10-kg-product-images-o491317316-p491317316-0-202411211509.jpg"
+                ],
+                "mrp": 700,
+                "offer_price": 549,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-mini-mogra-basmati-rice-10-kg/491317316",
+                "id": "491317316",
+                "parentIndex": 26,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491317316"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491539467",
+                "name": "Good Life Tibar Basmati Rice 1 kg",
+                "brand": "Good Life",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491539467/good-life-tibar-basmati-rice-1-kg-product-images-o491539467-p491539467-0-202204281550.jpg"
+                ],
+                "mrp": 160,
+                "offer_price": 89,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/good-life-tibar-basmati-rice-1kg/491539467",
+                "id": "491539467",
+                "parentIndex": 27,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491539467"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491316815",
+                "name": "Daawat Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491316815/daawat-sehat-mogra-70-basmati-rice-10-kg-product-images-o491316815-p491316815-0-202411221610.jpg"
+                ],
+                "mrp": 840,
+                "offer_price": 629,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-mogra-70-basmati-rice-10-kg/491316815",
+                "id": "491316815",
+                "parentIndex": 28,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491316815"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491215471",
+                "name": "Fortune Biryani Special Basmati Rice 1 kg",
+                "brand": "Fortune",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491215471/fortune-biryani-special-basmati-rice-1-kg-product-images-o491215471-p491215471-0-202203151403.jpg"
+                ],
+                "mrp": 210,
+                "offer_price": 179,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/fortune-biryani-special-basmati-rice-1-kg/491215471",
+                "id": "491215471",
+                "parentIndex": 29,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491215471"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490863667",
+                "name": "Daawat Biryani Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490863667/daawat-biryani-basmati-rice-1-kg-product-images-o490863667-p490863667-0-202205191716.jpg"
+                ],
+                "mrp": 250,
+                "offer_price": 209,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-biryani-basmati-rice-1-kg/490863667",
+                "id": "490863667",
+                "parentIndex": 30,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490863667"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490419418",
+                "name": "Daawat Brown Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490419418/daawat-brown-basmati-rice-1-kg-product-images-o490419418-p490419418-0-202203150830.jpg"
+                ],
+                "mrp": 200,
+                "offer_price": 155,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-brown-basmati-rice-1-kg/490419418",
+                "id": "490419418",
+                "parentIndex": 31,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490419418"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "590332946",
+                "name": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/492340086/daawat-sehat-mini-mogra-ii-basmati-rice-10-kg-product-images-o492340086-p590332946-0-202411221640.jpg"
+                ],
+                "mrp": 545,
+                "offer_price": 469,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-sehat-mini-mogra-ii-basmati-rice-10-kg/590332946",
+                "id": "590332946",
+                "parentIndex": 32,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "590332946"
+                ]
+            }
+        ]
+    }
+]

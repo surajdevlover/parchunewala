@@ -1,0 +1,942 @@
+[
+    {
+        "data": [
+            {
+                "id": 60660,
+                "name": "Daawat Rozana Super Basmati Rice - 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/9da7e53e-c676-4bca-83dd-c1c1ebc78b27.jpg?ts=1712665428",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a1279585-f0a3-4bde-9203-34edd58615b3.jpg?ts=1712665428",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/ab18db22-a91b-42d1-8e1f-bb15d9fba8b4.jpg?ts=1712665429",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4fb15a27-1d25-4144-8902-8d0336261eee.jpg?ts=1712665431",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/af49f12f-23b6-4e1a-9002-86ff47efd3d5.jpg?ts=1712665432",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a81b3695-b081-4af8-ae0b-cb73ebcccd20.jpg?ts=1712665434"
+                ],
+                "mrp": 100,
+                "offer_price": 88,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/60660",
+                "rank": 2,
+                "is_ad": false,
+                "inventory": 7,
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    60660
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490000003",
+                "name": "Daawat Super Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490000003/daawat-super-basmati-rice-1-kg-product-images-o490000003-p490000003-0-202305171353.jpg"
+                ],
+                "mrp": 232,
+                "offer_price": 149,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-super-basmati-rice-1-kg/490000003",
+                "id": "490000003",
+                "parentIndex": 0,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490000003"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 18763,
+                "name": "Daawat Pulav Basmati Rice (Slender Grains)",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f2acaeec-e1b4-44b7-b13f-13381540d644.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/321b7d84-b26b-4955-805b-44f4032c76a8.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7b97f745-44d5-44c3-aedf-94f1ce8183c4.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/75c75d19-66bf-4b24-b52f-cbb1e8bc6260.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8ca1110f-1128-47ae-ae52-b24e9c8676a6.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1fb8c5d2-e20a-4467-aa8d-be24f952b06f.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a75837bb-19ad-4b7e-b6aa-ca6d2826947d.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/f8f4695a-0aa3-4d84-9e7b-80b3c3326edd.jpg?ts=1707821637",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/55c7db4a-53b1-4c0e-a5a0-dba8f8697560.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/ed6a23ea-d8a0-489d-8aaf-e9d22975807d.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/bbd3ef27-7f62-448c-bd4b-89daa609ecd9.jpg"
+                ],
+                "mrp": 177,
+                "offer_price": 150,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/18763",
+                "rank": 3,
+                "is_ad": false,
+                "inventory": 7,
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    18763
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490863678",
+                "name": "Daawat Pulav Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490863678/daawat-pulav-basmati-rice-1-kg-product-images-o490863678-p490863678-0-202205172225.jpg"
+                ],
+                "mrp": 177,
+                "offer_price": 129,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-pulav-basmati-rice-1-kg/490863678",
+                "id": "490863678",
+                "parentIndex": 1,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490863678"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 18762,
+                "name": "Daawat Biryani Basmati Rice (Long Grains)",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/60ee453b-ac1a-4639-974d-bcfc25d1b93c.jpg?ts=1742200095",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/54d7cd8f-c913-4443-b10f-116cfce95e80.jpg?ts=1742200095",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8fc435c0-4a23-4009-99ab-541465f652f2.jpg?ts=1742200095",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/e57fa16e-41bc-4f67-b01e-724959993e17.jpg?ts=1742200095",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/70c44f85-8aa6-4586-8314-1f22c9a8d8e0.jpg?ts=1742200095",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/9c73bcd9-adf5-4948-bdeb-92ee1d3e3d9e.jpg?ts=1742200095",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/9f31826a-4c90-4c53-bf5b-b9874ca7c248.jpg?ts=1742200095"
+                ],
+                "mrp": 250,
+                "offer_price": 250,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/18762",
+                "rank": 4,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    18762,
+                    34826
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005638",
+                "name": "Daawat Rozana Gold Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005638/daawat-rozana-gold-basmati-rice-5-kg-product-images-o490005638-p490005638-0-202203171005.jpg"
+                ],
+                "mrp": 600,
+                "offer_price": 425,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-gold-basmati-rice-5-kg/490005638",
+                "id": "490005638",
+                "parentIndex": 2,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005638"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 34826,
+                "name": "Daawat Biryani Basmati Rice (Long Grains)",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/15c0e2ad-9efd-44db-adfd-0a155781a93c.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/83cbe71e-d9bd-40a4-a20c-7e9d626efb3e.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2d398d54-22bd-4e69-abbb-0fed6513115c.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/fc59e76d-0b54-470d-8de4-0b548fafbb22.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a06b5f3a-19ba-457b-93d9-1a93bef834c0.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/e8af8776-2c66-4471-948a-8b35292b8cf3.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/0ba36be1-af98-49fd-82ca-853aaa4d0558.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7c3d9668-7950-469f-b394-9ffe30c83391.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7fb16fe7-7b0b-409b-8050-55a60ae20a06.jpg?ts=1710490960",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/fc46b40c-a7bb-419f-a3e9-2b35c474a9e9.jpg"
+                ],
+                "mrp": 1245,
+                "offer_price": 1097,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/34826",
+                "rank": 4,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 2,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    18762,
+                    34826
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490863667",
+                "name": "Daawat Biryani Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490863667/daawat-biryani-basmati-rice-1-kg-product-images-o490863667-p490863667-0-202205191716.jpg"
+                ],
+                "mrp": 250,
+                "offer_price": 209,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-biryani-basmati-rice-1-kg/490863667",
+                "id": "490863667",
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490863667"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 99196,
+                "name": "Daawat Rozana Super Basmati Rice",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/cdae3f07-702c-4a68-bdbd-a1b03dc137b4.jpg?ts=1716212078",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1a4507f1-df3a-4c9c-ab15-277431c003fc.jpg?ts=1716212079",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8cc0b957-1f9a-474e-b863-ccb732979011.jpg?ts=1716212079",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/998814d8-dca4-447c-88aa-ca52f3f1a057.jpg?ts=1716212080",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/7fc13899-851b-4a9c-b0a9-bc748170a1e6.jpg?ts=1716212080"
+                ],
+                "mrp": 980,
+                "offer_price": 702,
+                "unit_level_price": "",
+                "quantity": "10 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/99196",
+                "rank": 6,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 3,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    99196,
+                    10974
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491019524",
+                "name": "Daawat Rozana Super Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491019524/daawat-rozana-super-basmati-rice-5-kg-product-images-o491019524-p491019524-0-202203171025.jpg"
+                ],
+                "mrp": 495,
+                "offer_price": 359,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-super-basmati-rice-5-kg/491019524",
+                "id": "491019524",
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491019524"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 10974,
+                "name": "Daawat Rozana Super Basmati Rice",
+                "brand": "Daawat",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/10974a.jpg?ts=1698225400",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1e3e9f09-1301-4563-b69e-65ec846c6b7e.jpg?ts=1713262839",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/9369d685-59b4-450c-acbd-acba09538b83.jpg?ts=1713262839",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/2105916e-932d-406a-ad89-244f56e45bd0.jpg?ts=1713262839",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/6de5f13e-a379-456f-b5d4-0d1de667088e.jpg?ts=1713262839"
+                ],
+                "mrp": 495,
+                "offer_price": 376,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/10974",
+                "rank": 6,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 3,
+                "childIndex": 1,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    99196,
+                    10974
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005640",
+                "name": "Daawat Devaaya Premium Rice 5 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005640/daawat-devaaya-basmati-rice-5-kg-product-images-o490005640-p490005640-0-202411280929.jpg"
+                ],
+                "mrp": 845,
+                "offer_price": 489,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-devaaya-basmati-rice-5-kg/490005640",
+                "id": "490005640",
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005640"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 486275,
+                "name": "Daawat Biryani Basmati Rice",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/049bee84-c6f3-4058-a87d-9529d90902a3.jpg?ts=1707821638",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/4d2f92a2-e00f-452f-8c23-3ac28b3eca96.jpg?ts=1707821638",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/75370986-98af-4fe6-8e60-189f345a06e2.jpg?ts=1707821638",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/3e373fb4-0fde-4876-8cf9-25928210606d.jpg?ts=1707821638",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/8f25b978-f540-44ee-bfa5-f556e7e2edd8.jpg?ts=1707821638",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/1b3c55dc-455c-47db-8e00-e6ba9fd979b7.jpg?ts=1707821638",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/67f0968c-a88f-413f-b8f2-e5fe8d86d066.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/c8c9ea10-b7d0-4af0-90ee-9d3fd28d7f09.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/b8cf48bf-fac4-4e04-adfc-3e6a31f5de56.jpg"
+                ],
+                "mrp": 125,
+                "offer_price": 116,
+                "unit_level_price": "",
+                "quantity": "500 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/486275",
+                "rank": 7,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 4,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    486275
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491316815",
+                "name": "Daawat Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491316815/daawat-sehat-mogra-70-basmati-rice-10-kg-product-images-o491316815-p491316815-0-202411221610.jpg"
+                ],
+                "mrp": 840,
+                "offer_price": 629,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-mogra-70-basmati-rice-10-kg/491316815",
+                "id": "491316815",
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491316815"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 335465,
+                "name": "Daawat Rozana Mini Mogra Basmati Rice (Broken)",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/21c258f4-0310-4207-b395-62a41693311f.jpg?ts=1737448408",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/1e58a42a-e34f-4c8b-a670-efe2315d58be.jpg?ts=1737448408",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/807afcc2-0736-4ab7-88de-835a8e18f4cd.jpg?ts=1737448409",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6394b780-9b1b-4a57-a685-9d438d04c0f0.jpg?ts=1737448409",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/562af849-f200-466d-9964-163ca4bcd718.jpg?ts=1737448410",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/8f9a9bc4-5576-4e32-a04c-b1405eafe6d9.jpg?ts=1737448410",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/535b5af8-4fbd-4167-b485-1e768dcc2675.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6e87222a-a6e8-45f2-8335-ddb8c851c136.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/6e97a753-50bf-48c8-a8e7-9f35e8631203.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e404cb0b-1dbd-4c29-8857-3585b3a17465.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/c1ad7ae3-6b82-4f1c-844d-b0a7320c87ac.jpg"
+                ],
+                "mrp": 360,
+                "offer_price": 305,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/335465",
+                "rank": 8,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 5,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    335465
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490005499",
+                "name": "Daawat Traditional Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490005499/daawat-traditional-basmati-rice-1-kg-product-images-o490005499-p490005499-0-202203151142.jpg"
+                ],
+                "mrp": 250,
+                "offer_price": 209,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-traditional-basmati-rice-1-kg/490005499",
+                "id": "490005499",
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490005499"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 132727,
+                "name": "Daawat Brown Basmati Rice",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/132727a.jpg?ts=1695715128",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/132727b.jpg",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/132727c.jpg?ts=1689329044",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/132727d.jpg?ts=1689329044",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/132727e.jpg?ts=1689329044"
+                ],
+                "mrp": 200,
+                "offer_price": 177,
+                "unit_level_price": "",
+                "quantity": "1 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/132727",
+                "rank": 10,
+                "is_ad": false,
+                "inventory": 4,
+                "parentIndex": 6,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    132727
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "491317316",
+                "name": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/491317316/daawat-sehat-mini-mogra-60-basmati-rice-10-kg-product-images-o491317316-p491317316-0-202411211509.jpg"
+                ],
+                "mrp": 700,
+                "offer_price": 549,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-rozana-mini-mogra-basmati-rice-10-kg/491317316",
+                "id": "491317316",
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "491317316"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 483144,
+                "name": "Daawat Hyderabadi Biryani Kit",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/33206805-2855-4d82-bc53-8813591e1c07.jpg?ts=1708600949",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483144b.jpg?ts=1690817346",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483144c.jpg?ts=1690817346",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483144d.jpg?ts=1690817346",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483144e.jpg?ts=1690817346",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483144f.jpg?ts=1690817346",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483144g.jpg?ts=1690817346"
+                ],
+                "mrp": 149,
+                "offer_price": 140,
+                "unit_level_price": "",
+                "quantity": "334 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/483144",
+                "rank": 11,
+                "is_ad": false,
+                "inventory": 3,
+                "parentIndex": 7,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    483144
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "490419418",
+                "name": "Daawat Brown Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/490419418/daawat-brown-basmati-rice-1-kg-product-images-o490419418-p490419418-0-202203150830.jpg"
+                ],
+                "mrp": 200,
+                "offer_price": 155,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-brown-basmati-rice-1-kg/490419418",
+                "id": "490419418",
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "490419418"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 435962,
+                "name": "Daawat Devaaya Everyday Basmati Rice",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/93696988-ca83-487e-81b3-5fc679a1f137.jpg?ts=1725884503",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/a03c33ea-378a-4887-9129-046c22346e3d.jpg?ts=1725884504",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/396bdb28-a2de-4d6e-ab0d-13c8ada8836b.jpg?ts=1725884506",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/5d4c4d61-82f6-485c-9361-b0038328b2b3.jpg?ts=1725884507",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/924c53bc-086f-4492-b235-1f8f2cf9c08e.jpg?ts=1725884508"
+                ],
+                "mrp": 650,
+                "offer_price": 344,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/435962",
+                "rank": 12,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 8,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    435962
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "xid": "590332946",
+                "name": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://www.jiomart.com/images/product/150x150/492340086/daawat-sehat-mini-mogra-ii-basmati-rice-10-kg-product-images-o492340086-p590332946-0-202411221640.jpg"
+                ],
+                "mrp": 545,
+                "offer_price": 469,
+                "unit_level_price": "",
+                "quantity": "",
+                "deeplink": "https://www.jiomart.com//p/groceries/daawat-sehat-mini-mogra-ii-basmati-rice-10-kg/590332946",
+                "id": "590332946",
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "Jiomart",
+                    "sla": "",
+                    "storeId": "U1P7",
+                    "open": true,
+                    "icon": "https://qcsearch.s3.ap-south-1.amazonaws.com/platforms/jiomart.webp"
+                },
+                "siblings": [
+                    "590332946"
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 126168,
+                "name": "Daawat Super Basmati Rice (Fluffy Long Grain)",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/b1212510-485d-40e7-9a8e-99f359f39526.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/fcef7fdb-60b4-4018-8f6b-e7e0bc711bcd.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/be419c98-a7c6-43ad-b065-16dd9247959c.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/5690e379-d965-4da4-8586-68fed4c50346.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/c25da384-5eda-4e2b-a82f-0e04f6b9f60d.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/e514dd3f-3341-4fcc-9ef0-7696b0f0fd2d.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/dbbc7f19-86b5-4531-ac59-2cc929d409eb.jpg?ts=1708431284",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/eeb98a8b-f25f-45ba-9e3e-81185812c340.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/e93c9dc4-ee1d-44f3-a40f-b396abdc5916.jpg",
+                    "https://cdn.grofers.com/app/assets/products/sliding_images/jpeg/90321427-94fe-4e33-8c0c-81afcdb210b7.jpg"
+                ],
+                "mrp": 995,
+                "offer_price": 760,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/126168",
+                "rank": 14,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 9,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    126168
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 483145,
+                "name": "Daawat Biryani Kit Kolkata",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145a.jpg?ts=1690817431",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145b.jpg?ts=1690817431",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145c.jpg?ts=1690817431",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145d.jpg?ts=1690817431",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145e.jpg?ts=1690817431",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145f.jpg?ts=1690817431",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483145g.jpg?ts=1690817431"
+                ],
+                "mrp": 149,
+                "offer_price": 140,
+                "unit_level_price": "",
+                "quantity": "334 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/483145",
+                "rank": 15,
+                "is_ad": false,
+                "inventory": 2,
+                "parentIndex": 10,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    483145
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 483146,
+                "name": "Daawat Lucknowi Biryani Kit",
+                "brand": "Daawat",
+                "available": true,
+                "images": [
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483146a.jpg?ts=1690815388",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483146b.jpg?ts=1690815388",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483146c.jpg?ts=1690815388",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483146d.jpg?ts=1690815388",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483146e.jpg?ts=1690815388",
+                    "https://cdn.grofers.com/app/images/products/sliding_image/483146f.jpg?ts=1690815388"
+                ],
+                "mrp": 149,
+                "offer_price": 140,
+                "unit_level_price": "",
+                "quantity": "334 g",
+                "deeplink": "https://blinkit.com/prn/x/prid/483146",
+                "rank": 16,
+                "is_ad": false,
+                "inventory": 1,
+                "parentIndex": 11,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    483146
+                ]
+            }
+        ]
+    },
+    {
+        "data": [
+            {
+                "id": 335463,
+                "name": "Daawat Rozana Mogra Basmati Rice (Broken)",
+                "brand": "Daawat",
+                "available": false,
+                "images": [
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/5d3f9717-4c06-40a2-a61f-6f1084f84b96.jpg?ts=1737448385",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/459421fd-df36-475a-b1cf-a5f6882bb986.jpg?ts=1737448386",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/08930100-42dd-48c7-b344-971312435f35.jpg?ts=1737448386",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/e37a2b21-abc1-46ae-9118-80175f698dd9.jpg?ts=1737448387",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/3ffd21c5-f701-4792-b770-696cc6a0491a.jpg?ts=1737448387",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/13fa5cc8-612e-4561-a0c5-2e56792faea4.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/92a9073e-c743-4bc1-ae3d-c4acc4ca109e.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/0d256b94-2907-4927-bb19-e89fc9d65d03.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/974cb37c-af1e-4389-aa19-7c6d4ee256df.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/904a9dc2-ffce-4273-867e-ade3ff564493.jpg",
+                    "https://cdn.grofers.com/da/cms-assets/cms/product/f7d4feff-bafd-483b-b76c-b7f17bfb923a.jpg"
+                ],
+                "mrp": 430,
+                "offer_price": 329,
+                "unit_level_price": "",
+                "quantity": "5 kg",
+                "deeplink": "https://blinkit.com/prn/x/prid/335463",
+                "rank": 18,
+                "is_ad": false,
+                "inventory": 0,
+                "parentIndex": 12,
+                "childIndex": 0,
+                "platform": {
+                    "name": "BlinkIt",
+                    "sla": "17 Mins",
+                    "storeId": "",
+                    "open": true,
+                    "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/blinkit.webp"
+                },
+                "siblings": [
+                    335463
+                ]
+            }
+        ]
+    }
+]

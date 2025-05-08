@@ -1,0 +1,2604 @@
+{
+    "aashirvaad organic whole wheat atta": {
+        "name": "aashirvaad organic whole wheat atta",
+        "prices": [
+            {
+                "store": "BlinkIt",
+                "price": 84,
+                "productName": "Aashirvaad Organic Atta",
+                "brand": "Aashirvaad",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 367,
+                "productName": "Aashirvaad Organic Atta",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 76,
+                "productName": "Organic Tattva Wheat Organic Atta 1 kg",
+                "brand": "Organic Tattva",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 314,
+                "productName": "Organic Tattva Wheat Organic Atta 5 kg",
+                "brand": "Organic Tattva",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 334,
+                "productName": "24 Mantra Organic Whole Wheat Atta",
+                "brand": "24 Mantra Organic",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 79,
+                "productName": "24 Mantra Organic Premium Whole Wheat Atta",
+                "brand": "24 Mantra Organic",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 75,
+                "productName": "Amul Organic Atta (Whole Wheat)",
+                "brand": "Amul",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 350,
+                "productName": "Amul Organic Atta (Whole Wheat)",
+                "brand": "Amul",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 96,
+                "productName": "Organic Tattva Multigrain Organic Atta",
+                "brand": "Organic Tattva",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 386,
+                "productName": "Aashirvaad Sugar Release Control Atta",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 611,
+                "productName": "Aashirvaad Select 100% MP Sharbati Atta (10 kg)",
+                "brand": "Aashirvaad",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 613,
+                "productName": "Aashirvaad High Fibre Atta with Multigrains - 10 kg",
+                "brand": "Aashirvaad",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 129,
+                "productName": "Aashirvaad Select 100% MP Sharbati Atta",
+                "brand": "Aashirvaad",
+                "quantity": "2 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 266,
+                "productName": "Aashirvaad 0% Maida, 100 % M.P. Chakki Atta",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 240,
+                "productName": "Two Brothers Stoneground Organic Khapli Wheat Atta",
+                "brand": "Two Brothers",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 160,
+                "productName": "Praakritik Organic Khapli Wheat Atta",
+                "brand": "Praakritik",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 724,
+                "productName": "Praakritik Organic Khapli Wheat Atta",
+                "brand": "Praakritik",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 455,
+                "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (10 kg)",
+                "brand": "Aashirvaad",
+                "quantity": "10 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 320,
+                "productName": "Aashirvaad High Fibre Atta with Multigrains - 5 kg",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 243,
+                "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (5 kg)",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 319,
+                "productName": "Aashirvaad Select 100% MP Sharbati Atta",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 517,
+                "productName": "Aashirvaad 0% Maida, 100% M.P. Chakki Atta",
+                "brand": "Aashirvaad",
+                "quantity": "10 kg",
+                "available": false
+            }
+        ],
+        "lowestPrice": 75,
+        "highestPrice": 724,
+        "averagePrice": 307.1818181818182,
+        "stores": {
+            "BlinkIt": [
+                {
+                    "price": 84,
+                    "productName": "Aashirvaad Organic Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 367,
+                    "productName": "Aashirvaad Organic Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 76,
+                    "productName": "Organic Tattva Wheat Organic Atta 1 kg",
+                    "brand": "Organic Tattva",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 314,
+                    "productName": "Organic Tattva Wheat Organic Atta 5 kg",
+                    "brand": "Organic Tattva",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 334,
+                    "productName": "24 Mantra Organic Whole Wheat Atta",
+                    "brand": "24 Mantra Organic",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 79,
+                    "productName": "24 Mantra Organic Premium Whole Wheat Atta",
+                    "brand": "24 Mantra Organic",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 75,
+                    "productName": "Amul Organic Atta (Whole Wheat)",
+                    "brand": "Amul",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 350,
+                    "productName": "Amul Organic Atta (Whole Wheat)",
+                    "brand": "Amul",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 96,
+                    "productName": "Organic Tattva Multigrain Organic Atta",
+                    "brand": "Organic Tattva",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 386,
+                    "productName": "Aashirvaad Sugar Release Control Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 611,
+                    "productName": "Aashirvaad Select 100% MP Sharbati Atta (10 kg)",
+                    "brand": "Aashirvaad",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 613,
+                    "productName": "Aashirvaad High Fibre Atta with Multigrains - 10 kg",
+                    "brand": "Aashirvaad",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 129,
+                    "productName": "Aashirvaad Select 100% MP Sharbati Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "2 kg",
+                    "available": true
+                },
+                {
+                    "price": 266,
+                    "productName": "Aashirvaad 0% Maida, 100 % M.P. Chakki Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 240,
+                    "productName": "Two Brothers Stoneground Organic Khapli Wheat Atta",
+                    "brand": "Two Brothers",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 160,
+                    "productName": "Praakritik Organic Khapli Wheat Atta",
+                    "brand": "Praakritik",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 724,
+                    "productName": "Praakritik Organic Khapli Wheat Atta",
+                    "brand": "Praakritik",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 455,
+                    "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (10 kg)",
+                    "brand": "Aashirvaad",
+                    "quantity": "10 kg",
+                    "available": false
+                },
+                {
+                    "price": 320,
+                    "productName": "Aashirvaad High Fibre Atta with Multigrains - 5 kg",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 243,
+                    "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (5 kg)",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 319,
+                    "productName": "Aashirvaad Select 100% MP Sharbati Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 517,
+                    "productName": "Aashirvaad 0% Maida, 100% M.P. Chakki Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "10 kg",
+                    "available": false
+                }
+            ]
+        }
+    },
+    "daawat basmati rice": {
+        "name": "daawat basmati rice",
+        "prices": [
+            {
+                "store": "BlinkIt",
+                "price": 88,
+                "productName": "Daawat Rozana Super Basmati Rice - 1 kg",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 149,
+                "productName": "Daawat Super Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 150,
+                "productName": "Daawat Pulav Basmati Rice (Slender Grains)",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 129,
+                "productName": "Daawat Pulav Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 250,
+                "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 425,
+                "productName": "Daawat Rozana Gold Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 1097,
+                "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 209,
+                "productName": "Daawat Biryani Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 702,
+                "productName": "Daawat Rozana Super Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 359,
+                "productName": "Daawat Rozana Super Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 376,
+                "productName": "Daawat Rozana Super Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "Jiomart",
+                "price": 489,
+                "productName": "Daawat Devaaya Premium Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 116,
+                "productName": "Daawat Biryani Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "500 g",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 629,
+                "productName": "Daawat Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 305,
+                "productName": "Daawat Rozana Mini Mogra Basmati Rice (Broken)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 209,
+                "productName": "Daawat Traditional Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 177,
+                "productName": "Daawat Brown Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 549,
+                "productName": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 140,
+                "productName": "Daawat Hyderabadi Biryani Kit",
+                "brand": "Daawat",
+                "quantity": "334 g",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 155,
+                "productName": "Daawat Brown Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 344,
+                "productName": "Daawat Devaaya Everyday Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 469,
+                "productName": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 760,
+                "productName": "Daawat Super Basmati Rice (Fluffy Long Grain)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 140,
+                "productName": "Daawat Biryani Kit Kolkata",
+                "brand": "Daawat",
+                "quantity": "334 g",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 140,
+                "productName": "Daawat Lucknowi Biryani Kit",
+                "brand": "Daawat",
+                "quantity": "334 g",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 329,
+                "productName": "Daawat Rozana Mogra Basmati Rice (Broken)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": false
+            }
+        ],
+        "lowestPrice": 88,
+        "highestPrice": 1097,
+        "averagePrice": 341.7307692307692,
+        "stores": {
+            "BlinkIt": [
+                {
+                    "price": 88,
+                    "productName": "Daawat Rozana Super Basmati Rice - 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 150,
+                    "productName": "Daawat Pulav Basmati Rice (Slender Grains)",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 250,
+                    "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 1097,
+                    "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 702,
+                    "productName": "Daawat Rozana Super Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 376,
+                    "productName": "Daawat Rozana Super Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 116,
+                    "productName": "Daawat Biryani Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "500 g",
+                    "available": true
+                },
+                {
+                    "price": 305,
+                    "productName": "Daawat Rozana Mini Mogra Basmati Rice (Broken)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 177,
+                    "productName": "Daawat Brown Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 140,
+                    "productName": "Daawat Hyderabadi Biryani Kit",
+                    "brand": "Daawat",
+                    "quantity": "334 g",
+                    "available": true
+                },
+                {
+                    "price": 344,
+                    "productName": "Daawat Devaaya Everyday Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 760,
+                    "productName": "Daawat Super Basmati Rice (Fluffy Long Grain)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 140,
+                    "productName": "Daawat Biryani Kit Kolkata",
+                    "brand": "Daawat",
+                    "quantity": "334 g",
+                    "available": true
+                },
+                {
+                    "price": 140,
+                    "productName": "Daawat Lucknowi Biryani Kit",
+                    "brand": "Daawat",
+                    "quantity": "334 g",
+                    "available": true
+                },
+                {
+                    "price": 329,
+                    "productName": "Daawat Rozana Mogra Basmati Rice (Broken)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": false
+                }
+            ],
+            "Jiomart": [
+                {
+                    "price": 149,
+                    "productName": "Daawat Super Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 129,
+                    "productName": "Daawat Pulav Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 425,
+                    "productName": "Daawat Rozana Gold Basmati Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 209,
+                    "productName": "Daawat Biryani Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 359,
+                    "productName": "Daawat Rozana Super Basmati Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 489,
+                    "productName": "Daawat Devaaya Premium Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 629,
+                    "productName": "Daawat Mogra Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 209,
+                    "productName": "Daawat Traditional Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 549,
+                    "productName": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 155,
+                    "productName": "Daawat Brown Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 469,
+                    "productName": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                }
+            ]
+        }
+    },
+    "fortune chakki fresh atta": {
+        "name": "fortune chakki fresh atta",
+        "prices": [
+            {
+                "store": "BlinkIt",
+                "price": 227,
+                "productName": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta",
+                "brand": "Fortune",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 231,
+                "productName": "Fortune Chakki Fresh Atta 5 kg",
+                "brand": "Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 443,
+                "productName": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta (10 kg)",
+                "brand": "Fortune",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 449,
+                "productName": "Fortune Chakki Fresh Whole Wheat Atta 10 kg",
+                "brand": "Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 226,
+                "productName": "Pillsbury Chakki Fresh Atta",
+                "brand": "Pillsbury",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 427,
+                "productName": "Pillsbury Chakki Fresh Atta -10 Kg",
+                "brand": "Pillsbury",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 452,
+                "productName": "Patanjali Traditional Whole Wheat Chakki Atta (with Bran)",
+                "brand": "Patanjali",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 245,
+                "productName": "Patanjali Whole Wheat Chakki Atta (with Bran) 5 kg",
+                "brand": "Patanjali",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 279,
+                "productName": "Fortune Premium Sharbati Atta",
+                "brand": "Fortune",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 184,
+                "productName": "Natureland Fresh Chakki Organic Atta",
+                "brand": "Natureland",
+                "quantity": "3 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 216,
+                "productName": "Nature Fresh Superior MP Atta",
+                "brand": "Nature Fresh",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 409,
+                "productName": "Vikram Mills Fresh Chakki Atta",
+                "brand": "Vikram Mills",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 266,
+                "productName": "Aashirvaad 0% Maida, 100 % M.P. Chakki Atta",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 199,
+                "productName": "Vikram Mills Fresh Chakki Atta",
+                "brand": "Vikram Mills",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 437,
+                "productName": "Nature Fresh Sampoorna Chakki Atta",
+                "brand": "Nature Fresh",
+                "quantity": "10 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 243,
+                "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (5 kg)",
+                "brand": "Aashirvaad",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 455,
+                "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (10 kg)",
+                "brand": "Aashirvaad",
+                "quantity": "10 kg",
+                "available": false
+            }
+        ],
+        "lowestPrice": 184,
+        "highestPrice": 455,
+        "averagePrice": 316.94117647058823,
+        "stores": {
+            "BlinkIt": [
+                {
+                    "price": 227,
+                    "productName": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta",
+                    "brand": "Fortune",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 443,
+                    "productName": "Fortune Chakki Fresh (100% Atta, 0% Maida) Atta (10 kg)",
+                    "brand": "Fortune",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 226,
+                    "productName": "Pillsbury Chakki Fresh Atta",
+                    "brand": "Pillsbury",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 427,
+                    "productName": "Pillsbury Chakki Fresh Atta -10 Kg",
+                    "brand": "Pillsbury",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 452,
+                    "productName": "Patanjali Traditional Whole Wheat Chakki Atta (with Bran)",
+                    "brand": "Patanjali",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 245,
+                    "productName": "Patanjali Whole Wheat Chakki Atta (with Bran) 5 kg",
+                    "brand": "Patanjali",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 279,
+                    "productName": "Fortune Premium Sharbati Atta",
+                    "brand": "Fortune",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 184,
+                    "productName": "Natureland Fresh Chakki Organic Atta",
+                    "brand": "Natureland",
+                    "quantity": "3 kg",
+                    "available": true
+                },
+                {
+                    "price": 216,
+                    "productName": "Nature Fresh Superior MP Atta",
+                    "brand": "Nature Fresh",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 409,
+                    "productName": "Vikram Mills Fresh Chakki Atta",
+                    "brand": "Vikram Mills",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 266,
+                    "productName": "Aashirvaad 0% Maida, 100 % M.P. Chakki Atta",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 199,
+                    "productName": "Vikram Mills Fresh Chakki Atta",
+                    "brand": "Vikram Mills",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 437,
+                    "productName": "Nature Fresh Sampoorna Chakki Atta",
+                    "brand": "Nature Fresh",
+                    "quantity": "10 kg",
+                    "available": false
+                },
+                {
+                    "price": 243,
+                    "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (5 kg)",
+                    "brand": "Aashirvaad",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 455,
+                    "productName": "Aashirvaad Shudh Chakki Atta (100% Atta, 0% Maida) (10 kg)",
+                    "brand": "Aashirvaad",
+                    "quantity": "10 kg",
+                    "available": false
+                }
+            ],
+            "Jiomart": [
+                {
+                    "price": 231,
+                    "productName": "Fortune Chakki Fresh Atta 5 kg",
+                    "brand": "Fortune",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 449,
+                    "productName": "Fortune Chakki Fresh Whole Wheat Atta 10 kg",
+                    "brand": "Fortune",
+                    "quantity": "",
+                    "available": true
+                }
+            ]
+        }
+    },
+    "fortune everyday basmati rice": {
+        "name": "fortune everyday basmati rice",
+        "prices": [
+            {
+                "store": "BlinkIt",
+                "price": 135,
+                "productName": "Fortune Everyday Full Grain Basmati Rice",
+                "brand": "Fortune",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 549,
+                "productName": "Fortune Everyday Full Grain Basmati Rice 5 kg",
+                "brand": "Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 86,
+                "productName": "India Gate Everyday Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 799,
+                "productName": "Fortune Physically Refined Rice Bran Oil 3 L (Can) + Fortune Everyday Full Grain Basmati Rice 5 kg",
+                "brand": "Fortune+Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 742,
+                "productName": "India Gate Everyday Pure Basmati Rice (Medium)",
+                "brand": "India Gate",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 325,
+                "productName": "Daawat Devaaya Everyday Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 359,
+                "productName": "India Gate Everyday Pure Basmati Rice (Medium)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 83,
+                "productName": "Whole Farm Premium Everyday Basmati Rice",
+                "brand": "Whole Farm",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 462,
+                "productName": "India Gate Daily Premium Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 97,
+                "productName": "Fortune Rozana Gold Basmati Rice",
+                "brand": "Fortune",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 406,
+                "productName": "Fortune Rozana Gold Basmati Rice",
+                "brand": "Fortune",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 385,
+                "productName": "Fortune Hamesha Mini Dubar Basmati Rice",
+                "brand": "Fortune",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 360,
+                "productName": "Crown Daily Basmati Rice",
+                "brand": "Crown",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 76,
+                "productName": "Crown Daily Basmati Rice",
+                "brand": "Crown",
+                "quantity": "1 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 409,
+                "productName": "India Gate Regular Choice Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 91,
+                "productName": "Fortune Rozana Super Basmati Rice (Medium)",
+                "brand": "Fortune",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 383,
+                "productName": "Fortune Rozana Super Basmati Rice (Medium)",
+                "brand": "Fortune",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "BlinkIt",
+                "price": 344,
+                "productName": "Daawat Devaaya Everyday Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 180,
+                "productName": "Amul Organic Basmati Rice",
+                "brand": "Amul",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 445,
+                "productName": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 107,
+                "productName": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 369,
+                "productName": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 689,
+                "productName": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 319,
+                "productName": "India Gate Mini Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 239,
+                "productName": "India Gate Super Basmati Rice (1 kg + 500 g)",
+                "brand": "India Gate",
+                "quantity": "1 kg + 500 g",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 149,
+                "productName": "India Gate Tibar Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 771,
+                "productName": "India Gate Super Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            }
+        ],
+        "lowestPrice": 76,
+        "highestPrice": 799,
+        "averagePrice": 346.6296296296296,
+        "stores": {
+            "BlinkIt": [
+                {
+                    "price": 135,
+                    "productName": "Fortune Everyday Full Grain Basmati Rice",
+                    "brand": "Fortune",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 86,
+                    "productName": "India Gate Everyday Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 742,
+                    "productName": "India Gate Everyday Pure Basmati Rice (Medium)",
+                    "brand": "India Gate",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 359,
+                    "productName": "India Gate Everyday Pure Basmati Rice (Medium)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 83,
+                    "productName": "Whole Farm Premium Everyday Basmati Rice",
+                    "brand": "Whole Farm",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 462,
+                    "productName": "India Gate Daily Premium Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 97,
+                    "productName": "Fortune Rozana Gold Basmati Rice",
+                    "brand": "Fortune",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 406,
+                    "productName": "Fortune Rozana Gold Basmati Rice",
+                    "brand": "Fortune",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 385,
+                    "productName": "Fortune Hamesha Mini Dubar Basmati Rice",
+                    "brand": "Fortune",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 360,
+                    "productName": "Crown Daily Basmati Rice",
+                    "brand": "Crown",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 76,
+                    "productName": "Crown Daily Basmati Rice",
+                    "brand": "Crown",
+                    "quantity": "1 kg",
+                    "available": false
+                },
+                {
+                    "price": 409,
+                    "productName": "India Gate Regular Choice Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 91,
+                    "productName": "Fortune Rozana Super Basmati Rice (Medium)",
+                    "brand": "Fortune",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 383,
+                    "productName": "Fortune Rozana Super Basmati Rice (Medium)",
+                    "brand": "Fortune",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 344,
+                    "productName": "Daawat Devaaya Everyday Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 180,
+                    "productName": "Amul Organic Basmati Rice",
+                    "brand": "Amul",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 445,
+                    "productName": "India Gate Feast Rozana Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 107,
+                    "productName": "India Gate Feast Rozana Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 369,
+                    "productName": "India Gate Mogra Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 689,
+                    "productName": "India Gate Mogra Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 319,
+                    "productName": "India Gate Mini Mogra Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 239,
+                    "productName": "India Gate Super Basmati Rice (1 kg + 500 g)",
+                    "brand": "India Gate",
+                    "quantity": "1 kg + 500 g",
+                    "available": true
+                },
+                {
+                    "price": 149,
+                    "productName": "India Gate Tibar Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 771,
+                    "productName": "India Gate Super Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                }
+            ],
+            "Jiomart": [
+                {
+                    "price": 549,
+                    "productName": "Fortune Everyday Full Grain Basmati Rice 5 kg",
+                    "brand": "Fortune",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 799,
+                    "productName": "Fortune Physically Refined Rice Bran Oil 3 L (Can) + Fortune Everyday Full Grain Basmati Rice 5 kg",
+                    "brand": "Fortune+Fortune",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 325,
+                    "productName": "Daawat Devaaya Everyday Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                }
+            ]
+        }
+    },
+    "india gate basmati rice": {
+        "name": "india gate basmati rice",
+        "prices": [
+            {
+                "store": "BlinkIt",
+                "price": 144,
+                "productName": "India Gate Dubar Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 135,
+                "productName": "India Gate Dubar Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 239,
+                "productName": "India Gate Classic Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 429,
+                "productName": "India Gate Rozana Basmati Rice 5 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 239,
+                "productName": "India Gate Super Basmati Rice (1 kg + 500 g)",
+                "brand": "India Gate",
+                "quantity": "1 kg + 500 g",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 689,
+                "productName": "India Gate Mogra Basmati Rice 10 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 86,
+                "productName": "India Gate Everyday Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 229,
+                "productName": "India Gate Super Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 445,
+                "productName": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 219,
+                "productName": "India Gate Classic Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 107,
+                "productName": "India Gate Feast Rozana Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 409,
+                "productName": "India Gate Rozana Choice 5 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 369,
+                "productName": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 359,
+                "productName": "India Gate Everyday Basmati Rice 5 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 689,
+                "productName": "India Gate Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 489,
+                "productName": "India Gate Mini Mogra-II Basmati Rice 10 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 319,
+                "productName": "India Gate Mini Mogra Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 99,
+                "productName": "Good Life Biryani Basmati Rice 1 kg",
+                "brand": "Good Life",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 149,
+                "productName": "India Gate Tibar Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 149,
+                "productName": "Daawat Super Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 462,
+                "productName": "India Gate Daily Premium Basmati Rice",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 599,
+                "productName": "India Gate Mini Mogra Basmati Rice 10 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 298,
+                "productName": "India Gate Pure Dubar Basmati Rice Jar (Long Grain)",
+                "brand": "India Gate",
+                "quantity": "2 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 125,
+                "productName": "India Gate Weight Watchers Special Brown Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 698,
+                "productName": "India Gate Pulav Pure Basmati Rice (Long)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 149,
+                "productName": "India Gate Unity Biryani Basmati Rice 1 kg",
+                "brand": "Unity",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 141,
+                "productName": "India Gate Pulav Pure Basmati Rice (Long)",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 155,
+                "productName": "India Gate 12 Min Active Health Special Brown Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 742,
+                "productName": "India Gate Everyday Pure Basmati Rice (Medium)",
+                "brand": "India Gate",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 189,
+                "productName": "India Gate Select Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 177,
+                "productName": "India Gate Biryani Pure Basmati Rice (Extra Long)",
+                "brand": "India Gate",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 145,
+                "productName": "India Gate Tibar Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 299,
+                "productName": "India Gate Daily Delight Pure Basmati Rice (Broken)",
+                "brand": "India Gate",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "Jiomart",
+                "price": 105,
+                "productName": "India Gate Super Rozzana Basmati Rice 1 kg",
+                "brand": "India Gate",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 359,
+                "productName": "Daawat Rozana Super Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 75,
+                "productName": "Good Life Rozana Basmati Rice 1 kg",
+                "brand": "Good Life",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 549,
+                "productName": "Fortune Everyday Full Grain Basmati Rice 5 kg",
+                "brand": "Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 275,
+                "productName": "Kohinoor Charminar Rozana Basmati Rice 5 kg",
+                "brand": "Kohinoor",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 69,
+                "productName": "Elina Long Grain Rice 1 kg",
+                "brand": "Elina",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 425,
+                "productName": "Daawat Rozana Gold Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 489,
+                "productName": "Daawat Devaaya Premium Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 129,
+                "productName": "Daawat Pulav Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 549,
+                "productName": "Fortune Mogra Basmati Rice 10 kg",
+                "brand": "Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 549,
+                "productName": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 89,
+                "productName": "Good Life Tibar Basmati Rice 1 kg",
+                "brand": "Good Life",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 629,
+                "productName": "Daawat Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 179,
+                "productName": "Fortune Biryani Special Basmati Rice 1 kg",
+                "brand": "Fortune",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 209,
+                "productName": "Daawat Biryani Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 155,
+                "productName": "Daawat Brown Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 469,
+                "productName": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            }
+        ],
+        "lowestPrice": 69,
+        "highestPrice": 742,
+        "averagePrice": 309.48,
+        "stores": {
+            "BlinkIt": [
+                {
+                    "price": 144,
+                    "productName": "India Gate Dubar Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 239,
+                    "productName": "India Gate Classic Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 239,
+                    "productName": "India Gate Super Basmati Rice (1 kg + 500 g)",
+                    "brand": "India Gate",
+                    "quantity": "1 kg + 500 g",
+                    "available": true
+                },
+                {
+                    "price": 86,
+                    "productName": "India Gate Everyday Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 445,
+                    "productName": "India Gate Feast Rozana Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 107,
+                    "productName": "India Gate Feast Rozana Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 369,
+                    "productName": "India Gate Mogra Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 689,
+                    "productName": "India Gate Mogra Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 319,
+                    "productName": "India Gate Mini Mogra Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 149,
+                    "productName": "India Gate Tibar Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 462,
+                    "productName": "India Gate Daily Premium Basmati Rice",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 298,
+                    "productName": "India Gate Pure Dubar Basmati Rice Jar (Long Grain)",
+                    "brand": "India Gate",
+                    "quantity": "2 kg",
+                    "available": true
+                },
+                {
+                    "price": 698,
+                    "productName": "India Gate Pulav Pure Basmati Rice (Long)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 141,
+                    "productName": "India Gate Pulav Pure Basmati Rice (Long)",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 742,
+                    "productName": "India Gate Everyday Pure Basmati Rice (Medium)",
+                    "brand": "India Gate",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 177,
+                    "productName": "India Gate Biryani Pure Basmati Rice (Extra Long)",
+                    "brand": "India Gate",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 299,
+                    "productName": "India Gate Daily Delight Pure Basmati Rice (Broken)",
+                    "brand": "India Gate",
+                    "quantity": "5 kg",
+                    "available": false
+                }
+            ],
+            "Jiomart": [
+                {
+                    "price": 135,
+                    "productName": "India Gate Dubar Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 429,
+                    "productName": "India Gate Rozana Basmati Rice 5 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 689,
+                    "productName": "India Gate Mogra Basmati Rice 10 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 229,
+                    "productName": "India Gate Super Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 219,
+                    "productName": "India Gate Classic Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 409,
+                    "productName": "India Gate Rozana Choice 5 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 359,
+                    "productName": "India Gate Everyday Basmati Rice 5 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 489,
+                    "productName": "India Gate Mini Mogra-II Basmati Rice 10 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 99,
+                    "productName": "Good Life Biryani Basmati Rice 1 kg",
+                    "brand": "Good Life",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 149,
+                    "productName": "Daawat Super Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 599,
+                    "productName": "India Gate Mini Mogra Basmati Rice 10 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 125,
+                    "productName": "India Gate Weight Watchers Special Brown Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 149,
+                    "productName": "India Gate Unity Biryani Basmati Rice 1 kg",
+                    "brand": "Unity",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 155,
+                    "productName": "India Gate 12 Min Active Health Special Brown Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 189,
+                    "productName": "India Gate Select Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 145,
+                    "productName": "India Gate Tibar Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 105,
+                    "productName": "India Gate Super Rozzana Basmati Rice 1 kg",
+                    "brand": "India Gate",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 359,
+                    "productName": "Daawat Rozana Super Basmati Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 75,
+                    "productName": "Good Life Rozana Basmati Rice 1 kg",
+                    "brand": "Good Life",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 549,
+                    "productName": "Fortune Everyday Full Grain Basmati Rice 5 kg",
+                    "brand": "Fortune",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 275,
+                    "productName": "Kohinoor Charminar Rozana Basmati Rice 5 kg",
+                    "brand": "Kohinoor",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 69,
+                    "productName": "Elina Long Grain Rice 1 kg",
+                    "brand": "Elina",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 425,
+                    "productName": "Daawat Rozana Gold Basmati Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 489,
+                    "productName": "Daawat Devaaya Premium Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 129,
+                    "productName": "Daawat Pulav Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 549,
+                    "productName": "Fortune Mogra Basmati Rice 10 kg",
+                    "brand": "Fortune",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 549,
+                    "productName": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 89,
+                    "productName": "Good Life Tibar Basmati Rice 1 kg",
+                    "brand": "Good Life",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 629,
+                    "productName": "Daawat Mogra Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 179,
+                    "productName": "Fortune Biryani Special Basmati Rice 1 kg",
+                    "brand": "Fortune",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 209,
+                    "productName": "Daawat Biryani Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 155,
+                    "productName": "Daawat Brown Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 469,
+                    "productName": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                }
+            ]
+        }
+    },
+    "test result": {
+        "name": "test result",
+        "prices": [
+            {
+                "store": "BlinkIt",
+                "price": 88,
+                "productName": "Daawat Rozana Super Basmati Rice - 1 kg",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 149,
+                "productName": "Daawat Super Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 150,
+                "productName": "Daawat Pulav Basmati Rice (Slender Grains)",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 129,
+                "productName": "Daawat Pulav Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 250,
+                "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 425,
+                "productName": "Daawat Rozana Gold Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 1097,
+                "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 209,
+                "productName": "Daawat Biryani Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 702,
+                "productName": "Daawat Rozana Super Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "10 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 359,
+                "productName": "Daawat Rozana Super Basmati Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 376,
+                "productName": "Daawat Rozana Super Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": false
+            },
+            {
+                "store": "Jiomart",
+                "price": 489,
+                "productName": "Daawat Devaaya Premium Rice 5 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 116,
+                "productName": "Daawat Biryani Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "500 g",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 629,
+                "productName": "Daawat Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 305,
+                "productName": "Daawat Rozana Mini Mogra Basmati Rice (Broken)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 209,
+                "productName": "Daawat Traditional Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 177,
+                "productName": "Daawat Brown Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "1 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 549,
+                "productName": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 140,
+                "productName": "Daawat Hyderabadi Biryani Kit",
+                "brand": "Daawat",
+                "quantity": "334 g",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 155,
+                "productName": "Daawat Brown Basmati Rice 1 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 344,
+                "productName": "Daawat Devaaya Everyday Basmati Rice",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "Jiomart",
+                "price": 469,
+                "productName": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                "brand": "Daawat",
+                "quantity": "",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 760,
+                "productName": "Daawat Super Basmati Rice (Fluffy Long Grain)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 140,
+                "productName": "Daawat Biryani Kit Kolkata",
+                "brand": "Daawat",
+                "quantity": "334 g",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 140,
+                "productName": "Daawat Lucknowi Biryani Kit",
+                "brand": "Daawat",
+                "quantity": "334 g",
+                "available": true
+            },
+            {
+                "store": "BlinkIt",
+                "price": 329,
+                "productName": "Daawat Rozana Mogra Basmati Rice (Broken)",
+                "brand": "Daawat",
+                "quantity": "5 kg",
+                "available": false
+            }
+        ],
+        "lowestPrice": 88,
+        "highestPrice": 1097,
+        "averagePrice": 341.7307692307692,
+        "stores": {
+            "BlinkIt": [
+                {
+                    "price": 88,
+                    "productName": "Daawat Rozana Super Basmati Rice - 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 150,
+                    "productName": "Daawat Pulav Basmati Rice (Slender Grains)",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 250,
+                    "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 1097,
+                    "productName": "Daawat Biryani Basmati Rice (Long Grains)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 702,
+                    "productName": "Daawat Rozana Super Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "10 kg",
+                    "available": true
+                },
+                {
+                    "price": 376,
+                    "productName": "Daawat Rozana Super Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": false
+                },
+                {
+                    "price": 116,
+                    "productName": "Daawat Biryani Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "500 g",
+                    "available": true
+                },
+                {
+                    "price": 305,
+                    "productName": "Daawat Rozana Mini Mogra Basmati Rice (Broken)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 177,
+                    "productName": "Daawat Brown Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "1 kg",
+                    "available": true
+                },
+                {
+                    "price": 140,
+                    "productName": "Daawat Hyderabadi Biryani Kit",
+                    "brand": "Daawat",
+                    "quantity": "334 g",
+                    "available": true
+                },
+                {
+                    "price": 344,
+                    "productName": "Daawat Devaaya Everyday Basmati Rice",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 760,
+                    "productName": "Daawat Super Basmati Rice (Fluffy Long Grain)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": true
+                },
+                {
+                    "price": 140,
+                    "productName": "Daawat Biryani Kit Kolkata",
+                    "brand": "Daawat",
+                    "quantity": "334 g",
+                    "available": true
+                },
+                {
+                    "price": 140,
+                    "productName": "Daawat Lucknowi Biryani Kit",
+                    "brand": "Daawat",
+                    "quantity": "334 g",
+                    "available": true
+                },
+                {
+                    "price": 329,
+                    "productName": "Daawat Rozana Mogra Basmati Rice (Broken)",
+                    "brand": "Daawat",
+                    "quantity": "5 kg",
+                    "available": false
+                }
+            ],
+            "Jiomart": [
+                {
+                    "price": 149,
+                    "productName": "Daawat Super Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 129,
+                    "productName": "Daawat Pulav Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 425,
+                    "productName": "Daawat Rozana Gold Basmati Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 209,
+                    "productName": "Daawat Biryani Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 359,
+                    "productName": "Daawat Rozana Super Basmati Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 489,
+                    "productName": "Daawat Devaaya Premium Rice 5 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 629,
+                    "productName": "Daawat Mogra Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 209,
+                    "productName": "Daawat Traditional Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 549,
+                    "productName": "Daawat Rozana Mini Mogra Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 155,
+                    "productName": "Daawat Brown Basmati Rice 1 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                },
+                {
+                    "price": 469,
+                    "productName": "Daawat Mini Mogra II Basmati Rice 10 kg",
+                    "brand": "Daawat",
+                    "quantity": "",
+                    "available": true
+                }
+            ]
+        }
+    }
+}

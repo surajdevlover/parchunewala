@@ -1,0 +1,87 @@
+{
+    "aashirvaad organic whole wheat atta": {
+        "product": "aashirvaad organic whole wheat atta",
+        "lowestPrice": 75,
+        "highestPrice": 724,
+        "averagePrice": 307.1818181818182,
+        "bestStores": [
+            {
+                "store": "BlinkIt",
+                "price": 75,
+                "productName": "Amul Organic Atta (Whole Wheat)",
+                "quantity": "1 kg",
+                "savings": "89.64%"
+            }
+        ],
+        "priceDifference": 649,
+        "potentialSavings": "89.64%"
+    },
+    "daawat basmati rice": {
+        "product": "daawat basmati rice",
+        "lowestPrice": 88,
+        "highestPrice": 1097,
+        "averagePrice": 341.7307692307692,
+        "bestStores": [
+            {
+                "store": "BlinkIt",
+                "price": 88,
+                "productName": "Daawat Rozana Super Basmati Rice - 1 kg",
+                "quantity": "1 kg",
+                "savings": "91.98%"
+            }
+        ],
+        "priceDifference": 1009,
+        "potentialSavings": "91.98%"
+    },
+    "fortune chakki fresh atta": {
+        "product": "fortune chakki fresh atta",
+        "lowestPrice": 184,
+        "highestPrice": 455,
+        "averagePrice": 316.94117647058823,
+        "bestStores": [
+            {
+                "store": "BlinkIt",
+                "price": 184,
+                "productName": "Natureland Fresh Chakki Organic Atta",
+                "quantity": "3 kg",
+                "savings": "59.56%"
+            }
+        ],
+        "priceDifference": 271,
+        "potentialSavings": "59.56%"
+    },
+    "india gate basmati rice": {
+        "product": "india gate basmati rice",
+        "lowestPrice": 69,
+        "highestPrice": 742,
+        "averagePrice": 309.48,
+        "bestStores": [
+            {
+                "store": "Jiomart",
+                "price": 69,
+                "productName": "Elina Long Grain Rice 1 kg",
+                "quantity": "",
+                "savings": "90.70%"
+            }
+        ],
+        "priceDifference": 673,
+        "potentialSavings": "90.70%"
+    },
+    "test result": {
+        "product": "test result",
+        "lowestPrice": 88,
+        "highestPrice": 1097,
+        "averagePrice": 341.7307692307692,
+        "bestStores": [
+            {
+                "store": "BlinkIt",
+                "price": 88,
+                "productName": "Daawat Rozana Super Basmati Rice - 1 kg",
+                "quantity": "1 kg",
+                "savings": "91.98%"
+            }
+        ],
+        "priceDifference": 1009,
+        "potentialSavings": "91.98%"
+    }
+}

@@ -6,17 +6,23 @@ import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import Footer from "../footer/footer"
 import { SharedHeader } from "@/components/shared-header"
-import { Search, ChevronRight, Star, Clock, MapPin, Phone, Filter, SlidersHorizontal, Heart, ShoppingBag, ArrowUpRight, ArrowLeft } from "lucide-react"
-import { motion } from "framer-motion"
+import { Search, ChevronRight, Star, Clock, MapPin, Phone, Filter, SlidersHorizontal, Heart, ShoppingBag, ArrowUpRight, ArrowLeft, Store, X, MapPinned, Award, Calendar, AlignJustify } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from 'react'
 import { LoginRequiredModal } from '@/components/login-required-modal'
+import { StoreCard } from '@/components/store-card'
+import { Badge } from "@/components/ui/badge"
 
 export default function StorePage() {
   const router = useRouter()
   const [showLoginModal, setShowLoginModal] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [loadingAnimation, setLoadingAnimation] = useState(true)
-  const [actionType, setActionType] = useState<'checkout' | 'wishlist' | 'generic'>('generic')
+  const [actionType, setActionType] = useState<'checkout' | 'wishlist' | 'cart' | 'general'>('general')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeFilter, setActiveFilter] = useState<string | null>(null)
+  const [showFilterPanel, setShowFilterPanel] = useState(false)
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
 
   useEffect(() => {
     // Check if user is logged in
@@ -26,12 +32,12 @@ export default function StorePage() {
     // Simulate loading for animation
     const timer = setTimeout(() => {
       setLoadingAnimation(false)
-    }, 800)
+    }, 600)
     
     return () => clearTimeout(timer)
   }, [])
 
-  const requireLogin = (action: 'checkout' | 'wishlist' | 'generic' = 'generic') => {
+  const requireLogin = (action: 'checkout' | 'wishlist' | 'cart' | 'general' = 'general') => {
     if (!isLoggedIn) {
       setActionType(action)
       setShowLoginModal(true)
@@ -40,161 +46,136 @@ export default function StorePage() {
     return true
   }
 
-  const handleAddToCart = (productId: string) => {
-    if (requireLogin('generic')) {
-      // Add to cart logic here
-      console.log("Adding to cart:", productId)
+  // Available stores - identical to the one used in the home page
+  const stores = [
+    {
+      id: "1",
+      name: "Satish General Store",
+      location: "Sector 44, Noida",
+      image: "https://content3.jdmagicbox.com/v2/comp/noida/k9/011pxx11.xx11.160125130009.a8k9/catalogue/anjali-general-store-noida-sector-44-noida-general-stores-2egpcjw.jpg?height=150&width=300",
+      timing: "Open 8 AM - 10 PM",
+      rating: 4.2,
+      distance: "0.5 km",
+      contact: "+91-9876543210",
+      address: "Shop No. 12, Market Road, Sector 44, Noida",
+      deliveryTime: "15-20 min",
+      description: "Your neighborhood supermarket with all daily essentials, fresh produce, and household items at affordable prices.",
+      tags: ["Groceries", "Household", "Daily Essentials"]
+    },
+    {
+      id: "2",
+      name: "Pandit General Store",
+      location: "Sector 18, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB87a87mmqARf0sUuN4nXF-hUTfKpjt4Y8hZZoj-JKj4sfEJDNV2Nl1s9EX9mLnPa8MBS5Fd0Y2YvIkhLl1iD8WKYkCyUhc2AeBqO1SJpY74s19AICUnLxJ37C3ayAkzpxlj25bf=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 7 AM - 11 PM",
+      rating: 4.5,
+      distance: "3.1 km",
+      contact: "+91-9876543211",
+      address: "Shop No. 5, Market Complex, Sector 18, Noida",
+      deliveryTime: "20-30 min",
+      description: "Family-run general store offering groceries, personal care items, and household essentials at competitive prices.",
+      tags: ["Personal Care", "Groceries", "Family Owned"]
+    },
+    {
+      id: "3",
+      name: "Anuj Kirana Store",
+      location: "Sector 126, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_QAIR4rpDjU1ofWAq01ZqBN0Zds7Yuz0aeaFjF0PQ1sAXnAgCYw16L1WEBWKcTaK-CiWGmkqHo1RhOZ9M4z9RRo_yABuvZIMki9by6Efiwmq_FKTfWceBVprj9txNRLCgsjuE=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 9 AM - 9 PM",
+      rating: 4.0,
+      distance: "3.5 km",
+      contact: "+91-9876543212",
+      address: "Near City Center, Sector 126, Noida",
+      deliveryTime: "25-35 min",
+      description: "Local convenience store with a wide selection of daily needs, snacks, and beverages.",
+      tags: ["Snacks", "Beverages", "Convenience"]
+    },
+    {
+      id: "4",
+      name: "Sharma General Store",
+      location: "Sector 15, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_QAIR4rpDjU1ofWAq01ZqBN0Zds7Yuz0aeaFjF0PQ1sAXnAgCYw16L1WEBWKcTaK-CiWGmkqHo1RhOZ9M4z9RRo_yABuvZIMki9by6Efiwmq_FKTfWceBVprj9txNRLCgsjuE=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 8 AM - 9 PM",
+      rating: 4.3,
+      distance: "2.3 km",
+      contact: "+91-9876543213",
+      address: "Main Market, Sector 15, Noida",
+      deliveryTime: "15-25 min",
+      description: "Trusted neighborhood store offering quality groceries and household items with personalized service.",
+      tags: ["Quality", "Groceries", "Local Favorite"]
+    },
+    {
+      id: "5",
+      name: "Gupta General Store",
+      location: "Sector 62, Noida",
+      image: "https://content3.jdmagicbox.com/v2/comp/noida/k9/011pxx11.xx11.160125130009.a8k9/catalogue/anjali-general-store-noida-sector-44-noida-general-stores-2egpcjw.jpg?height=150&width=300",
+      timing: "Open 7 AM - 10 PM",
+      rating: 4.1,
+      distance: "4.2 km",
+      contact: "+91-9876543214",
+      address: "Near Metro Station, Sector 62, Noida",
+      deliveryTime: "25-40 min",
+      description: "Conveniently located store offering a wide range of groceries, toiletries and household supplies.",
+      tags: ["Toiletries", "Groceries", "Metro Access"]
+    },
+    {
+      id: "6",
+      name: "Singh Provision Store",
+      location: "Sector 34, Noida",
+      image: "https://lh3.googleusercontent.com/gps-cs-s/AB5caB87a87mmqARf0sUuN4nXF-hUTfKpjt4Y8hZZoj-JKj4sfEJDNV2Nl1s9EX9mLnPa8MBS5Fd0Y2YvIkhLl1iD8WKYkCyUhc2AeBqO1SJpY74s19AICUnLxJ37C3ayAkzpxlj25bf=s1360-w1360-h1020?height=150&width=300",
+      timing: "Open 8 AM - 10 PM",
+      rating: 4.4,
+      distance: "1.8 km",
+      contact: "+91-9876543215",
+      address: "Block D, Sector 34, Noida",
+      deliveryTime: "15-20 min",
+      description: "Local grocery store with a friendly atmosphere offering fresh products and essential items at reasonable prices.",
+      tags: ["Fresh Products", "Friendly", "Reasonable Prices"]
     }
-  }
+  ]
 
-  const handleBackClick = () => {
-    router.back()
-  }
-
-  const storeInfo = {
-    id: "123",
-    name: "Sharma General Store",
-    rating: 4.7,
-    ratingCount: 243,
-    image: "/images/store-banner.jpg",
-    logo: "/images/store-logo.jpg",
-    address: "123 Market Street, Sector 12, Noida",
-    distance: "1.5 km",
-    deliveryTime: "20-30 min",
-    openingHours: "8:00 AM - 10:00 PM",
-    contact: "+91 98765 43210"
-  }
+  const filters = [
+    { id: 'nearby', name: 'Nearby', icon: <MapPinned size={14} /> },
+    { id: 'rating', name: 'Top Rated', icon: <Award size={14} /> },
+    { id: 'open', name: 'Open Now', icon: <Calendar size={14} /> }
+  ]
 
   const categories = [
-    { id: "fruits", name: "Fruits & Vegetables", icon: "/icons/fruits.png" },
-    { id: "dairy", name: "Dairy & Breakfast", icon: "/icons/dairy.png" },
-    { id: "snacks", name: "Snacks & Munchies", icon: "/icons/snacks.png" },
-    { id: "beverages", name: "Beverages", icon: "/icons/beverages.png" },
-    { id: "bakery", name: "Bakery & Biscuits", icon: "/icons/bakery.png" },
-    { id: "staples", name: "Staples & Grains", icon: "/icons/staples.png" },
-    { id: "personal", name: "Personal Care", icon: "/icons/personal-care.png" },
-    { id: "household", name: "Household", icon: "/icons/household.png" }
+    { id: 'all', name: 'All' },
+    { id: 'groceries', name: 'Groceries' },
+    { id: 'household', name: 'Household' },
+    { id: 'personal', name: 'Personal Care' },
+    { id: 'beverages', name: 'Beverages' },
+    { id: 'snacks', name: 'Snacks' }
   ]
 
-  const featuredProducts = [
-    {
-      id: "p1",
-      name: "Fresh Organic Bananas",
-      image: "/images/product-banana.jpg",
-      price: 45,
-      mrp: 60,
-      discount: "25% OFF",
-      unit: "6 pcs (approx. 1kg)"
-    },
-    {
-      id: "p2",
-      name: "Toned Milk 500ml",
-      image: "/images/product-milk.jpg",
-      price: 30,
-      mrp: 35,
-      discount: "14% OFF",
-      unit: "500 ml"
-    },
-    {
-      id: "p3",
-      name: "Whole Wheat Bread",
-      image: "/images/product-bread.jpg",
-      price: 40,
-      mrp: 45,
-      discount: "11% OFF",
-      unit: "400g"
-    },
-    {
-      id: "p4",
-      name: "Mixed Vegetable Pack",
-      image: "/images/product-vegetables.jpg",
-      price: 120,
-      mrp: 150,
-      discount: "20% OFF",
-      unit: "1 kg pack"
-    },
-    {
-      id: "p5",
-      name: "Assorted Cookies",
-      image: "/images/product-cookies.jpg",
-      price: 99,
-      mrp: 120,
-      discount: "18% OFF",
-      unit: "300g pack"
-    },
-    {
-      id: "p6",
-      name: "Tomato Ketchup",
-      image: "/images/product-ketchup.jpg",
-      price: 85,
-      mrp: 100,
-      discount: "15% OFF",
-      unit: "500g"
+  const filteredStores = stores.filter(store => {
+    if (searchTerm && !store.name.toLowerCase().includes(searchTerm.toLowerCase()) && 
+        !store.location.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        !store.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))) {
+      return false;
     }
-  ]
-
-  const bestSellers = [
-    {
-      id: "bs1",
-      name: "Basmati Rice Premium",
-      image: "/images/product-rice.jpg",
-      price: 250,
-      mrp: 300,
-      discount: "17% OFF",
-      unit: "5 kg"
-    },
-    {
-      id: "bs2",
-      name: "Cold Pressed Coconut Oil",
-      image: "/images/product-oil.jpg",
-      price: 210,
-      mrp: 240,
-      discount: "13% OFF",
-      unit: "1 liter"
-    },
-    {
-      id: "bs3",
-      name: "Honey Natural",
-      image: "/images/product-honey.jpg",
-      price: 180,
-      mrp: 220,
-      discount: "18% OFF",
-      unit: "500g"
-    },
-    {
-      id: "bs4",
-      name: "Spice Blend Box",
-      image: "/images/product-spices.jpg",
-      price: 299,
-      mrp: 350,
-      discount: "15% OFF",
-      unit: "Set of 8"
+    
+    if (activeFilter === 'nearby') {
+      // Filter for nearby stores (less than 3 km)
+      return parseFloat(store.distance.replace(' km', '')) < 3;
+    } else if (activeFilter === 'rating') {
+      // Filter for top rated stores
+      return store.rating >= 4.3;
+    } else if (activeFilter === 'open') {
+      // All stores are open in this example
+      return true;
     }
-  ]
-
-  const offers = [
-    {
-      id: "o1",
-      title: "20% OFF on first order",
-      code: "FIRST20",
-      image: "/images/offer-1.jpg",
-      description: "Use code FIRST20 at checkout"
-    },
-    {
-      id: "o2",
-      title: "Free delivery on orders above ₹499",
-      code: "FREEDEL",
-      image: "/images/offer-2.jpg",
-      description: "No coupon needed"
-    }
-  ]
+    
+    return true;
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.08
       }
     }
   }
@@ -211,478 +192,567 @@ export default function StorePage() {
     }
   }
 
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  }
+
   if (loadingAnimation) {
     return (
-      <div className="loading-container bg-gradient-to-br from-orange-50 to-amber-50">
-        <div className="loading-spinner">
+      <motion.div 
+        className="loading-container bg-gradient-to-br from-orange-50 to-amber-50 min-h-screen flex flex-col items-center justify-center"
+        initial="hidden"
+        animate="visible"
+        variants={overlayVariants}
+      >
+        <motion.div 
+          className="loading-spinner"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div></div>
           <div></div>
-        </div>
-        <p className="mt-6 text-pastel-orange font-semibold text-lg animate-pulse">Loading Store...</p>
-      </div>
+        </motion.div>
+        <motion.p 
+          className="mt-6 text-pastel-orange font-semibold text-lg animate-pulse"
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          Discovering Nearby Stores...
+        </motion.p>
+      </motion.div>
     )
   }
 
   return (
-    <main className="bg-gradient-to-br from-orange-50 to-amber-50 min-h-screen">
-      {showLoginModal && (
-        <LoginRequiredModal
-          isOpen={showLoginModal}
-          onClose={() => setShowLoginModal(false)}
-          actionType={actionType}
-          continueShopping={() => setShowLoginModal(false)}
-        />
-      )}
-      
-      <SharedHeader 
-        title={storeInfo.name}
-        showLogo={false}
-        showBackButton={false}
-      />
-
-      {/* Hero Section with Store Info */}
-      <motion.div 
-        className="relative"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Back button */}
-        <button 
-          onClick={handleBackClick} 
-          className="absolute top-4 left-4 z-10 bg-white/80 p-2 rounded-full shadow-md"
-        >
-          <ArrowLeft className="h-5 w-5 text-gray-700" />
-        </button>
-
-        <div className="h-48 w-full overflow-hidden relative rounded-b-3xl">
-          <Image
-            src={storeInfo.image}
-            alt={storeInfo.name}
-            fill
-            className="object-cover"
-            priority
+    <main className="bg-gradient-to-br from-orange-50 to-amber-50 min-h-screen relative">
+      <AnimatePresence>
+        {showLoginModal && (
+          <LoginRequiredModal
+            isOpen={showLoginModal}
+            onClose={() => setShowLoginModal(false)}
+            actionType={actionType}
+            onLogin={() => {
+              // Handle login action
+              router.push('/login');
+              setShowLoginModal(false);
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        )}
+      </AnimatePresence>
+      
+      {/* Custom Header with Hero Section */}
+      <motion.div 
+        className="bg-gradient-to-r from-pastel-orange to-orange-500 text-white py-4 px-4 relative overflow-hidden"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ 
+          type: "spring",
+          stiffness: 70,
+          damping: 20
+        }}
+      >
+        <div className="absolute right-0 top-0 opacity-10">
+          <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="100" fill="white"/>
+            <circle cx="100" cy="100" r="80" fill="white"/>
+            <circle cx="100" cy="100" r="60" fill="white"/>
+          </svg>
         </div>
         
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto relative z-10">
+          <div className="flex items-center justify-between mb-2">
+            <Link href="/home">
+              <Button variant="ghost" size="icon" className="h-9 w-9 text-white hover:bg-white/20 hover:text-white">
+                <ArrowLeft size={20} />
+              </Button>
+            </Link>
+            <div className="flex gap-3">
+              <motion.button 
+                className="rounded-full p-2 bg-white/20 hover:bg-white/30 transition-colors"
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')}
+              >
+                <AlignJustify size={18} className="text-white" />
+              </motion.button>
+              <Link href="/cart">
+                <motion.div whileTap={{ scale: 0.95 }}>
+                  <Button variant="ghost" size="icon" className="h-9 w-9 text-white relative hover:bg-white/20 hover:text-white">
+                    <ShoppingBag size={20} />
+                    <span className="absolute -top-1 -right-1 bg-white text-pastel-orange text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                      2
+                    </span>
+                  </Button>
+                </motion.div>
+              </Link>
+            </div>
+          </div>
+          
+          <h1 className="text-2xl font-bold mb-1">Find Nearby Stores</h1>
+          <p className="text-sm text-white/80 mb-4">Discover local shops and compare prices</p>
+          
+          {/* Animated Search Bar */}
           <motion.div 
-            className="flex items-end -mt-16 mb-6 relative z-10"
+            className="relative mb-3"
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            <input
+              type="text"
+              placeholder="Search stores, products, or locations..."
+              className="w-full py-3 pl-10 pr-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/30 focus:outline-none focus:bg-white/20 text-white placeholder-white/70 shadow-lg transition-all"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <Search className="h-5 w-5 text-white/70 absolute left-3 top-1/2 -translate-y-1/2" />
+            
+            <AnimatePresence>
+              {searchTerm ? (
+                <motion.button
+                  className="absolute right-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-white"
+                  onClick={() => setSearchTerm('')}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                >
+                  <X size={18} />
+                </motion.button>
+              ) : null}
+            </AnimatePresence>
+            
+            <motion.button
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 w-6 h-6 rounded-full flex items-center justify-center"
+              onClick={() => setShowFilterPanel(!showFilterPanel)}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Filter size={14} className="text-white" />
+            </motion.button>
+          </motion.div>
+          
+          {/* Filter Chips */}
+          <motion.div 
+            className="flex gap-2 overflow-x-auto hide-scrollbar pb-1"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.4 }}
           >
-            <div className="h-24 w-24 rounded-xl overflow-hidden border-4 border-white shadow-lg bg-white">
-              <Image
-                src={storeInfo.logo}
-                alt={storeInfo.name}
-                width={96}
-                height={96}
-                className="object-cover"
-              />
-            </div>
-            <div className="ml-4 pb-2">
-              <h1 className="text-white text-2xl font-bold drop-shadow-md">{storeInfo.name}</h1>
-              <div className="flex items-center mt-1">
-                <div className="flex items-center bg-yellow-500 px-2 py-0.5 rounded-md text-xs font-medium text-white">
-                  <Star className="h-3 w-3 fill-white mr-1" />
-                  {storeInfo.rating}
-                </div>
-                <span className="text-white text-xs ml-2">{storeInfo.ratingCount} ratings</span>
-              </div>
-            </div>
+            {filters.map(filter => (
+              <motion.button
+                key={filter.id}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium border flex items-center gap-1 whitespace-nowrap ${
+                  activeFilter === filter.id 
+                    ? 'bg-white text-pastel-orange border-white' 
+                    : 'bg-white/10 text-white border-white/30 hover:bg-white/20'
+                }`}
+                onClick={() => setActiveFilter(activeFilter === filter.id ? null : filter.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {filter.icon}
+                <span>{filter.name}</span>
+              </motion.button>
+            ))}
+            
+            {categories.map(category => (
+              <motion.button
+                key={category.id}
+                className="px-3 py-1.5 rounded-full text-xs font-medium border bg-white/10 text-white border-white/30 hover:bg-white/20 whitespace-nowrap"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {category.name}
+              </motion.button>
+            ))}
           </motion.div>
         </div>
       </motion.div>
 
-      {/* Store Details */}
-      <motion.div 
-        className="container mx-auto px-4 mb-6"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-      >
-        <div className="bg-white rounded-xl shadow-md p-4 backdrop-blur-sm bg-white/90">
-          <div className="flex flex-wrap gap-y-3">
-            <div className="w-1/2 flex items-center">
-              <div className="bg-pastel-orange/10 p-2 rounded-lg mr-3">
-                <MapPin className="h-4 w-4 text-pastel-orange" />
+      <div className="container mx-auto px-3 py-4">
+        {/* Active Filters Display */}
+        <AnimatePresence>
+          {(activeFilter || searchTerm) && (
+            <motion.div 
+              className="flex items-center justify-between bg-white rounded-lg px-4 py-2 mb-3 shadow-sm"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-500">Filtered by:</span>
+                {activeFilter && (
+                  <Badge className="bg-pastel-orange/20 text-pastel-orange border-none">
+                    {filters.find(f => f.id === activeFilter)?.name}
+                  </Badge>
+                )}
+                {searchTerm && (
+                  <Badge className="bg-pastel-orange/20 text-pastel-orange border-none">
+                    "{searchTerm.length > 15 ? searchTerm.substring(0, 15) + '...' : searchTerm}"
+                  </Badge>
+                )}
               </div>
-              <div>
-                <div className="text-xs text-gray-500">Distance</div>
-                <div className="text-sm font-medium">{storeInfo.distance}</div>
-              </div>
-            </div>
-            <div className="w-1/2 flex items-center">
-              <div className="bg-pastel-orange/10 p-2 rounded-lg mr-3">
-                <Clock className="h-4 w-4 text-pastel-orange" />
-              </div>
-              <div>
-                <div className="text-xs text-gray-500">Delivery Time</div>
-                <div className="text-sm font-medium">{storeInfo.deliveryTime}</div>
-              </div>
-            </div>
-            <div className="w-1/2 flex items-center">
-              <div className="bg-pastel-orange/10 p-2 rounded-lg mr-3">
-                <Clock className="h-4 w-4 text-pastel-orange" />
-              </div>
-              <div>
-                <div className="text-xs text-gray-500">Open Hours</div>
-                <div className="text-sm font-medium">{storeInfo.openingHours}</div>
-              </div>
-            </div>
-            <div className="w-1/2 flex items-center">
-              <div className="bg-pastel-orange/10 p-2 rounded-lg mr-3">
-                <Phone className="h-4 w-4 text-pastel-orange" />
-              </div>
-              <div>
-                <div className="text-xs text-gray-500">Contact</div>
-                <div className="text-sm font-medium">{storeInfo.contact}</div>
-              </div>
-            </div>
-          </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-7 text-xs px-2 hover:bg-pastel-orange hover:text-white"
+                onClick={() => {
+                  setSearchTerm('');
+                  setActiveFilter(null);
+                }}
+              >
+                Clear All
+              </Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Store Count & Sort Info */}
+        <motion.div 
+          className="flex justify-between items-center mb-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-sm text-gray-600">
+            <span className="font-semibold">{filteredStores.length}</span> stores found
+          </p>
           
-          <div className="mt-4 pt-4 border-t border-gray-100">
-            <div className="text-sm text-gray-600 mb-2">
-              <MapPin className="h-4 w-4 text-pastel-orange inline mr-1" />
-              {storeInfo.address}
-            </div>
-            <div className="flex gap-2">
-              <Link href={`/store/${storeInfo.id}/info`}>
-                <Button variant="outline" size="sm" className="text-xs px-3 py-1 h-auto border-pastel-orange text-pastel-orange hover:bg-pastel-orange hover:text-white transition-colors">
-                  Store Info
-                </Button>
-              </Link>
-              <Link href={`https://maps.google.com?q=${encodeURIComponent(storeInfo.address)}`} target="_blank">
-                <Button variant="outline" size="sm" className="text-xs px-3 py-1 h-auto border-pastel-orange text-pastel-orange hover:bg-pastel-orange hover:text-white transition-colors">
-                  Get Directions
-                </Button>
-              </Link>
-            </div>
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-500">Sort by:</span>
+            <select className="text-xs bg-white rounded-lg border border-gray-200 px-2 py-1">
+              <option>Distance</option>
+              <option>Rating</option>
+              <option>Alphabetical</option>
+            </select>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      {/* Search and Filter */}
-      <motion.div 
-        className="container mx-auto px-4 mb-6"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
-      >
-        <div className="flex gap-2">
-          <div className="flex-1 relative">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="w-full py-2.5 pl-10 pr-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pastel-orange focus:border-transparent shadow-sm transition-all"
-            />
-            <Search className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
-          </div>
-          <Button variant="outline" className="border-gray-300 rounded-xl hover:bg-pastel-orange hover:text-white hover:border-pastel-orange transition-colors">
-            <SlidersHorizontal className="h-5 w-5" />
-          </Button>
-        </div>
-      </motion.div>
-
-      {/* Offers Carousel */}
-      <motion.div 
-        className="container mx-auto px-4 mb-8"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-      >
-        <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
-          {offers.map((offer, index) => (
-            <motion.div
-              key={offer.id}
-              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 max-w-xs relative rounded-xl overflow-hidden shadow-md"
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 + index * 0.1, type: "spring", stiffness: 300 }}
+        {/* No Results Message */}
+        <AnimatePresence>
+          {filteredStores.length === 0 && (
+            <motion.div 
+              className="text-center py-10 bg-white rounded-xl shadow-sm"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
             >
-              <div className="relative h-36">
-                <Image
-                  src={offer.image}
-                  alt={offer.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-pastel-orange/90 to-pastel-orange/60 p-4 flex flex-col justify-between">
-                  <div className="bg-white text-pastel-orange text-xs font-bold px-2 py-1 rounded-lg w-fit shadow-sm">
-                    {offer.code}
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-lg">{offer.title}</h3>
-                    <p className="text-white text-sm">{offer.description}</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Categories */}
-      <motion.div 
-        className="container mx-auto px-4 mb-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-gray-800">Shop by Category</h2>
-          <Link href={`/store/${storeInfo.id}/categories`} className="text-pastel-orange text-sm font-medium flex items-center">
-            View All <ChevronRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-4 gap-3">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.id}
-              variants={itemVariants}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            >
-              <Link 
-                href={`/store/${storeInfo.id}/category/${category.id}`}
-                className="flex flex-col items-center p-3 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-pastel-orange/30 transition-all"
-              >
-                <div className="w-12 h-12 rounded-full bg-pastel-orange/10 flex items-center justify-center mb-2">
-                  <Image 
-                    src={category.icon} 
-                    alt={category.name} 
-                    width={28} 
-                    height={28} 
-                  />
-                </div>
-                <span className="text-xs text-center text-gray-700 line-clamp-2">{category.name}</span>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Featured Products */}
-      <motion.div 
-        className="container mx-auto px-4 mb-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ delayChildren: 0.6 }}
-      >
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-gray-800">Featured Products</h2>
-          <Link href={`/store/${storeInfo.id}/featured`} className="text-pastel-orange text-sm font-medium flex items-center">
-            View All <ChevronRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {featuredProducts.map((product, index) => (
-            <motion.div
-              key={product.id}
-              variants={itemVariants}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            >
-              <Link
-                href={`/product/${product.id}`}
-                className="bg-white rounded-xl overflow-hidden shadow-md flex flex-col h-full border border-gray-100 hover:border-pastel-orange/30 transition-all"
-              >
-                <div className="relative">
-                  <div className="h-40 relative">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  {product.discount && (
-                    <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg shadow-sm">
-                      {product.discount}
-                    </div>
-                  )}
-                  <button 
-                    className="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full shadow-sm hover:bg-pastel-orange hover:text-white transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      requireLogin('wishlist')
-                      // Add to wishlist logic when logged in
-                    }}
-                  >
-                    <Heart className="h-4 w-4" />
-                  </button>
-                </div>
-
-                <div className="p-3 flex-1 flex flex-col">
-                  <h3 className="text-sm font-medium text-gray-800 line-clamp-2 mb-1">{product.name}</h3>
-                  <p className="text-xs text-gray-500 mb-2">{product.unit}</p>
-                  <div className="mt-auto flex items-center justify-between">
-                    <div>
-                      <span className="text-sm font-bold text-gray-800">₹{product.price}</span>
-                      {product.mrp > product.price && (
-                        <span className="text-xs text-gray-500 line-through ml-1">₹{product.mrp}</span>
-                      )}
-                    </div>
-                    <button 
-                      className="bg-pastel-orange/10 text-pastel-orange p-1.5 rounded-full hover:bg-pastel-orange hover:text-white transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        handleAddToCart(product.id)
-                      }}
-                    >
-                      <ShoppingBag className="h-4 w-4" />
-                    </button>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Best Sellers */}
-      <motion.div 
-        className="container mx-auto px-4 mb-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ delayChildren: 0.7 }}
-      >
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-gray-800">Best Sellers</h2>
-          <Link href={`/store/${storeInfo.id}/best-sellers`} className="text-pastel-orange text-sm font-medium flex items-center">
-            View All <ChevronRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {bestSellers.map((product, index) => (
               <motion.div
-                key={product.id}
-                variants={itemVariants}
-                whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                className="mx-auto w-20 h-20 bg-pastel-orange/10 rounded-full flex items-center justify-center mb-4"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-                <Link
-                  href={`/product/${product.id}`}
-                  className="flex border border-gray-100 rounded-xl overflow-hidden p-2 hover:border-pastel-orange/30 transition-all"
-                >
-                  <div className="relative w-24 h-24 flex-shrink-0">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover rounded-lg"
-                    />
-                    {product.discount && (
-                      <div className="absolute -top-1 -left-1 bg-green-500 text-white text-xs px-1.5 py-0.5 rounded shadow-sm">
-                        {product.discount}
-                      </div>
-                    )}
-                  </div>
-                  <div className="ml-3 flex-1">
-                    <h3 className="text-sm font-medium text-gray-800 line-clamp-2">{product.name}</h3>
-                    <p className="text-xs text-gray-500">{product.unit}</p>
-                    <div className="mt-1.5 flex items-center justify-between">
-                      <div>
-                        <span className="text-sm font-bold text-gray-800">₹{product.price}</span>
-                        {product.mrp > product.price && (
-                          <span className="text-xs text-gray-500 line-through ml-1">₹{product.mrp}</span>
-                        )}
-                      </div>
-                      <button 
-                        className="bg-pastel-orange text-white p-1.5 rounded-lg hover:bg-pastel-orange/90 transition-colors shadow-sm"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          handleAddToCart(product.id)
-                        }}
-                      >
-                        <ShoppingBag className="h-3.5 w-3.5" />
-                      </button>
-                    </div>
-                  </div>
-                </Link>
+                <Store className="h-10 w-10 text-pastel-orange" />
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Recent Purchases/Trending */}
-      <motion.div 
-        className="container mx-auto px-4 mb-12"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ delayChildren: 0.8 }}
-      >
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-gray-800">Trending Now</h2>
-          <Link href={`/store/${storeInfo.id}/trending`} className="text-pastel-orange text-sm font-medium flex items-center">
-            View All <ChevronRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 scrollbar-hide">
-          {featuredProducts.slice(0, 4).map((product, index) => (
-            <motion.div
-              key={product.id}
-              variants={itemVariants}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="flex-shrink-0 w-44"
-            >
-              <Link
-                href={`/product/${product.id}`}
-                className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 hover:border-pastel-orange/30 transition-all block h-full"
+              <motion.div 
+                className="text-gray-700 text-lg font-medium mb-2"
               >
-                <div className="relative h-40">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                  />
-                  {product.discount && (
-                    <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-lg shadow-sm">
-                      {product.discount}
-                    </div>
-                  )}
-                </div>
-                <div className="p-3">
-                  <h3 className="text-sm font-medium text-gray-800 line-clamp-2 mb-1">{product.name}</h3>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-bold text-gray-800">₹{product.price}</span>
-                    <button 
-                      className="bg-pastel-orange text-white p-1.5 rounded-lg hover:bg-pastel-orange/90 transition-colors shadow-sm"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        handleAddToCart(product.id)
-                      }}
-                    >
-                      <ShoppingBag className="h-3.5 w-3.5" />
-                    </button>
-                  </div>
-                </div>
-              </Link>
+                No stores found
+              </motion.div>
+              <p className="text-sm text-gray-500 mb-4">Try a different search term or filter</p>
+              <motion.button
+                className="px-4 py-2 bg-pastel-orange text-white rounded-lg text-sm"
+                onClick={() => {setSearchTerm(''); setActiveFilter(null)}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Clear Filters
+              </motion.button>
             </motion.div>
-          ))}
-        </div>
-      </motion.div>
-      
-      {/* Floating Cart Button */}
-      <motion.div
+          )}
+        </AnimatePresence>
+
+        {/* Stores Grid/List View */}
+        <AnimatePresence mode="wait">
+          {viewMode === 'grid' ? (
+            <motion.div 
+              key="grid"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, y: 20 }}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3"
+            >
+              {filteredStores.map((store, index) => (
+                <motion.div
+                  key={store.id}
+                  variants={itemVariants}
+                  custom={index}
+                  layout
+                >
+                  <StoreCard
+                    id={store.id}
+                    name={store.name}
+                    location={store.location}
+                    image={store.image}
+                    timing={store.timing}
+                    rating={store.rating}
+                    distance={store.distance}
+                    size="small"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="list"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, y: 20 }}
+              className="flex flex-col gap-3"
+            >
+              {filteredStores.map((store, index) => (
+                <motion.div
+                  key={store.id}
+                  variants={itemVariants}
+                  custom={index}
+                  whileHover={{ y: -2, transition: { duration: 0.2 } }}
+                  className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                >
+                  <Link href={`/store/${store.id}`} className="flex">
+                    <div className="w-24 h-24 relative">
+                      <Image 
+                        src={store.image} 
+                        alt={store.name} 
+                        fill 
+                        className="object-cover" 
+                      />
+                    </div>
+                    <div className="p-3 flex-1">
+                      <div className="flex justify-between">
+                        <h3 className="font-bold text-gray-900">{store.name}</h3>
+                        <div className="flex items-center gap-1 bg-pastel-orange/10 px-2 py-0.5 rounded text-xs font-medium text-pastel-orange">
+                          <Star size={12} className="fill-pastel-orange" />
+                          <span>{store.rating}</span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-1 text-gray-500 text-xs mt-1">
+                        <MapPin size={12} className="text-pastel-orange/70" />
+                        <span className="line-clamp-1">{store.location}</span>
+                      </div>
+                      
+                      <div className="flex items-center justify-between mt-2 text-xs">
+                        <div className="flex gap-2">
+                          <div className="bg-green-100 text-green-800 font-medium px-2 py-0.5 rounded-sm">
+                            {store.distance}
+                          </div>
+                          <div className="text-gray-500">
+                            {store.timing}
+                          </div>
+                        </div>
+                        <Button variant="link" size="sm" className="p-0 h-auto text-xs text-pastel-orange">
+                          View Store
+                        </Button>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        {/* Featured Stores Section */}
+        {filteredStores.length > 0 && !activeFilter && !searchTerm && (
+          <motion.div
+            className="mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-bold text-gray-800">Popular Stores</h2>
+              <Button variant="link" className="text-pastel-orange text-sm p-0 h-auto">
+                See All
+              </Button>
+            </div>
+            
+            <div className="bg-white rounded-xl p-4 shadow-sm">
+              <div className="flex overflow-x-auto gap-4 hide-scrollbar pb-2">
+                {stores
+                  .filter(store => store.rating >= 4.3)
+                  .map((store) => (
+                    <motion.div
+                      key={`featured-${store.id}`}
+                      className="min-w-[200px] bg-pastel-orange/5 rounded-lg p-3 border border-pastel-orange/20"
+                      whileHover={{ scale: 1.02, backgroundColor: "rgba(251, 146, 60, 0.1)" }}
+                    >
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-12 h-12 rounded-full overflow-hidden relative">
+                          <Image 
+                            src={store.image} 
+                            alt={store.name} 
+                            fill 
+                            className="object-cover" 
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-sm text-gray-900">{store.name}</h3>
+                          <div className="flex items-center gap-1 text-xs text-pastel-orange">
+                            <Star size={10} className="fill-pastel-orange" />
+                            <span>{store.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        {store.tags.map((tag, i) => (
+                          <span key={i} className="text-[10px] bg-white px-1.5 py-0.5 rounded-full text-gray-600">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <Link href={`/store/${store.id}`}>
+                        <Button variant="ghost" size="sm" className="w-full h-7 text-xs bg-white text-pastel-orange hover:bg-pastel-orange hover:text-white">
+                          View Store
+                        </Button>
+                      </Link>
+                    </motion.div>
+                  ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+        
+        {/* Recently Viewed Section */}
+        {filteredStores.length > 0 && !activeFilter && !searchTerm && (
+          <motion.div
+            className="mt-6 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-bold text-gray-800">Recently Viewed</h2>
+              <Button variant="link" className="text-pastel-orange text-sm p-0 h-auto">
+                Clear
+              </Button>
+            </div>
+            
+            <div className="bg-white rounded-xl p-4 shadow-sm">
+              <div className="flex flex-wrap gap-3">
+                {stores.slice(0, 3).map((store) => (
+                  <Link key={`recent-${store.id}`} href={`/store/${store.id}`} className="flex items-center gap-2 bg-gray-50 rounded-lg p-2 flex-1 min-w-[160px]">
+                    <div className="w-10 h-10 rounded-full overflow-hidden relative">
+                      <Image 
+                        src={store.image} 
+                        alt={store.name} 
+                        fill 
+                        className="object-cover" 
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-medium text-xs text-gray-900 truncate">{store.name}</h3>
+                      <p className="text-[10px] text-gray-500 truncate">{store.location}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </div>
+
+      {/* Floating Action Button */}
+      <motion.button
+        className="fixed bottom-20 right-4 z-10 bg-pastel-orange text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5, type: "spring" }}
+        transition={{ delay: 1, type: "spring" }}
       >
-        <Link 
-          href="/cart" 
-          className="fixed bottom-6 right-6 bg-gradient-to-r from-pastel-orange to-amber-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform"
-        >
-          <ShoppingBag className="h-6 w-6" />
-          <span className="absolute -top-2 -right-2 bg-gray-900 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center shadow-md">5</span>
-        </Link>
-      </motion.div>
+        <MapPinned size={22} />
+      </motion.button>
+
+      {/* Filter Panel */}
+      <AnimatePresence>
+        {showFilterPanel && (
+          <>
+            <motion.div 
+              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowFilterPanel(false)}
+            />
+            <motion.div 
+              className="fixed bottom-0 left-0 right-0 bg-white rounded-t-2xl z-40 p-5"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            >
+              <div className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-5" />
+              <h2 className="text-xl font-bold text-gray-800 mb-4">Filter Stores</h2>
+              
+              <div className="mb-5">
+                <h3 className="font-medium text-sm text-gray-700 mb-3">Store Categories</h3>
+                <div className="flex flex-wrap gap-2">
+                  {categories.map(category => (
+                    <button
+                      key={category.id}
+                      className="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 hover:border-pastel-orange hover:bg-pastel-orange/5"
+                    >
+                      {category.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="mb-5">
+                <h3 className="font-medium text-sm text-gray-700 mb-3">Distance</h3>
+                <div className="flex flex-wrap gap-2">
+                  <button className="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 hover:border-pastel-orange hover:bg-pastel-orange/5">
+                    Less than 1 km
+                  </button>
+                  <button className="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 hover:border-pastel-orange hover:bg-pastel-orange/5">
+                    1-3 km
+                  </button>
+                  <button className="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 hover:border-pastel-orange hover:bg-pastel-orange/5">
+                    3-5 km
+                  </button>
+                  <button className="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 hover:border-pastel-orange hover:bg-pastel-orange/5">
+                    5+ km
+                  </button>
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="font-medium text-sm text-gray-700 mb-3">Rating</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[4, 3, 2, 1].map(rating => (
+                    <button key={rating} className="px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200 hover:border-pastel-orange hover:bg-pastel-orange/5 flex items-center gap-1">
+                      {rating}+ <Star size={10} className="fill-yellow-400 text-yellow-400" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <Button 
+                  variant="outline" 
+                  className="flex-1 border-gray-300"
+                  onClick={() => setShowFilterPanel(false)}
+                >
+                  Cancel
+                </Button>
+                <Button 
+                  className="flex-1 bg-pastel-orange hover:bg-pastel-orange/90"
+                  onClick={() => setShowFilterPanel(false)}
+                >
+                  Apply Filters
+                </Button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </main>
